@@ -2,15 +2,19 @@ import React from "react";
 import { TextField, Button, Grid, Typography, Paper, Box } from "@mui/material";
 import { LocationOn, Phone, Email, Facebook, Instagram, Pinterest, LinkedIn } from "@mui/icons-material";
 import "./ContactUs.css";
-import Container1 from "../Container/Container";
+import CustomContainer from "../Container/CustomContainer";
 
 
 const ContactUs = () => {
   return (
     <Box >
     <Box className="background">
-    <Container1/>
-      <Box spacing={3} className="contact-container">
+    <CustomContainer
+     title="Contact Us"
+     description="Lorem ipsum dolor sit amet consectetur. Quis sed donec quis nunc aliquet cursus mauris ut.">
+      <p>Enim fermentum maecenas rutrum dapibus sodales quis.</p>
+     </CustomContainer>
+      <Box spacing={3}  className="contact-container">
         <Grid item xs={12} md={6}  className="left-section" >
           <Typography variant="h4" className="title">
             Let's Talk
@@ -66,6 +70,8 @@ const ContactUs = () => {
         </Grid>
       </Box>
     </Box>
+     <Box sx={{borderBottom:'2px solid #ccc',mb:3}}> 
+               </Box>
     </Box>
   );
 };

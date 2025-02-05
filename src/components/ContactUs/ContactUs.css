@@ -1,9 +1,9 @@
 
 .contact-container {
     width: 85%;
-    padding: 40px;
+    padding: 20px;
     margin-top: 40px;
-    border-radius: 20px;
+    border-radius: 10px;
     background: rgba(255, 255, 255, 0.938);
     box-shadow: 10px 10px 30px rgba(9, 7, 7, 0.2), 
                 -10px -10px 30px rgba(6, 5, 5, 0.1);
@@ -13,10 +13,13 @@
     display: flex;
     justify-self: center;
     align-items: center;
-    
-   
-}
   
+    
+}
+  .background{
+    background-color: aliceblue;
+    
+  }
   
 .left-section, .right-section {
     padding: 30px;

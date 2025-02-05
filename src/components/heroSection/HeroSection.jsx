@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Typography, Button } from "@mui/material";
+import { Box, Typography, Button, Divider } from "@mui/material";
 import "./HeroSection.css";
 import kid1 from "../../assets/kid1.avif";
 import toy1 from "../../assets/toy1.png"; // Ensure PNG format for transparency
@@ -7,6 +7,7 @@ import toy2 from "../../assets/toy2.png";
 
 function HeroSection() {
   return (
+    <Box>
     <Box className="hero-container">
       <Box className="hero-content">
         {/* Toys placed before text */}
@@ -35,6 +36,9 @@ function HeroSection() {
         <img src={kid1} className="background-img shadow-img" alt="kid" />
       </Box>
     </Box>
+    <Box sx={{borderBottom:'2px solid #ccc',mb:3,mt:2}}> 
+           </Box>
+           </Box>
   );
 }
 

@@ -22,8 +22,8 @@ function Navbar() {
               textTransform:'none',fontSize:'18px'}} >Home</Button></Link> 
             <Button sx={{color:'black',fontWeight:600,
               textTransform:'none',fontSize:'18px'}}>Classes</Button>
-            <Button sx={{color:'black',fontWeight:600,
-              textTransform:'none',fontSize:'18px'}}>About</Button>
+           <Link to={'/about'}><Button sx={{color:'black',fontWeight:600,
+              textTransform:'none',fontSize:'18px'}} >About</Button></Link> 
          <Link to={'/contact'}> <Button sx={{color:'black',fontWeight:600,
               textTransform:'none',fontSize:'18px'}}>Contact Us</Button></Link>  
             <Button sx={{color:'black',fontWeight:600,

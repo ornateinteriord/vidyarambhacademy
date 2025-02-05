@@ -5,10 +5,10 @@ import "./Footer.css";
 
 const Footer = () => {
   return (
-    
+    <Box mt={1}>
     <footer className="footer">
-      <Box sx={{borderBottom:'2px solid #ccc',mt:3,mb:3}}> 
-      </Box>
+      {/* <Box sx={{borderBottom:'1px solid #ccc',mb:3,background:'#fff'}}> 
+      </Box> */}
       <Container maxWidth="lg">
         <Grid container spacing={10} justifyContent="center">
           
@@ -67,7 +67,7 @@ const Footer = () => {
         </Typography>
       </Container>
     </footer>
-   
+    </Box>
   );
 };
 

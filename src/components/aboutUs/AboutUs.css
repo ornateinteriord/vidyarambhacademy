@@ -1,0 +1,197 @@
+.about-container {
+    padding: 3rem 0;
+    background:   aliceblue;;
+    
+  }
+  .about-background{
+    width: 100%;
+    background-color: aliceblue;
+  }
+  
+  .about-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap; /* Allows for responsive layout */
+  }
+  
+  .about-image-container {
+    flex: 1;
+    min-width: 250px; /* Prevents the image from being too small on smaller screens */
+  }
+  
+  .about-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover; /* Ensures the image covers the container */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .about-text-container {
+    flex: 1;
+    min-width: 250px; /* Ensures text section remains readable even on smaller screens */
+  }
+  
+  .about-title {
+    font-size: 2.5rem !important;
+    font-weight: bold !important;
+    color: #ee186d;
+    margin-bottom: 2rem !important;
+    text-align: left !important;
+  }
+  
+  .about-description {
+    font-size: 1.25rem !important;
+    color: #555 !important;
+    line-height: 1.6 !important;
+    text-align: left !important;
+    margin-bottom: 2rem !important;
+    font-weight: bold !important;
+  }
+  
+  .about-points-container {
+    margin-top: 3rem;
+ 
+
+  }
+  
+  .about-points-title {
+    font-size: 2rem !important;
+    color: #34495e !important;
+    /* margin-bottom: 1rem !important; */
+    text-align: center !important;
+    font-weight: bold !important;
+  }
+ 
+  
+  .about-points {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    /* margin-bottom: 20px !important; */
+    font-size: 1.25rem;
+    color: #555;
+    line-height: 1;
+    display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns per row */
+  gap: 1rem;
+    font-weight: bold !important;
+    text-align: left;
+  }
+  
+.about-points li {
+  display: flex;
+  align-items: center; /* Vertically centers the icon and text */
+  gap: 0.45rem; /* Adds space between the icon and text */
+}
+
+.about-icon {
+  color: #3f51b5; /* Icon color */
+  font-size: 2rem; /* Larger icon size */
+  margin-bottom: 20px !important;
+}
+
+  
+  .about-values-container {
+    margin-top: 3rem;
+  }
+  
+  .about-values-title {
+    font-size: 2rem !important;
+    color: #34495e !important;
+    margin-bottom: 1rem !important;
+    text-align: center !important;
+  }
+  
+  .about-values-description {
+    font-size: 1.2rem;
+    color: #555;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .about-values-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 1.25rem;
+    color: #333;
+    line-height: 1.8;
+    text-align: center;
+  }
+  
+  .about-team-container {
+    margin-top: 3rem;
+  }
+  
+  .about-team-title {
+    font-size: 2rem !important;
+    color: #34495e !important;
+    margin-bottom: 1rem !important;
+    text-align: center !important;
+    font-weight: bold !important;
+  }
+  
+  .about-team-description {
+    font-size: 1.25rem !important;
+    color: #555 !important;
+    text-align: center !important;
+    margin-bottom: 2rem !important;
+    font-weight: bold !important;
+  }
+  
+  .about-team-members {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+  }
+  
+  .team-member {
+    text-align: center;
+    max-width: 200px;
+  }
+  
+  .team-member-image {
+    width: 200px;
+    height: 190px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    object-fit: cover;
+  }
+  
+  .team-member-name {
+    font-weight: bold !important;
+    color: #34495e;
+  }
+  
+  .team-member-role {
+    color: #555;
+  }
+  
+  @media (max-width: 768px) {
+    .about-title {
+      font-size: 2rem;
+      text-align: center;
+    }
+  
+    .about-description {
+      font-size: 1rem;
+      text-align: center;
+    }
+  
+    .about-points {
+      grid-template-columns: 1fr;
+    }
+  
+    .about-values-list {
+      font-size: 1rem;
+    }
+  
+    .about-team-members {
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+  }
+  

@@ -7,13 +7,13 @@
     flex-direction: column;
     text-align: left;
     color: white;
-    margin-top: 80px;
+    margin-top: 90px;
     backdrop-filter: blur(10px);
     background: rgba(255, 255, 255, 0.1); 
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     padding: 20px;
-    
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(1,146,187,1) 49%, rgba(0,212,255,1) 100%);
 }
 
 .overlay {
