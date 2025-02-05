@@ -1,0 +1,122 @@
+.hero-container {
+  margin-top: 80px; 
+  padding: 20px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(1,146,187,1) 49%, rgba(0,212,255,1) 100%);
+  position: relative;
+}
+/* Toy Images Positioned Above Text */
+.toy {
+position: absolute;
+width: 80px;
+animation: float 3s infinite ease-in-out;
+z-index: 2; /* Ensures toys appear above text */
+mix-blend-mode: multiply !important;
+border: none;
+outline: none;
+
+}
+
+/* Position toys above text */
+.toy1 {
+top: 0px;
+left: 2%;
+width: 120px;
+}
+
+.toy2 {
+bottom: 10px;
+right: 2%;
+width: 120px;
+}
+
+/* Floating animation */
+@keyframes float {
+0% { transform: translateY(0px); }
+50% { transform: translateY(-40px); }
+100% { transform: translateY(2px); }
+}
+
+.hero-content {
+  flex: 1;
+  text-align: center;
+  padding: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+.image-container {
+  position: relative;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #f2c534 0%, #d81b79 100%);
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+}
+
+.background-img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 15px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.background-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.bouncy-text {
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.gradient-text {
+  background: linear-gradient(to right, yellow, yellow);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.highlight-text {
+  /* background-color: #fffa90; */
+  padding: 5px;
+  border-radius: 5px;
+ color: azure;
+}
+
+.custom-button {
+  background-color: #ee186d !important; 
+  color: #fff !important; 
+  border-radius: 8px; 
+  font-size: 20px !important;
+  padding: 10px 20px;
+  border-radius: 25px;
+  transition: background 0.3s ease;
+  text-transform: capitalize !important;
+
+}
+
+.custom-button:hover {
+  background-color: #f05622 !important;
+}
+
+.shadow-img {
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
