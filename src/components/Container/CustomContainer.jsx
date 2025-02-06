@@ -6,10 +6,10 @@ import "./Container.css";
 const CustomContainer = ({ title, description, children }) => {
   return (
     <Box className="container">
-      <Typography variant="h3" className="title-1">
+      <Typography variant="h3" className="title-1" >
         {title}
       </Typography>
-      <Typography variant="body1" className="container-description">
+      <Typography variant="body1" className="container-description" sx={{color:'#fff',fontWeight:'bold'}}>
         {description}
       </Typography>
       {children} 

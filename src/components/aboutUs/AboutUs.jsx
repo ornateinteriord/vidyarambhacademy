@@ -17,7 +17,7 @@ function AboutUs() {
         title="About Us"
         description="Lorem ipsum dolor sit amet consectetur. Quis sed donec quis nunc aliquet cursus mauris ut."
       >
-        <p>Enim fermentum maecenas rutrum dapibus sodales quis.</p>
+        <p style={{color:'#fff'}}>Enim fermentum maecenas rutrum dapibus sodales quis.</p>
       </CustomContainer>
 
       <Container className="about-container">

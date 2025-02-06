@@ -19,11 +19,11 @@ function Gallery() {
   const settings = {
     dots: true,
     infinite: true,
-    speed: 600,
+    speed: 900,
     slidesToShow: 3, 
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 4000,
+    autoplaySpeed: 2000,
     cssEase: "ease-in-out",
     responsive: [
       {
@@ -42,7 +42,7 @@ function Gallery() {
   };
 
   return (
-    <Box>
+    <Box id="moments-section">
     <Typography variant="h3" className="gallery-title">
     Our Moments 
   </Typography>

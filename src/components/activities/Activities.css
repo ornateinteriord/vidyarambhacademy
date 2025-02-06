@@ -1,0 +1,64 @@
+.activities-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 40px;
+    padding: 60px;
+    justify-content: center;
+}
+
+.activity-card {
+    background:  black!important;
+    text-align: center;
+    border-radius: 16px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease-in-out;
+    padding: 10px;
+    animation: bounceIn 0.8s ease-in-out;
+}
+
+  
+  /* Bounce Hover Effect */
+  .activity-card:hover {
+    animation: bounce 0.5s ease-in-out;
+    transform: translateY(-10px) scale(1.05);
+  }
+  
+  /* Icon Styling */
+  .activities-icon {
+    font-size: 10px;
+    margin-bottom: 8px;
+  }
+  
+  /* Title & Description */
+  .activities-title {
+    font-weight: bold !important;
+    color: #fff;
+    font-size: 1.2rem;
+  }
+  
+  .activities-description {
+    color: #fff;
+    font-size: 15px !important;
+    padding: 10px;
+    font-weight: bold !important;
+  }
+  
+  /* Bounce Animation */
+  @keyframes bounce {
+    0% { transform: translateY(0); }
+    30% { transform: translateY(-2px); }
+   
+  }
+  
+/* Responsive for smaller screens */
+@media (max-width: 900px) {
+    .activities-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .activities-wrapper {
+        grid-template-columns: repeat(1, 1fr); 
+    }
+}

@@ -36,9 +36,9 @@
     width: 100% !important;
     height: 250px !important;
     object-fit: cover !important;
-    border-radius: 15px !important;
+    border-radius: 9px !important;
     box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15) !important;
-    transition: transform 0.3s ease-in-out !important;
+    transition: transform 0.2s ease-in-out !important;
     margin-right: 20px !important;
   }
   
@@ -79,4 +79,3 @@
   .slick-prev:hover:before, .slick-next:hover:before {
     color: #ff4500 !important; 
   }
-  

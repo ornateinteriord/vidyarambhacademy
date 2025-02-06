@@ -8,6 +8,7 @@ import kidsbg from "../../assets/kidsGrp11-bg.png"
 import kidsGrp8 from "../../assets/kidsGrp8.avif"
 import { Link } from "react-router-dom";
 import Gallery from "../gallery/Gallery";
+import Activities from "../activities/Activities";
 
 function HeroSection() {
   return (
@@ -86,14 +87,17 @@ function HeroSection() {
        <Link to={'/about'}> <Button
           variant="contained"
           size="large"
-          sx={{ mt: 3, borderRadius: "20px", px: 3 ,background:'#ee186d',fontWeight:'bold'}}
+          
+          sx={{ mt: 3, borderRadius: "20px", px: 3 ,background:'#ee186d',fontWeight:'bold',textTransform:'none'}}
         >
-          About Us
+          Discover More
         </Button></Link>
       </Box>
     </Box>
-
-<Gallery/>
+  {/* Gallery */}
+      <Gallery/>
+      {/* Activities */}
+    <Activities/>  
 
 
 

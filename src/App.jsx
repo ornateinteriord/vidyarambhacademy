@@ -6,6 +6,7 @@ import HeroSection from "./components/heroSection/HeroSection";
 import ContactUs from "./components/ContactUs/contactUs";
 import Footer from "./components/footer/Footer";
 import AboutUs from "./components/aboutUs/AboutUs";
+import Gallery from "./components/gallery/Gallery";
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
           <Route path="/" element={<HeroSection />} />
           <Route path="/contact" element={<ContactUs />} />
           <Route path="/about" element={<AboutUs />} />
+          {/* <Route path="/moments" element={<Gallery />} /> */}
         </Routes>
         <Footer/>
       </div>

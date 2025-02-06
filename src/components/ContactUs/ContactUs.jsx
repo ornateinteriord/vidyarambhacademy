@@ -12,7 +12,7 @@ const ContactUs = () => {
     <CustomContainer
      title="Contact Us"
      description="Lorem ipsum dolor sit amet consectetur. Quis sed donec quis nunc aliquet cursus mauris ut.">
-      <p>Enim fermentum maecenas rutrum dapibus sodales quis.</p>
+      <p style={{color:'#fff'}}>Enim fermentum maecenas rutrum dapibus sodales quis.</p>
      </CustomContainer>
       <Box spacing={3}  className="contact-container">
         <Grid item xs={12} md={6}  className="left-section" >
