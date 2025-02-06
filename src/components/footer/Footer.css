@@ -1,5 +1,5 @@
 .footer {
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(1,146,187,1) 49%, rgba(0,212,255,1) 100%);
+    background: linear-gradient(10deg, rgba(2,0,36,1) 0%, rgba(1,146,187,1) 49%, rgba(0,212,255,1) 100%);
     color: white;
     padding: 10px 0 !important;
     text-align: center;
@@ -11,7 +11,7 @@
     display: flex;
     align-items: center;
     flex-direction: row;
-    color: black !important;
+    color: #fff !important;
 }
    
 .footer-text {
@@ -19,7 +19,8 @@
     line-height: 1.6 !important;
     padding: 0 15px !important;
     font-size: 18px !important;
-  
+    color: black !important;
+    font-weight: 600 !important;
 }
 
 .footer-links {
@@ -33,12 +34,13 @@
 
 .footer-links a {
     text-decoration: none;
-    color: white;
+    color: black;
     font-size: 16px !important;
     transition: 0.3s !important;
     display: flex;
     align-items: center;
     flex-direction: row;
+    font-weight: 600 !important;
 
 }
 
@@ -46,12 +48,17 @@
     color: #ee186d; /* Yellow hover effect */
 }
 
-.contact-item {
+.contact-item  {
     display: flex;
     align-items: center;
     gap: 8px;
     font-size: 14px;
     margin: 6px 0;
+   
+}
+.footer-title, p, .contact-item{
+    font-weight: bold !important;
+    color: black;
 }
 
 .newsletter-input {
@@ -64,11 +71,13 @@
 
 .newsletter-btn {
     margin-top: 10px !important;
-    width: 80% !important;
+    width: 60% !important;
     background: #ee186d !important;
     color: white;
-    height: 40px;
+    padding: 10px 22px !important;
+    text-transform: capitalize !important;
     margin-left: 40% !important;
+    font-weight: bold !important;
 }
 
 .social-section {
@@ -87,4 +96,5 @@
     margin-top: 20px !important;
     font-size: 12px !important;
     opacity: 0.8 !important;
+    color: #fff;
 }

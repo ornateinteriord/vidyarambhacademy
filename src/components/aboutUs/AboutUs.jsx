@@ -29,8 +29,8 @@ function AboutUs() {
 
           {/* Text Section */}
           <Box className="about-text-container">
-            <Typography variant="h2" className="about-title">About Us</Typography>
-            <Typography variant="h3" sx={{color:'#34495e',fontWeight:'bold',mb:1}}>
+            <Typography variant="h4" className="about-title">About Us</Typography>
+            <Typography  sx={{color:'#34495e',fontWeight:'bold',mb:1,fontSize:'30px'}}>
             Give the Children Space to Grow a Creativity
 
             </Typography>

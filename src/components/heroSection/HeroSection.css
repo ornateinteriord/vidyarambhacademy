@@ -1,5 +1,5 @@
 .hero-container {
-  margin-top: 70px; 
+  margin-top: 75px; 
   padding: 20px;
   overflow: hidden;
   display: flex;
@@ -8,19 +8,22 @@
   background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(1,146,187,1) 49%, rgba(0,212,255,1) 100%);
   position: relative;
 }
-/* Toy Images Positioned Above Text */
+
+.hero-background{
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(1,146,187,1) 49%, rgba(0,212,255,1) 100%);
+}
+
 .toy {
 position: absolute;
 width: 80px;
 animation: float 3s infinite ease-in-out;
-z-index: 2; /* Ensures toys appear above text */
+z-index: 2; 
 mix-blend-mode: multiply !important;
 border: none;
 outline: none;
 
 }
 
-/* Position toys above text */
 .toy1 {
 top: 0px;
 left: 2%;
@@ -36,7 +39,7 @@ width: 120px;
 /* Floating animation */
 @keyframes float {
 0% { transform: translateY(0px); }
-50% { transform: translateY(-40px); }
+50% { transform: translateY(-30px); }
 100% { transform: translateY(2px); }
 }
 
@@ -84,7 +87,7 @@ width: 120px;
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-10px);
+    transform: translateY(-20px);
   }
 }
 
@@ -92,6 +95,7 @@ width: 120px;
   background: linear-gradient(to right, yellow, yellow);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  margin-top: 40px !important;
 }
 
 .highlight-text {
@@ -104,12 +108,13 @@ width: 120px;
 .custom-button {
   background-color: #ee186d !important; 
   color: #fff !important; 
-  border-radius: 8px; 
+  border-radius: 10px !important; 
   font-size: 20px !important;
-  padding: 10px 20px;
-  border-radius: 25px;
+  padding: 6px 24px !important;
+  border-radius: 25px !important;
   transition: background 0.3s ease;
   text-transform: capitalize !important;
+  font-weight: bold !important;
 
 }
 
