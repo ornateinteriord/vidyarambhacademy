@@ -25,12 +25,11 @@ function Navbar() {
               textTransform:'none',fontSize:'18px'}} >Home</Button></Link> 
            <Link to={'/about'}><Button sx={{color:'black',fontWeight:600,
               textTransform:'none',fontSize:'18px'}} >About</Button></Link> 
-                          <Button sx={{color:'black',fontWeight:600,
-              textTransform:'none',fontSize:'18px'}}>Classes</Button> 
+              <Link to={'/classes'}> <Button sx={{color:'black',fontWeight:600,
+              textTransform:'none',fontSize:'18px'}}>Classes</Button> </Link>
             <Button sx={{color:'black',fontWeight:600,
               textTransform:'none',fontSize:'18px'}}  onClick={handleMenuOpen}>Pages ▼</Button>
             <Menu anchorEl={anchorEl} open={Boolean(anchorEl)} onClose={handleMenuClose}>
-              <MenuItem onClick={handleMenuClose}>Classes Detail</MenuItem>
               <MenuItem >
               <ScrollLink onClick={handleMenuClose} to="activities"   smooth={true} duration={800} style={{ cursor: "pointer", textDecoration: "none", color: "inherit" }}>
               Activities

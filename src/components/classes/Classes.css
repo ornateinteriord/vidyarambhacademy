@@ -1,0 +1,50 @@
+.classes-page {
+    text-align: center;
+    padding: 20px;
+  }
+  .class-bg{
+    background: aliceblue;
+  }
+  
+  .classes-title {
+    margin-bottom: 20px !important;
+    font-weight: bold !important;
+    color: #34495e;
+    margin-top: 10px;
+  }
+  
+  .classes-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+    padding: 0px 90px !important;
+  }
+  
+  .class-card {
+    width:28%; /* Ensures three cards per row */
+    min-width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgb(2, 35, 44) 49%, rgb(3, 32, 52) 100%) !important;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5) !important;
+  }
+  
+  .class-card:hover {
+    transform: scale(1.01);
+  }
+  
+  .class-timing {
+    font-weight: bold !important;
+    margin-top: 10px;
+    color: #ee186d;
+  }
+  .class-title{
+    color:#fff;
+    font-weight: bold !important;
+  }
+  .class-description{
+    color:#fff !important;
+    font-weight: bold !important;
+  }

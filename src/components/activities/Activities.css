@@ -1,14 +1,18 @@
 .activities-wrapper {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 columns */
-    gap: 40px;
-    padding: 60px;
+    gap: 30px;
+    padding: 20px 90px;
     justify-content: center;
 }
 
 .activity-card {
-    background:  black!important;
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgb(2, 35, 44) 49%, rgb(3, 32, 52) 100%) !important;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5) !important;
     text-align: center;
+    width: 330px;
+    height: 250px;
+    justify-self: center;
     border-radius: 16px;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5);
     transition: transform 0.3s ease-in-out;
@@ -41,6 +45,7 @@
     font-size: 15px !important;
     padding: 10px;
     font-weight: bold !important;
+
   }
   
   /* Bounce Animation */
