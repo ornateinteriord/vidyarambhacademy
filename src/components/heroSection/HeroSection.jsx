@@ -12,7 +12,7 @@ import Activities from "../activities/Activities";
 
 function HeroSection() {
   return (
-    <Box>
+    <Box className="hero">
     <Box className="hero-container">
       <Box className="hero-content">
         {/* Toys placed before text */}

@@ -7,7 +7,7 @@ import CustomContainer from "../Container/CustomContainer";
 
 const ContactUs = () => {
   return (
-    <Box >
+    <Box mb={'30px'}>
     <Box className="background">
     <CustomContainer
      title="Contact Us"
@@ -70,8 +70,8 @@ const ContactUs = () => {
         </Grid>
       </Box>
     </Box>
-     <Box sx={{borderBottom:'2px solid #ccc',mb:3}}> 
-               </Box>
+     {/* <Box sx={{borderBottom:'2px solid #ccc',mb:3}}> 
+               </Box> */}
     </Box>
   );
 };
