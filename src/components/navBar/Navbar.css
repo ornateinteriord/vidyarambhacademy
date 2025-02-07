@@ -1,45 +1,95 @@
+/* Navbar container */
 .navbar {
-    background-color: white !important;
-    color: black;
-    height: 75px;
-    width: 100%;
-    top: 0;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    font-family: 'Arial', sans-serif;
-  }
-  
-  .toolbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .logo {
-    height: 40px;
-    margin-right: 20px;
-  }
-  
+  background-color: white !important;
+  color: black;
+  height: 75px;
+  width: 100%;
+  top: 0;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
+}
+
+/* Toolbar layout */
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo styling */
+.logo {
+  height: 40px;
+  margin-right: 20px;
+}
+
+/* Desktop Navigation Links */
+.nav-links {
+  display: flex;
+  margin-left: 200px !important;
+  gap: 15px;
+}
+
+.nav-links .MuiButton-root {
+  color: black;
+  justify-self: center !important;
+  font-weight: 600;
+  text-transform: none;
+  font-size: 18px;
+}
+
+/* Button focus effect */
+.nav-links .MuiButton-root:focus {
+  color: #ee186d; 
+  border-radius: 8px; 
+}  
+
+/* Get Started Button */
+.get-started {
+  margin-left: 20rem !important; 
+  font-size: 1rem !important;
+  background-color: #ee186d !important;
+  color: white !important;
+  text-transform: capitalize !important;
+  padding: 10px 30px !important;
+  font-weight: bold !important;
+}
+
+/* Hide mobile menu icon on larger screens */
+.menu-icon {
+  display: none !important;
+ 
+}
+
+/* Mobile menu styling */
+.mobile-menu {
+  width: 200px;
+  padding: 20px;
+  font-weight: bold !important;
+  font-size: 1rem !important;
+}
+.navLink{
+  text-decoration: none !important;
+  color: #000 !important;
+ 
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
   .nav-links {
-    display: flex;
-    gap: 15px;
-    
+      display: none;
   }
-  
+
+  .menu-icon {
+      display: block !important;
+      color: black !important;
+  }
   .get-started {
-    margin-left: 2rem;
+    /* margin-left: 20rem !important; 
+    background-color: #ee186d !important;
+    color: white !important;
+    font-size: 14px !important;
+    width: 150px; */
+    display: none !important;
   }
+}
 
-  .nav-links .MuiButton-root {
-    color: black;
-    font-weight: 600;
-    text-transform: none;
-    font-size: 18px;
-  }
-  
-
-  .nav-links .MuiButton-root:focus {
-    /* background-color: #ee186d;  */
-    color: #ee186d; 
-    border-radius: 8px; 
-  }  
-  
