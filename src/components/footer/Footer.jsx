@@ -5,7 +5,7 @@ import "./Footer.css";
 
 const Footer = () => {
   return (
-    <Box mt={2} className="footer">
+    <Box mt={2} className="footer1">
     <footer className="footer">
       {/* <Box sx={{borderBottom:'1px solid #ccc',mb:3,background:'#fff'}}> 
       </Box> */}

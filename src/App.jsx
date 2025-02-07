@@ -7,6 +7,9 @@ import ContactUs from "./components/ContactUs/contactUs";
 import Footer from "./components/footer/Footer";
 import AboutUs from "./components/aboutUs/AboutUs";
 import Classes from "./components/classes/Classes";
+import Testimonials from "./components/testimonials/Testimonials";
+import FAQs from "./components/Faqs/FAQs";
+import AdmissionInquiry from "./components/Admission/AdmissionInquiry";
 
 
 function App() {
@@ -19,6 +22,9 @@ function App() {
           <Route path="/contact" element={<ContactUs />} />
           <Route path="/about" element={<AboutUs />} />
           <Route path="/classes" element={<Classes />} />
+          <Route path="/testimonials" element={<Testimonials />} />
+          <Route path="/faqs" element={<FAQs />} />
+          <Route path="/admission" element={<AdmissionInquiry />} />
         </Routes>
         <Footer/>
       </div>

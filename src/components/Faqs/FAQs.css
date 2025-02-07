@@ -1,0 +1,115 @@
+/* FAQs.css */
+.faqs-bg{
+    background: aliceblue;
+}
+.faqs-container {
+    padding: 40px 100px;
+    text-align: center;
+    background: #f9f9f9;
+   gap: 20px !important;
+  }
+  
+  .faqs-title {
+    font-size: 2.5rem !important;
+    font-weight: bold !important;
+    color: #2c4a62;
+    margin-bottom: 10px;
+  }
+  
+  .faqs-subtitle {
+    font-size: 1rem;
+    color: #6c757d;
+    margin-bottom: 30px !important;
+   justify-self: center;
+  }
+  
+  .faqs-grid {
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    justify-content: center;
+    gap: 20px!important;
+    margin: 0 auto;
+  }
+  
+  .faq-item {
+    display: flex;
+    justify-self: center;
+    background: #ffffff;
+    padding: 20px 70px !important;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 450px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .faq-item:hover {
+    transform: scale(1.05);
+  }
+  
+  .faq-icon {
+    font-size: 2rem;
+    /* margin-right: 7px; */
+  }
+  
+  .faq-question {
+    font-size: 1rem !important;
+    font-weight: bold !important;
+  }
+  
+  .faq-answer {
+    font-size: 1rem !important;
+    color: #6c757d !important;
+  }
+  
+/* enroll */
+
+  .enroll-section {
+    text-align: center;
+    margin-top: 50px;
+    padding: 40px;
+    background-color: aliceblue;
+    border-radius: 10px;
+  }
+  
+  .enroll-heading {
+    font-size: 20px;
+    color: #333 !important;
+    font-weight: bold !important;
+    margin-top: 10px !important;
+  }
+  
+  .enroll-title {
+    font-size: 28px;
+    font-weight: bold !important;
+    color: #b15a7d;
+    margin: 10px 0;
+  }
+  
+  .enroll-text {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  .enroll-button {
+    background-color: #ee186d !important;
+    border-radius: 20px !important;
+    text-transform: capitalize !important;
+    font-weight: bold !important;
+    padding: 15px 35px;
+    border: none;
+    color: #fff;
+   font-size: 1rem;
+  }
+  
+ 
+  
+
+
+  @media (max-width: 768px) {
+    .faqs-grid {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  

@@ -98,11 +98,6 @@ function HeroSection() {
       <Gallery/>
       {/* Activities */}
     <Activities/>  
-
-
-
-    {/* <Box sx={{borderBottom:'2px solid #ccc',mb:3,mt:2}}> 
-    </Box> */}
       </Box>
   );
 }

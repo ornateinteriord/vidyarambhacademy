@@ -70,7 +70,7 @@
   
 
 .animated-button {
-    background: #ee186d !important;
+    background: #34495e !important;
     color: white;
     font-weight: bold;
     padding: 14px 28px;
@@ -79,7 +79,7 @@
 }
   
 .animated-button:hover {
-    background: linear-gradient(45deg, #151616, #08e5e9) !important;
+    background: #ee186d !important;
     box-shadow: 0px 0px 25px rgba(0, 212, 255, 1);
 }
   

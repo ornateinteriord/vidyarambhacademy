@@ -35,14 +35,15 @@ function Navbar() {
               Activities
                 </ScrollLink>
                 </MenuItem> 
-              <MenuItem onClick={handleMenuClose}>Testimonials</MenuItem>
-              <MenuItem onClick={handleMenuClose}>FAQs</MenuItem>
-              <MenuItem onClick={handleMenuClose}>Team</MenuItem>
+            <Link to={'/testimonials'} style={{textDecoration:'none',color:'black'}}> <MenuItem onClick={handleMenuClose}>Testimonials</MenuItem></Link> 
+            <Link to={'/faqs'} style={{textDecoration:'none',color:'black'}}> <MenuItem onClick={handleMenuClose}>FAQs</MenuItem></Link> 
+      
               <MenuItem >
                 <ScrollLink onClick={handleMenuClose} to="moments-section"  smooth={true} duration={800} style={{ cursor: "pointer", textDecoration: "none", color: "inherit" }}>
                   Moments
                 </ScrollLink>
               </MenuItem>
+              <MenuItem onClick={handleMenuClose}>Team</MenuItem>
               <MenuItem onClick={handleMenuClose}>404</MenuItem>
               <MenuItem onClick={handleMenuClose}>Coming Soon</MenuItem>             
             </Menu>
@@ -51,10 +52,10 @@ function Navbar() {
           </Box>
        </Box>
          
-          <Button variant="contained" sx={{color:'#fff',fontWeight:600,
+        <Link to={'/admission'} style={{textDecoration:'none',color:'black'}}> <Button variant="contained" sx={{color:'#fff',fontWeight:600,
             textTransform:'none',fontSize:'18px',background:'#ee186d'}} className="get-started">
             Get Started
-          </Button>
+          </Button></Link> 
         </Toolbar>
       </AppBar>
     );
