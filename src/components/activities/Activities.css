@@ -2,12 +2,12 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 columns */
     gap: 30px;
-    padding: 20px 90px;
+    padding: 20px 140px !important;
     justify-content: center;
 }
 
 .activity-card {
-  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgb(2, 35, 44) 49%, rgb(3, 32, 52) 100%) !important;
+  background: #0e0d0e !important;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5) !important;
     text-align: center;
     width: 330px;

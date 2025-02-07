@@ -23,13 +23,18 @@ function Navbar() {
        <Box className="nav-links">
          <Link to={'/'}><Button sx={{color:'black',fontWeight:600,
               textTransform:'none',fontSize:'18px'}} >Home</Button></Link> 
+
            <Link to={'/about'}><Button sx={{color:'black',fontWeight:600,
               textTransform:'none',fontSize:'18px'}} >About</Button></Link> 
+
               <Link to={'/classes'}> <Button sx={{color:'black',fontWeight:600,
               textTransform:'none',fontSize:'18px'}}>Classes</Button> </Link>
+
             <Button sx={{color:'black',fontWeight:600,
               textTransform:'none',fontSize:'18px'}}  onClick={handleMenuOpen}>Pages ▼</Button>
+
             <Menu anchorEl={anchorEl} open={Boolean(anchorEl)} onClose={handleMenuClose}>
+
               <MenuItem >
               <ScrollLink onClick={handleMenuClose} to="activities"   smooth={true} duration={800} style={{ cursor: "pointer", textDecoration: "none", color: "inherit" }}>
               Activities
@@ -43,8 +48,11 @@ function Navbar() {
                   Moments
                 </ScrollLink>
               </MenuItem>
+
               <MenuItem onClick={handleMenuClose}>Team</MenuItem>
+
               <MenuItem onClick={handleMenuClose}>404</MenuItem>
+              
               <MenuItem onClick={handleMenuClose}>Coming Soon</MenuItem>             
             </Menu>
              <Link to={'/contact'}> <Button sx={{color:'black',fontWeight:600,

@@ -10,12 +10,14 @@ import Classes from "./components/classes/Classes";
 import Testimonials from "./components/testimonials/Testimonials";
 import FAQs from "./components/Faqs/FAQs";
 import AdmissionInquiry from "./components/Admission/AdmissionInquiry";
+import ScrollToTop from "./components/scroller/ScrollToTop";
 
 
 function App() {
   return (
     <Router>
       <div className="App">
+      <ScrollToTop /> 
       <Navbar/>
         <Routes>
           <Route path="/" element={<HeroSection />} />

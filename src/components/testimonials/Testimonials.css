@@ -28,12 +28,12 @@
   border-radius: 10px;
   background: #324d68 !important;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5) !important;
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out !important;
   color: #fff !important;
 }
 
 .testimonial-card:hover {
-  transform: scale(1.05);
+  transform: scale(1.05) !important;
 }
 
 .testimonial-avatar {
@@ -47,7 +47,7 @@
   font-weight: bold !important;
 }
 .testimonials-name{
-color: #0e0806 !important;
+color: #dede34 !important;
 font-weight: bold !important;
 }
 

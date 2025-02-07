@@ -4,6 +4,7 @@ import "./FAQs.css";
 import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
 import CustomContainer from "../Container/CustomContainer";
 import { Button } from "react-scroll";
+import { Link } from "react-router-dom";
 
 const faqs = [
   {
@@ -80,9 +81,12 @@ const FAQs = () => {
         <Typography variant="body1" mb={2} className="enroll-text">
           Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. <br/>Cum sociis natoque penatibus et magnis dis parturient montes.
         </Typography>
-        <Button variant="contained"  className="enroll-button">
-          Enroll Now
-        </Button>
+        <Button variant="contained" className="enroll-button">
+  <Link to="/admission" style={{ textDecoration: "none", color: "white" }}>
+    Enroll Now
+  </Link>
+</Button>
+ 
       </Box>
     </Box>
     </Box>

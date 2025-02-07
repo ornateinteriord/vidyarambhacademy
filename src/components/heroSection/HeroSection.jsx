@@ -31,9 +31,9 @@ function HeroSection() {
           Providing quality education with love and care.
         </Typography>
         
-        <Button variant="contained" className="custom-button">
+        <Link to={'/admission'} style={{textDecoration:'none',color:'black'}}> <Button variant="contained" className="custom-button">
           Enroll Now
-        </Button>
+        </Button></Link> 
       </Box>
 
       {/* Kid Image Section */}
