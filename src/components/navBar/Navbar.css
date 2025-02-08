@@ -7,6 +7,9 @@
   top: 0;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   font-family: 'Arial', sans-serif;
+  display: 'flex';
+  align-items: center;
+  justify-content: center;
 }
 
 /* Toolbar layout */
@@ -30,7 +33,7 @@
 }
 
 .nav-links .MuiButton-root {
-  color: black;
+  color: black !important;
   justify-self: center !important;
   font-weight: 600;
   text-transform: none;
@@ -39,7 +42,7 @@
 
 /* Button focus effect */
 .nav-links .MuiButton-root:focus {
-  color: #ee186d; 
+  color: #ee186d !important; 
   border-radius: 8px; 
 }  
 
@@ -50,7 +53,7 @@
   background-color: #ee186d !important;
   color: white !important;
   text-transform: capitalize !important;
-  padding: 10px 30px !important;
+  padding: 10px 25px !important;
   font-weight: bold !important;
 }
 

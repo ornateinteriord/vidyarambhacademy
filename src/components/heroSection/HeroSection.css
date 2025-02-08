@@ -1,5 +1,5 @@
 .hero {
-  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(1,146,187,1) 49%, rgba(0,212,255,1) 100%);
+  background: linear-gradient(90deg, rgb(127, 123, 198) 0%, rgba(1,146,187,1) 49%, rgba(0,212,255,1) 100%);
   padding: 20px;
 }
 
@@ -10,13 +10,13 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(1,146,187,1) 49%, rgba(0,212,255,1) 100%);
+  background: linear-gradient(90deg, rgb(127, 123, 198) 0%, rgba(1,146,187,1) 49%, rgba(0,212,255,1) 100%);
   position: relative;
   flex-wrap: wrap; /* Allow wrapping for small screens */
 }
 
 .hero-background {
-  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(1,146,187,1) 49%, rgba(0,212,255,1) 100%);
+  background: linear-gradient(90deg, rgb(127, 123, 198) 0%, rgba(1,146,187,1) 49%, rgba(0,212,255,1) 100%);
 }
 
 .toy {
@@ -261,7 +261,7 @@
 /* 
 ---------------------about us ---------------------*/
 .preschool-hero {
-  /* margin-top: 35px; */
+  margin-top: 0 !important;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -344,14 +344,18 @@
   text-transform: none !important;
 }
 
-@media (min-width: 456px) {
+@media (min-width: 350px) {
   .preschool-button {
     width: auto !important;
     justify-self: center !important;
-    font-size: 18px;
+    font-size: 18px !important;
   }
   .preschool-hero{
-    background: linear-gradient(90deg, rgb(127, 123, 198) 0%, rgba(1,146,187,1) 49%, rgba(0,212,255,1) 100%);
+    margin-top: 35px !important;
+    background: linear-gradient(90deg, rgb(127, 123, 198) 0%, rgba(1,146,187,1) 49%, rgba(0,212,255,1) 100%) !important;
+  }
+  .preschool-heading{
+    justify-self: flex-start;
   }
 }
 

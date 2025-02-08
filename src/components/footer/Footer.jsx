@@ -9,7 +9,7 @@ const Footer = () => {
     <Box mt={0} className="footer1">
       <footer className="footer">
         <Container maxWidth="lg">
-          <Grid container spacing={10} justifyContent="center">
+          <Grid container spacing={5} justifyContent="center">
             
             {/* About Section */}
             <Grid item xs={12} sm={4}>
@@ -22,8 +22,9 @@ const Footer = () => {
             </Grid>
 
             {/* Links Section */}
-            <Grid item xs={12} sm={2}>
+            <Grid item xs={12} sm={2} >
               <Typography variant="h6" mt={2} className="footer-title">Quick Links</Typography>
+             
               <ul className="footer-links">
                 <li><Link to="/about">About Us</Link></li>
                 <li><Link to="/testimonials">Testimonials</Link></li>
@@ -34,17 +35,19 @@ const Footer = () => {
             </Grid>
 
             {/* Contact Details */}
-            <Grid item xs={12} mt={2} sm={3}>
-              <Typography variant="h6" className="footer-title">Contact Us</Typography>
+            <Grid item xs={12} mt={2} sm={3} >
+              <Typography variant="h6" className="footer-title footer-contact">Contact Us</Typography>
+              <Box justifySelf={'center'}>
               <p className="contact-item"><LocationOn /> 123 Happy St, Kids City</p>
               <p className="contact-item"><Phone /> +123 456 7890</p>
               <p className="contact-item"><Email /> info@littlestars.com</p>
+              </Box>
             </Grid>
 
             {/* Newsletter Signup */}
             <Grid item xs={12} mt={2} sm={3}>
               <Typography variant="h6" className="footer-title">Stay Updated</Typography>
-              <Box display={'flex'} sx={{width:'400px',alignItems:'center', justifyContent:'center',gap:'5px'}}>
+              <Box className="newsletter-section" display={'flex'} sx={{width:'400px',alignItems:'center', justifyContent:'center',gap:'5px'}}>
               <TextField  placeholder="Enter your email" className="newsletter-input" />
               <Button variant="contained" size="small" color="primary" className="newsletter-btn">Subscribe</Button>
               </Box>
