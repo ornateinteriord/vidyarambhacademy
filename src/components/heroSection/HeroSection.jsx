@@ -22,8 +22,8 @@ function HeroSection() {
         </Box>
 
         {/* Main Heading */}
-        <Typography className="bouncy-text gradient-text" sx={{ fontSize: "70px", fontWeight: "bold" }} gutterBottom>
-          Better Future For<br /> Your Kids
+        <Typography className="bouncy-text gradient-text" sx={{ fontSize: "80px", fontWeight: "bold" }} gutterBottom>
+          Better Future <br /><span> For Your Kids</span>
         </Typography>
         
         {/* Subtext */}
@@ -37,61 +37,46 @@ function HeroSection() {
       </Box>
 
       {/* Kid Image Section */}
-      <Box className="image-container">
+      <Box className="image-container" marginTop={5}>
         <img src={kid1} className="background-img shadow-img" alt="kid" />
       </Box>
     </Box>
-    <Box
-    className="hero-background"
-      sx={{
-        marginTop:'45px',
-        display: "flex",
-        flexDirection: { xs: "column", md: "row" },
-        alignItems: "center",
-        justifyContent: "center",
-        p: 4,
-        backgroundColor: "#f9f9f9",
-      }}
-    >
+
+
+   <Box className="preschool-hero">
       {/* Image Section */}
       <Box
         component="img"
         src={kidsGrp8}
         alt="Preschool"
-        sx={{
-          width: { xs: "90%", md: "50%" },
-          height: "auto",
-          borderRadius: "10px",
-          boxShadow: 3,
-        }}
+        className="preschool-image"
       />
-      <Box sx={{ p: 3, textAlign: { xs: "center", md: "left",marginLeft:'40px' } }}>
-        <Typography variant="h4" sx={{ fontWeight: "bold", color: "#fff" }}>
+
+      {/* Text Section */}
+      <Box className="preschool-text">
+        <Typography variant="h4" className="preschool-heading">
           About Preschool
         </Typography>
-        <Typography variant="body1" sx={{ mt: 2, color: "#333",fontWeight:'bold',fontSize:'20px' }}>
+        <Typography variant="body1" className="preschool-description">
           We provide a safe, nurturing environment where children can learn, grow, 
-          and develop essential life skills. Our focus is on early childhood education 
+          and develop essential life skills. <br /> Our focus is on early childhood education 
           and emotional well-being.
         </Typography>
 
-        <Typography variant="h4" sx={{ fontWeight: "bold", mt: 3, color: "#fff" }}>
+        <Typography variant="h4" className="preschool-heading">
           About Teachers
         </Typography>
-        <Typography variant="body2" sx={{ mt: 1, color: "#333",fontWeight:'bold',fontSize:'20px' }}>
+        <Typography variant="body2" className="preschool-description">
           Our teachers are highly trained professionals who are passionate about 
-          early childhood education. They create a warm and encouraging atmosphere 
+          early childhood education. <br /> They create a warm and encouraging atmosphere 
           where every child can thrive.
         </Typography>
 
-       <Link to={'/about'}> <Button
-          variant="contained"
-          size="large"
-          
-          sx={{ mt: 3, borderRadius: "20px", px: 3 ,background:'#ee186d',fontWeight:'bold',textTransform:'none'}}
-        >
-          Discover More
-        </Button></Link>
+        <Link to={"/about"} style={{ textDecoration: "none" }}>
+          <Button variant="contained" className="preschool-button">
+            Discover More
+          </Button>
+        </Link>
       </Box>
     </Box>
   {/* Gallery */}

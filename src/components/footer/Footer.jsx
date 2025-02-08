@@ -13,7 +13,7 @@ const Footer = () => {
             
             {/* About Section */}
             <Grid item xs={12} sm={4}>
-              <Typography variant="h5" mt={2} sx={{ color: '#fff', fontWeight: 'bold', marginBottom: '20px' }}>
+              <Typography variant="h5" mt={2} sx={{ color: '#fff', fontWeight: 'bold', marginBottom: '10px' }}>
                 Little Stars Kindergarten
               </Typography>
               <Typography variant="body1" className="footer-text">
@@ -44,8 +44,10 @@ const Footer = () => {
             {/* Newsletter Signup */}
             <Grid item xs={12} mt={2} sm={3}>
               <Typography variant="h6" className="footer-title">Stay Updated</Typography>
-              <TextField placeholder="Enter your email" className="newsletter-input" />
-              <Button variant="contained" color="primary" className="newsletter-btn">Subscribe</Button>
+              <Box display={'flex'} sx={{width:'400px',alignItems:'center', justifyContent:'center',gap:'5px'}}>
+              <TextField  placeholder="Enter your email" className="newsletter-input" />
+              <Button variant="contained" size="small" color="primary" className="newsletter-btn">Subscribe</Button>
+              </Box>
             </Grid>
           </Grid>
 
@@ -53,14 +55,14 @@ const Footer = () => {
           <div className="social-section">
             <Typography variant="h6" sx={{ color: '#fff', fontWeight: 'bold' }}>Follow Us</Typography>
             <div className="social-icons social-icons1">
-              <IconButton color="primary"><Facebook /></IconButton>
-              <IconButton color="primary"><Twitter /></IconButton>
-              <IconButton color="primary"><Instagram /></IconButton>
-              <IconButton color="primary"><YouTube /></IconButton>
+              <IconButton ><Facebook /></IconButton>
+              <IconButton ><Twitter /></IconButton>
+              <IconButton ><Instagram /></IconButton>
+              <IconButton ><YouTube /></IconButton>
             </div>
           </div>
 
-          <Typography variant="body2" align="center" className="footer-copy">
+          <Typography variant="body2" align="center" className="footer-copy" >
             © {new Date().getFullYear()} Little Stars Kindergarten. All rights reserved.
           </Typography>
         </Container>

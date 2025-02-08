@@ -98,8 +98,7 @@
 .social-icons svg {
     width: 40px !important; 
     height: 40px !important; 
-    color: #333 !important; 
-    margin-right: 20px !important;
+    /* margin-right: 15px !important; */
     transition: transform 0.3s ease-in-out;
 }
   
