@@ -345,6 +345,10 @@
 }
 
 @media (min-width: 350px) {
+  
+  .gradient-text{
+    margin-right: 20px !important;
+  }
   .preschool-button {
     width: auto !important;
     justify-self: center !important;
@@ -356,6 +360,20 @@
   }
   .preschool-heading{
     justify-self: flex-start;
+  }
+  .preschool-image{
+    width: 100%;
+    justify-self: center !important;
+    /* margin-left: 17px; */
+  }
+  .image-container{
+    margin-right: 18px;
+    margin-top: 5px !important;
+  }
+  @keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(2px); }
   }
 }
 

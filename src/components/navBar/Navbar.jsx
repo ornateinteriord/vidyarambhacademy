@@ -15,8 +15,8 @@ import {
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
-import { Link as ScrollLink } from "react-scroll";
-import { Link } from "react-router-dom";
+import { Link as ScrollLink, scroller } from "react-scroll";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import kidslogo from "../../assets/kidzena-red.png";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import "./Navbar.css";
@@ -24,10 +24,41 @@ import "./Navbar.css";
 function Navbar() {
   const [anchorEl, setAnchorEl] = useState(null);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
-  const handleMenuOpen = (event) => setAnchorEl(event.currentTarget);
+  const handleMenuOpen = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+
   const handleMenuClose = () => setAnchorEl(null);
-  const handleDrawerToggle = () => setMobileOpen(!mobileOpen);
+
+
+  const handleDrawerToggle = () =>{
+    setMobileOpen(!mobileOpen)
+    handleMenuOpen(false)
+  };
+
+  const handleScrollToSection = (sectionId) => {
+    handleMenuClose(); 
+    setMobileOpen(false); 
+
+    if (location.pathname !== "/") {
+      navigate("/");
+      setTimeout(() => {
+        scroller.scrollTo(sectionId, {
+          smooth: true,
+          duration: 800,
+        });
+      }, 500); 
+    } else {
+      scroller.scrollTo(sectionId, {
+        smooth: true,
+        duration: 800,
+      });
+    }
+  };
 
   return (
     <AppBar position="fixed" className="navbar">
@@ -46,34 +77,19 @@ function Navbar() {
           <Link to={"/classes"}>
             <Button>Classes</Button>
           </Link>
-
           <Link to={"/contact"}>
-            <Button>Contact </Button>
+            <Button>Contact</Button>
           </Link>
           <Button onClick={handleMenuOpen}>
             More{" "}
-            <KeyboardArrowDownIcon
-              style={{ fontWeight: "bold", fontSize: "30px" }}
-            />
+            <KeyboardArrowDownIcon style={{ fontWeight: "bold", fontSize: "30px" }} />
           </Button>
-          <Menu
-            anchorEl={anchorEl}
-            open={Boolean(anchorEl)}
-            onClose={handleMenuClose}
-          >
-            <MenuItem onClick={handleMenuClose}>
-              <ScrollLink to="activities" smooth={true} duration={800}>
-                Activities
-              </ScrollLink>
-            </MenuItem>
+          <Menu anchorEl={anchorEl} open={Boolean(anchorEl)} onClose={handleMenuClose}>
+            <MenuItem onClick={() => handleScrollToSection("activities")}>Activities</MenuItem>
             <Link className="navLink" to={"/testimonials"}>
               <MenuItem onClick={handleMenuClose}>Testimonials</MenuItem>
             </Link>
-            <MenuItem onClick={handleMenuClose}>
-              <ScrollLink to="moments-section" smooth={true} duration={800}>
-                Moments
-              </ScrollLink>
-            </MenuItem>
+            <MenuItem onClick={() => handleScrollToSection("moments-section")}>Moments</MenuItem>
             <Link className="navLink" to={"/faqs"}>
               <MenuItem onClick={handleMenuClose}>FAQs</MenuItem>
             </Link>
@@ -97,11 +113,7 @@ function Navbar() {
       {/* Mobile Drawer */}
       <Drawer anchor="right" open={mobileOpen} onClose={handleDrawerToggle}>
         <Box justifySelf={"flex-start"}>
-          <IconButton
-            onClick={handleDrawerToggle}
-            className="close-menu-icon"
-            sx={{ color: "red" }}
-          >
+          <IconButton onClick={handleDrawerToggle} className="close-menu-icon" sx={{ color: "red" }}>
             <CloseIcon />
           </IconButton>
         </Box>
@@ -124,20 +136,29 @@ function Navbar() {
               </Link>
             </ListItem>
             <ListItem button onClick={handleDrawerToggle}>
-              <Link className="navLink" to={"/testimonials"}>
-                <ListItemText primary="Testimonials" />
-              </Link>
-            </ListItem>
-            <ListItem button onClick={handleDrawerToggle}>
-              <Link className="navLink" to={"/faqs"}>
-                <ListItemText primary="FAQs" />
-              </Link>
-            </ListItem>
-            <ListItem button onClick={handleDrawerToggle}>
               <Link className="navLink" to={"/contact"}>
                 <ListItemText primary="Contact " />
               </Link>
             </ListItem>
+
+            {/* More Menu inside Drawer */}
+            <Box>
+              <Button onClick={handleMenuOpen} sx={{ marginLeft: "10px", color: "black" }}>
+                More <KeyboardArrowDownIcon style={{ fontWeight: "bold", fontSize: "30px" }} />
+              </Button>
+              <Menu anchorEl={anchorEl} open={Boolean(anchorEl)} onClose={handleMenuClose}>
+                <MenuItem onClick={() => handleScrollToSection("activities")}>Activities</MenuItem>
+                <Link className="navLink" to={"/testimonials"}>
+                  <MenuItem onClick={handleDrawerToggle}>Testimonials</MenuItem>
+                </Link>
+                <MenuItem onClick={() => handleScrollToSection("moments-section")}>Moments</MenuItem>
+                <Link className="navLink" to={"/faqs"}>
+                  <MenuItem onClick={handleDrawerToggle}>FAQs</MenuItem>
+                </Link>
+                <MenuItem onClick={handleDrawerToggle}>404</MenuItem>
+                <MenuItem onClick={handleDrawerToggle}>Coming Soon</MenuItem>
+              </Menu>
+            </Box>
           </Box>
         </List>
       </Drawer>

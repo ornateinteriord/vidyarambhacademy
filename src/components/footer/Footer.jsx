@@ -35,7 +35,7 @@ const Footer = () => {
             </Grid>
 
             {/* Contact Details */}
-            <Grid item xs={12} mt={2} sm={3} >
+            <Grid item xs={12} mt={0} sm={3} >
               <Typography variant="h6" className="footer-title footer-contact">Contact Us</Typography>
               <Box justifySelf={'center'}>
               <p className="contact-item"><LocationOn /> 123 Happy St, Kids City</p>
@@ -45,8 +45,8 @@ const Footer = () => {
             </Grid>
 
             {/* Newsletter Signup */}
-            <Grid item xs={12} mt={2} sm={3}>
-              <Typography variant="h6" className="footer-title">Stay Updated</Typography>
+            <Grid item xs={12}  sm={3}>
+              <Typography variant="h6" className="footer-title footer-input">Stay Updated</Typography>
               <Box className="newsletter-section" display={'flex'} sx={{width:'400px',alignItems:'center', justifyContent:'center',gap:'5px'}}>
               <TextField  placeholder="Enter your email" className="newsletter-input" />
               <Button variant="contained" size="small" color="primary" className="newsletter-btn">Subscribe</Button>

@@ -14,7 +14,7 @@ function HeroSection() {
   return (
     <Box className="hero">
     <Box className="hero-container">
-      <Box className="hero-content">
+      <Box className="hero-content hero-text">
         {/* Toys placed before text */}
         <Box className="toys-container">
           <img src={toy1} className="toy toy1" alt="toy1" />
