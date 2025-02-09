@@ -20,14 +20,14 @@
     gap: 20px;
 }
 
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
     .footer-content {
         flex-direction: row;
         justify-content: space-around;
         text-align: left;
         align-items: flex-start;
     }
-}
+} */
 
 /* Footer Title */
 .footer-title {
@@ -51,12 +51,153 @@
     text-align: center !important;
 }
 
-@media (min-width: 768px) {
+/* Responsive Adjustments for Tablets (600px - 1024px) */
+@media (max-width: 1020px) {
+    .footer {
+        padding: 40px 30px !important;
+        text-align: center !important;
+    }
+
+    .footer-title {
+        font-size: 42px !important;
+        font-weight: bold !important;
+        margin-top: 0px !important;
+    }
+
     .footer-text {
-        font-size: 18px;
-        text-align: left;
+        font-size: 20px !important;
+        line-height: 1.6 !important;
+    }
+
+    .footer-links {
+        margin-top: 15px !important;
+        justify-content: center !important;
+    }
+
+    .footer-links a {
+        font-size: 22px !important;
+    }
+
+    .social-icons {
+        justify-content: center !important;
+        margin-top: 20px !important;
+    }
+
+    .social-icons1 svg {
+        font-size: 28px !important;
+        margin: 0 10px !important;
+    }
+
+    .contact-item {
+        font-size: 22px !important;
+    }
+
+    .footer-contact {
+        font-size: 42px !important;
+        padding-right: 20px !important;
+        margin-top: 10px !important;
+    }
+
+    .newsletter-section {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        width: 100% !important;
+    }
+
+    .newsletter-input {
+        width: 85% !important;
+        font-size: 20px !important;
+        margin-bottom: 12px !important;
+        padding: 12px !important;
+    }
+
+    .newsletter-btn {
+        font-size: 20px !important;
+        padding: 14px !important;
+        width: 60% !important;
+        max-width: 450px !important;
+    }
+
+    .footer-copy {
+        font-size: 16px !important;
+        margin-top: 20px !important;
     }
 }
+
+/* Existing Styles for Mobile (400px and below) */
+/* @media (max-width: 400px) {
+    .footer {
+        padding: 25px 15px !important;
+        text-align: center !important;
+    }
+
+    .footer-title {
+        font-size: 35px !important;
+        font-weight: bold !important;
+        margin-top: 0px !important;
+    }
+
+    .footer-text {
+        font-size: 16px !important;
+        line-height: 1.5 !important;
+    }
+
+    .footer-links {
+        margin-top: 0 !important;
+        justify-content: center !important;
+    }
+
+    .footer-links a {
+        font-size: 22px !important;
+    }
+
+    .social-icons {
+        justify-content: center !important;
+        margin-top: 15px !important;
+    }
+
+    .social-icons1 svg {
+        font-size: 22px !important;
+        margin: 0 5px !important;
+    }
+
+    .contact-item {
+        font-size: 18px !important;
+    }
+
+    .footer-contact {
+        font-size: 38px !important;
+        padding-right: 30px !important;
+        margin-top: 0px !important;
+    }
+
+    .newsletter-section {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        width: 100% !important;
+    }
+
+    .newsletter-input {
+        width: 100%;
+        font-size: 16px;
+        margin-bottom: 10px !important;
+        text-align: center;
+    }
+
+    .newsletter-btn {
+        font-size: 16px !important;
+        padding: 12px !important;
+        width: 50% !important;
+        max-width: 350px !important;
+    }
+
+    .footer-copy {
+        font-size: 14px !important;
+        margin-top: 15px !important;
+    }
+} */
 
 /* Footer Links */
 .footer-links {
@@ -99,12 +240,6 @@
     color: #fff;
 }
 
-@media (min-width: 768px) {
-    .contact-item {
-        justify-content: flex-start;
-    }
-}
-
 /* Newsletter Section */
 .newsletter-section {
     width: 100%;
@@ -121,6 +256,7 @@
     font-size: 16px;
     text-align: center;
     outline: none !important;
+    padding: 0px !important;
    
 }
 
@@ -214,7 +350,7 @@
 
     .footer-links a {
         font-size: 22px !important;
-        justify-self: start;
+        justify-self: flex-start;
     }
 
     .social-icons {
@@ -249,6 +385,7 @@
     .newsletter-input {
         background: #ffffff;
         border-radius: 5px;
+        padding: 0px !important;
         width: 100%;
         border: none !important;
         font-size: 16px;
