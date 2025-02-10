@@ -45,15 +45,48 @@
  .testimonials-feed{
   color: #fff !important;
   font-weight: bold !important;
+  text-align: center;
 }
 .testimonials-name{
 color: #dede34 !important;
 font-weight: bold !important;
 }
 
+@media (max-width: 1024px) {
+  .testimonials-grid {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 20px 30px;
+  }
+}
+
+/* For screens 768px and below */
 @media (max-width: 768px) {
   .testimonials-grid {
-    flex-direction: column;
-    align-items: center;
+    grid-template-columns: repeat(1, 1fr);
+    padding: 20px;
   }
+
+  .testimonials-container1 {
+    padding: 30px;
+  }
+ 
+}
+
+/* For mobile screens 400px and below */
+@media (max-width: 400px) {
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+    gap: 15px !important;
+    padding: 10px !important;
+  }
+
+  .testimonial-card {
+    max-width: 90% !important;
+    padding: 15px !important ;
+  }
+
+  .testimonials-container1 {
+    padding: 20px;
+  }
+
 }

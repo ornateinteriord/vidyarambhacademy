@@ -48,3 +48,31 @@
     color:#fff !important;
     font-weight: bold !important;
   }
+ 
+ 
+@media (max-width: 1024px) {
+  .classes-grid {
+    padding: 0px 30px !important;
+   
+  }
+
+  .class-card {
+    width: 45%; 
+  }
+}
+
+@media (max-width: 768px) {
+  .classes-grid {
+    padding: 0px 20px !important;
+    padding-bottom: 20px !important;
+  }
+
+  .class-card {
+    width: 100% !important; 
+    
+  }
+  .classes-page{
+    padding: 0 !important;
+    width: 100% !important;
+  }
+}

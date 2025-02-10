@@ -210,10 +210,11 @@
 @media (max-width: 480px) {
   .hero {
     background: linear-gradient(90deg, rgb(127, 123, 198) 0%, rgba(1,146,187,1) 49%, rgba(0,212,255,1) 100%);
-    padding: 20px;
+    padding: 10px 5px;
   }
   .hero-container {
-    padding:0px 5px !important;
+    padding:20px 0px !important;
+    
   }
 
   .image-container {

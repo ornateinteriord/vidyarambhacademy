@@ -190,6 +190,7 @@
     }
   
     .about-team-members {
+      justify-self: center !important;
       flex-direction: column;
       gap: 1.5rem;
     }
