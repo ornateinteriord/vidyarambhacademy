@@ -1,6 +1,7 @@
 .hero {
   background: linear-gradient(90deg, rgb(127, 123, 198) 0%, rgba(1,146,187,1) 49%, rgba(0,212,255,1) 100%);
   padding: 20px;
+
 }
 
 .hero-container {

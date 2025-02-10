@@ -12,8 +12,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 2rem;
+    gap: 3rem;
     flex-wrap: wrap; /* Allows for responsive layout */
+    margin-top: 60px !important;
   }
   
   .about-image-container {
@@ -60,7 +61,7 @@
   .about-points-title {
     font-size: 2rem !important;
     color: #34495e !important;
-    /* margin-bottom: 1rem !important; */
+    margin-bottom: 1rem !important;
     text-align: center !important;
     font-weight: bold !important;
   }
@@ -75,22 +76,23 @@
     color: #555;
     line-height: 1;
     display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 columns per row */
-  gap: 1rem;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 2rem;
     font-weight: bold !important;
     text-align: left;
   }
   
 .about-points li {
   display: flex;
-  align-items: center; /* Vertically centers the icon and text */
-  gap: 0.45rem; /* Adds space between the icon and text */
+  align-items: center; 
+  justify-content: center;
+  gap: 1rem; 
 }
 
 .about-icon {
-  color: #3f51b5; /* Icon color */
-  font-size: 2rem; /* Larger icon size */
-  margin-bottom: 20px !important;
+  color: #3f51b5; 
+  font-size: 2rem; 
+  margin-bottom: 0px !important;
 }
 
   
@@ -158,41 +160,42 @@
     height: 190px;
     border-radius: 50%;
     margin-bottom: 1rem;
-    object-fit: cover;
+    object-fit: cover !important;
   }
   
   .team-member-name {
     font-weight: bold !important;
-    color: #34495e;
+    color: #34495e !important;
   }
   
   .team-member-role {
-    color: #555;
+    color: #555 !important;
   }
   
   @media (max-width: 768px) {
     .about-title {
-      font-size: 2rem;
-      text-align: center;
+      font-size: 2rem !important;
+      text-align: center !important;
     }
   
     .about-description {
       font-size: 1rem;
-      text-align: center;
+      text-align: start !important;
+      margin-bottom: 0 !important;
     }
   
     .about-points {
-      grid-template-columns: 1fr;
+      grid-template-columns: 1fr !important;
     }
   
     .about-values-list {
-      font-size: 1rem;
+      font-size: 1rem !important;
     }
   
     .about-team-members {
       justify-self: center !important;
-      flex-direction: column;
-      gap: 1.5rem;
+      flex-direction: column !important;
+      gap: 1.5rem !important;
     }
   }
   

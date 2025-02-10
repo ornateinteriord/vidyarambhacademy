@@ -7,6 +7,7 @@
     text-align: center;
     background: #f9f9f9;
    gap: 20px !important;
+   margin-top: 60px;
   }
   
   .faqs-title {
@@ -151,7 +152,7 @@
 @media (max-width: 400px) {
   .faqs-container {
     padding: 10px !important;
-   
+    margin-top: 80px !important;
   }
 
   .faqs-title {

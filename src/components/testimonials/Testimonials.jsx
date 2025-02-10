@@ -45,11 +45,11 @@ const testimonials = [
 const Testimonials = () => {
   return (
     <Box className="testimonials-container">
-    <CustomContainer
+    {/* <CustomContainer
   title="Testimonials"
   description="Lorem ipsum dolor sit amet consectetur. Quis sed donec quis nunc aliquet cursus mauris ut.">
    <p style={{color:'#fff'}}>Enim fermentum maecenas rutrum dapibus sodales quis.</p>
-  </CustomContainer>
+  </CustomContainer> */}
     <div className="testimonials-container1">
       <Typography variant="h4" gutterBottom sx={{color:'#324d68',fontWeight:'bold'}}>
         What Parents Say

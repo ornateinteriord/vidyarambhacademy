@@ -52,11 +52,11 @@ const classesData = [
 const Classes = () => {
   return (
     <Box className="class-bg">
-       <CustomContainer
+       {/* <CustomContainer
      title="Classses"
      description="Lorem ipsum dolor sit amet consectetur. Quis sed donec quis nunc aliquet cursus mauris ut.">
       <p style={{color:'#fff'}}>Enim fermentum maecenas rutrum dapibus sodales quis.</p>
-     </CustomContainer>
+     </CustomContainer> */}
   
     <div className="classes-page">
       <Typography variant="h4" className="classes-title">Our Classes</Typography>

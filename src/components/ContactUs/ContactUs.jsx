@@ -9,12 +9,13 @@ const ContactUs = () => {
   return (
     <Box mb={'30px'}>
     <Box className="background">
-    <CustomContainer
+    {/* <CustomContainer
      title="Contact Us"
      description="Lorem ipsum dolor sit amet consectetur. Quis sed donec quis nunc aliquet cursus mauris ut.">
       <p style={{color:'#fff'}}>Enim fermentum maecenas rutrum dapibus sodales quis.</p>
-     </CustomContainer>
+     </CustomContainer> */}
       <Box spacing={3}  className="contact-container">
+        <Box className="contact-container1">
         <Grid item xs={12} md={6}  className="left-section" >
           <Typography variant="h4" className="title">
             Let's Talk
@@ -68,6 +69,7 @@ const ContactUs = () => {
             <LinkedIn />
           </div>
         </Grid>
+        </Box>
       </Box>
     </Box>
      {/* <Box sx={{borderBottom:'2px solid #ccc',mb:3}}> 

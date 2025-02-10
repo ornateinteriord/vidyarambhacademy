@@ -6,11 +6,11 @@ import CustomContainer from "../Container/CustomContainer";
 const AdmissionInquiry = () => {
   return (
     <Box className="admission" mb={'30px'}>
-         <CustomContainer
+         {/* <CustomContainer
      title="Admissions"
      description="Lorem ipsum dolor sit amet consectetur. Quis sed donec quis nunc aliquet cursus mauris ut.">
       <p style={{color:'#fff'}}>Enim fermentum maecenas rutrum dapibus sodales quis.</p>
-     </CustomContainer>
+     </CustomContainer> */}
    
     <Box className="admission-inquiry">
       <Box className="admission-content">

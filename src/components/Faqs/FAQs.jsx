@@ -43,11 +43,11 @@ const faqs = [
 const FAQs = () => {
   return (
     <Box className="faqs-bg">
-        <CustomContainer
+        {/* <CustomContainer
      title="FAQs"
      description="Lorem ipsum dolor sit amet consectetur. Quis sed donec quis nunc aliquet cursus mauris ut.">
       <p style={{color:'#fff'}}>Enim fermentum maecenas rutrum dapibus sodales quis.</p>
-     </CustomContainer>
+     </CustomContainer> */}
     <Box className="faqs-container">
       <Typography variant="h3" className="faqs-title" >
         General Questions
@@ -72,7 +72,7 @@ const FAQs = () => {
       </Box>
       {/* enroll section */}
       <Box className="enroll-section">
-        <Typography sx={{color:'#34495e',fontSize:'1rem',fontWeight:'bold',mb:'15px'}}>
+        <Typography sx={{color:'#34495e',fontSize:'1.5rem',fontWeight:'bold',mb:'15px'}}>
         Join Us Now
         </Typography>
         <Typography variant="h4" mb={2} className="enroll-title">

@@ -6,19 +6,20 @@ import kidsGrp from "../../assets/kidsGrp.avif";
 import teacher1 from "../../assets/teacher1.avif";
 import teacher2 from "../../assets/teacher2.avif";
 import teacher3 from "../../assets/teacher3.avif";
+import img5 from "../../assets/classes/parent5.jpg";
 import CustomContainer from "../Container/CustomContainer";
 import { Book, EmojiPeople, Home, Palette, School } from "@mui/icons-material";
 
 function AboutUs() {
   return (
     <Box className="about-background">
-    <Box>
-      <CustomContainer
+    
+      {/* <CustomContainer
         title="About Us"
         description="Lorem ipsum dolor sit amet consectetur. Quis sed donec quis nunc aliquet cursus mauris ut."
       >
         <p style={{color:'#fff'}}>Enim fermentum maecenas rutrum dapibus sodales quis.</p>
-      </CustomContainer>
+      </CustomContainer> */}
 
       <Container className="about-container">
         <Box className="about-content">
@@ -96,12 +97,17 @@ function AboutUs() {
               <Typography variant="h6" className="team-member-name">John</Typography>
               <Typography variant="body2" className="team-member-role">Assistant Teacher</Typography>
             </Box>
+            <Box className="team-member">
+              <img src={img5} alt="Team Member" className="team-member-image" />
+              <Typography variant="h6" className="team-member-name">John</Typography>
+              <Typography variant="body2" className="team-member-role">Assistant Teacher</Typography>
+            </Box>
             {/* Add more team members here */}
           </Box>
         </Box>
       </Container>
     </Box>
-    </Box>
+    
   );
 }
 
