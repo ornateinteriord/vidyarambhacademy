@@ -1,4 +1,12 @@
+/* Background Styling */
+.background {
+    background-color: aliceblue;
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+}
 
+/* Contact Container */
 .contact-container {
     width: 85%;
     padding: 20px;
@@ -11,83 +19,116 @@
     border: 1px solid rgba(255, 255, 255, 0.3);
     transition: all 0.3s ease-in-out;
     display: flex;
-    justify-self: center;
+    justify-content: center;
     align-items: center;
-  
-    
+    gap: 20px;
 }
 .contact-container1{
     display: flex !important;
     justify-content: space-evenly !important;
 }
-  .background{
-    background-color: aliceblue;
-    
-  }
-  
+
+/* Contact Sections */
 .left-section, .right-section {
     padding: 30px;
-    color: black; 
+    color: black;
     margin-bottom: 10px !important;
-}
-.left-section{
     width: 50%;
 }
-  
+
+/* Left & Right Animation */
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.left-section {
+    animation: slideInLeft 1s ease-out;
+}
+
+.right-section {
+    animation: slideInRight 1s ease-out;
+}
+
+/* Titles & Text */
 .title {
     font-weight: 700 !important;
     font-size: 28px;
     text-transform: uppercase;
     color: #ee186d !important;
-    text-shadow: none; 
     margin-bottom: 20px !important;
 }
-  
+
 .description {
     font-weight: 600 !important;
     margin-bottom: 20px !important;
-    font-size:20px !important;
+    font-size: 20px !important;
 }
-  
+
+/* Contact Form */
 .contact-form {
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
-  
+
 .input-field {
     border-radius: 12px;
     border: none;
     transition: all 0.3s ease-in-out;
 }
-  
+
 .input-field input,
 .input-field textarea {
+    width: 100%;
     color: black !important;
     padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
 }
-  
+
 .input-field input:focus, 
 .input-field textarea:focus {
     outline: none;
+    border-color: #ee186d;
 }
-  
 
+/* Button Styling */
 .animated-button {
     background: #34495e !important;
     color: white;
     font-weight: bold;
     padding: 14px 28px;
     border-radius: 30px;
-    width: 150px!important;
+    width: 150px !important;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
 }
-  
+
 .animated-button:hover {
     background: #ee186d !important;
     box-shadow: 0px 0px 25px rgba(0, 212, 255, 1);
 }
-  
 
+/* Contact Details */
 .contact-details p {
     margin: 10px 0;
     display: flex;
@@ -96,50 +137,31 @@
     font-weight: bold;
     font-size: 17px !important;
     color: #333 !important; 
-    margin-bottom: 20px;
 }
- 
+
+/* Social Icons */
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
 .social-icons svg {
     width: 40px !important; 
     height: 40px !important; 
-    margin-right: 15px !important;
-    transition: transform 0.3s ease-in-out;
-}
-  
-.social-icons svg {
-    color: #333 !important;
-    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
     cursor: pointer;
+    color: #333 !important;
+}
 
-}
-.icons{
-    display: flex;
-   justify-self: self-start;
-}
-  
 .social-icons svg:hover {
     color: #ee186d !important;
-    transform: scale(1.1) 
+    transform: scale(1.1);
 }
-  
-/* 📱 Responsive Design */
-/* @media (max-width: 768px) {
-    .contact-container {
-        padding: 20px;
-        margin: 20px;
-    }
-  
-    .left-section, .right-section {
-        padding: 20px;
-    }
-  
-    .social-icons {
-        gap: 12px;
-        font-size: 22px;
-    }
-} */
 
-/* ✅ iPad Air 4 (820px) */
+/* Responsive Design */
+
+/* ✅ Tablets (820px and below) */
 @media (max-width: 820px) {
     .contact-container {
         flex-direction: column;
@@ -152,17 +174,9 @@
         text-align: center;
         padding: 20px;
     }
-
-    .contact-form {
-        width: 100%;
-    }
-
-    .input-field {
-        width: 100%;
-    }
 }
 
-/* ✅ Tablet (768px and below) */
+/* ✅ Mobile (768px and below) */
 @media (max-width: 768px) {
     .contact-container {
         padding: 20px !important;
@@ -173,39 +187,38 @@
     .left-section, .right-section {
         width: 100%;
         text-align: center;
-        padding: 5px !important;
+        padding: 10px;
     }
 
-    .contact-form {
-        width: 100%;
-    }
-
-    .input-field {
-        width: 100%;
+    .description {
+        text-align: start !important;
     }
 
     .social-icons {
         gap: 12px;
         font-size: 22px;
-    }
-    .description{
-        justify-self: flex-start !important;
-        text-align: start !important;
+        justify-content: center;
     }
 }
 
-/* ✅ Mobile (480px and below) */
-@media (max-width: 480px) {
-    .contact-container{
-        margin-top: 100px;
+/* ✅ Small Mobile (480px and below) */
+@media (max-width: 400px) {
+    .contact-container {
+        margin-top: 50px;
+        margin-bottom: 10px !important;
     }
+    .contact-container1{
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
     .title {
-        font-size: 24px;
+        font-size: 30px !important;
+        justify-self: flex-start !important;
     }
 
     .description {
-        font-size: 16px;
-        justify-self: flex-start !important;
+        font-size: 18px !important;
         text-align: start !important;
     }
 
@@ -215,11 +228,23 @@
     }
 
     .social-icons svg {
-        width: 40px !important;
-        height: 40px !important;
-       
+        width: 35px !important;
+        height: 35px !important;
     }
-    .social-icons{
-     padding-left: 60px !important;
+.address{
+    justify-self: center !important;
+}
+    .social-icons {
+        padding-left: 0 !important;
+        justify-content: center;
+        
+    }
+    .follow-title{
+        justify-self: flex-start !important;
+        font-size: 30px !important;
+    }
+    .icons{
+        justify-self: flex-start !important;
+        
     }
 }

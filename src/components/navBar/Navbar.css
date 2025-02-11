@@ -1,4 +1,56 @@
-/* Navbar container */
+.logo-container {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important; 
+}
+
+.logo-content {
+  display: flex !important;
+  align-items: center !important ;
+  justify-content: center !important;
+   
+}
+
+.logo {
+  height: 50px !important;
+}
+
+.logo-text {
+  display: flex !important;
+  flex-direction: column !important;
+  text-align: center !important;
+  line-height: 1.0 !important; /* Reduces space between text */
+}
+
+.logo-primary {
+  font-size: 20px !important;
+  font-weight: bold !important;
+  color: #ee186d !important;
+  /* margin-bottom:  !important; Reduces extra space below */
+}
+
+.logo-secondary {
+  font-size: 18px !important;
+  color: #267dc0 !important; /* Matched with boy's color */
+  justify-self: center !important;
+  margin-top: -5px !important; /* Reduces extra space above */
+  font-weight: bold !important;
+}
+
+
+
+
+
+
+@keyframes glow {
+  0% {
+      text-shadow: 2px 2px 4px rgba(238, 24, 109, 0.5);
+  }
+  100% {
+      text-shadow: 4px 4px 8px rgba(238, 24, 109, 0.8);
+  }
+}
+
 .navbar {
   background-color: white !important;
   color: black;
@@ -12,20 +64,19 @@
   justify-content: space-evenly !important;
 }
 
-/* Toolbar layout */
+
 .toolbar {
   display: flex !important;
   justify-content: space-evenly !important;
   align-items: center;
 }
 
-/* Logo styling */
-.logo {
+
+.logo-container {
   height: 40px;
-  margin-right: 90px;
+  margin-right: 90px !important;
 }
 
-/* Desktop Navigation Links */
 .nav-links {
   display: flex;
   margin-left: 200px !important;
@@ -40,13 +91,12 @@
   font-size: 18px;
 }
 
-/* Button focus effect */
+
 .nav-links .MuiButton-root:focus {
   color: #ee186d !important; 
   border-radius: 8px; 
 }  
 
-/* Get Started Button */
 .get-started {
   margin-left: 20rem !important; 
   font-size: 1rem !important;
@@ -57,13 +107,12 @@
   font-weight: bold !important;
 }
 
-/* Hide mobile menu icon on larger screens */
+
 .menu-icon {
   display: none !important;
  
 }
 
-/* Mobile menu styling */
 .mobile-menu {
   width: 200px;
   padding: 20px;
@@ -76,18 +125,114 @@
  
 }
 
-/* Responsive Design */
+.mobile-menu {
+  padding: 20px;
+  width: 220px;
+  background: white;
+  height: 100vh;
+}
+
+@keyframes fadeInRight {
+  from {
+      opacity: 0;
+      transform: translateX(30px);
+  }
+  to {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+.mobile-menu .MuiListItem-root {
+  opacity: 0;
+  transform: translateX(30px);
+  animation: fadeInRight 0.4s ease-out forwards;
+}
+
+
+.mobile-menu .MuiListItem-root:nth-child(1) { animation-delay: 0.3s; }
+.mobile-menu .MuiListItem-root:nth-child(2) { animation-delay: 0.5s; }
+.mobile-menu .MuiListItem-root:nth-child(3) { animation-delay: 0.7s; }
+.mobile-menu .MuiListItem-root:nth-child(4) { animation-delay: 0.9s; }
+.mobile-menu .MuiListItem-root:nth-child(5) { animation-delay: 0.9s; }
+
+.mobile-menu .MuiMenuItem-root {
+  opacity: 0;
+  transform: translateX(30px);
+  animation: fadeInRight 0.5s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+      opacity: 0;
+      transform: translateY(10px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.more-menu .menu-item {
+  opacity: 0;
+  animation-duration: 0.6s;
+  animation-fill-mode: forwards;
+}
+
+.more-menu .menu-item:nth-child(odd) {
+  animation-name: slideInLeft;
+}
+
+.more-menu .menu-item:nth-child(even) {
+  animation-name: slideInRight;
+}
+
+.more-menu .menu-item:nth-child(1) { animation-delay: 0.1s; }
+.more-menu .menu-item:nth-child(2) { animation-delay: 0.2s; }
+.more-menu .menu-item:nth-child(3) { animation-delay: 0.3s; }
+.more-menu .menu-item:nth-child(4) { animation-delay: 0.4s; }
+.more-menu .menu-item:nth-child(5) { animation-delay: 0.5s; }
+.more-menu .menu-item:nth-child(6) { animation-delay: 0.6s; }
+
 @media (max-width: 900px) {
   .nav-links {
       display: none;
   }
-
   .menu-icon {
       display: block !important;
       color: black !important;
+      font-weight: bold !important;
+    
   }
   .get-started {
-    display: none !important;
+      display: none !important;
+  }
+  .logo-primary{
+  font-size: 22px !important;
   }
 }
+
 

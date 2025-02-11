@@ -18,6 +18,8 @@ import CloseIcon from "@mui/icons-material/Close";
 import { Link as ScrollLink, scroller } from "react-scroll";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import kidslogo from "../../assets/kidzena-red.png";
+import vlogo from "../../assets/classes/v-logo1.png"
+
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import "./Navbar.css";
 
@@ -62,10 +64,23 @@ function Navbar() {
 
   return (
     <AppBar position="fixed" className="navbar">
-      <Toolbar className="toolbar">
+      <Box className="toolbar">
+        <Box display={'flex'} justifyContent={'space-evenly'} alignItems={'center'}>
+      <Box className="logo-container">
+      <Box>
+        <img src={vlogo} alt="Kidzena" className="logo" />
+        </Box>  
         <Box>
-          <img src={kidslogo} alt="Kidzena" className="logo" />
-        </Box>
+  <Typography  className="logo-primary">Vidyarambha</Typography>
+  <Typography  className="logo-secondary">Balamandir</Typography>
+  </Box>
+</Box>
+<Box>
+<IconButton className="menu-icon" onClick={handleDrawerToggle}>
+          <MenuIcon />
+        </IconButton>
+</Box>
+</Box>
 
         <Box className="nav-links">
           <Link to={"/"}>
@@ -84,17 +99,17 @@ function Navbar() {
             More{" "}
             <KeyboardArrowDownIcon style={{ fontWeight: "bold", fontSize: "30px" }} />
           </Button>
-          <Menu anchorEl={anchorEl} open={Boolean(anchorEl)} onClose={handleMenuClose}>
-            <MenuItem onClick={() => handleScrollToSection("activities")}>Activities</MenuItem>
+          <Menu anchorEl={anchorEl} open={Boolean(anchorEl)} onClose={handleMenuClose} className="more-menu">
+            <MenuItem onClick={() => handleScrollToSection("activities")} className="menu-item">Activities</MenuItem>
             <Link className="navLink" to={"/testimonials"}>
-              <MenuItem onClick={handleMenuClose}>Testimonials</MenuItem>
+              <MenuItem onClick={handleMenuClose} className="menu-item">Testimonials</MenuItem>
             </Link>
-            <MenuItem onClick={() => handleScrollToSection("moments-section")}>Moments</MenuItem>
+            <MenuItem onClick={() => handleScrollToSection("moments-section")} className="menu-item">Moments</MenuItem>
             <Link className="navLink" to={"/faqs"}>
-              <MenuItem onClick={handleMenuClose}>FAQs</MenuItem>
+              <MenuItem onClick={handleMenuClose} className="menu-item">FAQs</MenuItem>
             </Link>
-            <MenuItem onClick={handleMenuClose}>404</MenuItem>
-            <MenuItem onClick={handleMenuClose}>Coming Soon</MenuItem>
+            <MenuItem onClick={handleMenuClose} className="menu-item">404</MenuItem>
+            <MenuItem onClick={handleMenuClose} className="menu-item">Coming Soon</MenuItem>
           </Menu>
         </Box>
 
@@ -105,63 +120,63 @@ function Navbar() {
         </Link>
 
         {/* Mobile Menu Icon */}
-        <IconButton className="menu-icon" onClick={handleDrawerToggle}>
-          <MenuIcon />
-        </IconButton>
-      </Toolbar>
+      
+      </Box>
 
       {/* Mobile Drawer */}
-      <Drawer anchor="right" open={mobileOpen} onClose={handleDrawerToggle}>
-        <Box justifySelf={"flex-start"}>
-          <IconButton onClick={handleDrawerToggle} className="close-menu-icon" sx={{ color: "red" }}>
-            <CloseIcon />
-          </IconButton>
-        </Box>
+     {/* Mobile Drawer */}
+<Drawer anchor="right" open={mobileOpen} onClose={handleDrawerToggle}>
+  <Box justifySelf={"flex-start"}>
+    <IconButton onClick={handleDrawerToggle} className="close-menu-icon" sx={{ color: "red" }}>
+      <CloseIcon />
+    </IconButton>
+  </Box>
 
-        <List className="mobile-menu">
-          <Box justifySelf={"center"}>
-            <ListItem button onClick={handleDrawerToggle}>
-              <Link className="navLink" to={"/"}>
-                <ListItemText primary="Home" />
-              </Link>
-            </ListItem>
-            <ListItem button onClick={handleDrawerToggle}>
-              <Link className="navLink" to={"/about"}>
-                <ListItemText primary="About" />
-              </Link>
-            </ListItem>
-            <ListItem button onClick={handleDrawerToggle}>
-              <Link className="navLink" to={"/classes"}>
-                <ListItemText primary="Classes" />
-              </Link>
-            </ListItem>
-            <ListItem button onClick={handleDrawerToggle}>
-              <Link className="navLink" to={"/contact"}>
-                <ListItemText primary="Contact " />
-              </Link>
-            </ListItem>
+  <List className="mobile-menu">
+    <Box justifySelf={"center"}>
+      <ListItem button onClick={handleDrawerToggle}>
+        <Link className="navLink" to={"/"}>
+          <ListItemText primary="Home" />
+        </Link>
+      </ListItem>
+      <ListItem button onClick={handleDrawerToggle}>
+        <Link className="navLink" to={"/about"}>
+          <ListItemText primary="About" />
+        </Link>
+      </ListItem>
+      <ListItem button onClick={handleDrawerToggle}>
+        <Link className="navLink" to={"/classes"}>
+          <ListItemText primary="Classes" />
+        </Link>
+      </ListItem>
+      <ListItem button onClick={handleDrawerToggle}>
+        <Link className="navLink" to={"/contact"}>
+          <ListItemText primary="Contact " />
+        </Link>
+      </ListItem>
 
-            {/* More Menu inside Drawer */}
-            <Box>
-              <Button onClick={handleMenuOpen} sx={{ marginLeft: "10px", color: "black" }}>
-                More <KeyboardArrowDownIcon style={{ fontWeight: "bold", fontSize: "30px" }} />
-              </Button>
-              <Menu anchorEl={anchorEl} open={Boolean(anchorEl)} onClose={handleMenuClose}>
-                <MenuItem onClick={() => handleScrollToSection("activities")}>Activities</MenuItem>
-                <Link className="navLink" to={"/testimonials"}>
-                  <MenuItem onClick={handleDrawerToggle}>Testimonials</MenuItem>
-                </Link>
-                <MenuItem onClick={() => handleScrollToSection("moments-section")}>Moments</MenuItem>
-                <Link className="navLink" to={"/faqs"}>
-                  <MenuItem onClick={handleDrawerToggle}>FAQs</MenuItem>
-                </Link>
-                <MenuItem onClick={handleDrawerToggle}>404</MenuItem>
-                <MenuItem onClick={handleDrawerToggle}>Coming Soon</MenuItem>
-              </Menu>
-            </Box>
-          </Box>
-        </List>
-      </Drawer>
+      {/* More Menu inside Drawer */}
+      <Box>
+        <Button onClick={handleMenuOpen} sx={{ marginLeft: "10px", color: "black" }}>
+          More <KeyboardArrowDownIcon style={{ fontWeight: "bold", fontSize: "30px" }} />
+        </Button>
+        <Menu anchorEl={anchorEl} open={Boolean(anchorEl)} onClose={handleMenuClose}  >
+          <MenuItem onClick={() => handleScrollToSection("activities")}>Activities</MenuItem>
+          <Link className="navLink" to={"/testimonials"}>
+            <MenuItem onClick={handleDrawerToggle}>Testimonials</MenuItem>
+          </Link>
+          <MenuItem onClick={() => handleScrollToSection("moments-section")}>Moments</MenuItem>
+          <Link className="navLink" to={"/faqs"}>
+            <MenuItem onClick={handleDrawerToggle}>FAQs</MenuItem>
+          </Link>
+          <MenuItem onClick={handleDrawerToggle}>404</MenuItem>
+          <MenuItem onClick={handleDrawerToggle}>Coming Soon</MenuItem>
+        </Menu>
+      </Box>
+    </Box>
+  </List>
+</Drawer>
+
     </AppBar>
   );
 }

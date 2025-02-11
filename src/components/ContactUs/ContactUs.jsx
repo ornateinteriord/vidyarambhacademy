@@ -57,9 +57,9 @@ const ContactUs = () => {
             Reach out to us at our office or through the contact details below.
           </Typography>
           <div className="contact-details">
-            <p><LocationOn /> 121 King Street, Melbourne Evonic Soft, New York, USA</p>
-            <p><Phone /> +1 (800) 060-07-30</p>
-            <p><Email /> yourname@example.com</p>
+            <p><LocationOn /><span className="address"> 121 King Street, New York, USA</span> </p>
+            <p><Phone /> <span className="address"> +1 (800) 060-07-30</span> </p>
+            <p><Email />  <span className="address"> yourname@example.com </span></p>
           </div>
           <Typography variant="h5" className="follow-title" marginBottom={2} fontWeight={700} sx={{color:'#ee186d'}}>Follow Us</Typography>
           <div className="social-icons icons">

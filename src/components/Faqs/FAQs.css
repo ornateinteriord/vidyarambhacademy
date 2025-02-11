@@ -1,199 +1,213 @@
-/* FAQs.css */
-.faqs-bg{
-    background: aliceblue;
+
+.faqs-bg {
+  background: aliceblue;
 }
+
 .faqs-container {
-    padding: 40px 100px;
-    text-align: center;
-    background: #f9f9f9;
-   gap: 20px !important;
-   margin-top: 60px;
-  }
-  
-  .faqs-title {
-    font-size: 2.5rem !important;
-    font-weight: bold !important;
-    color: #2c4a62;
-    margin-bottom: 10px;
-  }
-  
-  .faqs-subtitle {
-    font-size: 1rem;
-    color: #6c757d;
-    margin-bottom: 30px !important;
-   justify-self: center;
-  }
-  
-  .faqs-grid {
-    display:grid;
-    grid-template-columns: repeat(2,1fr);
-    justify-content: center;
-    gap: 20px!important;
-    margin: 0 auto;
-  }
-  
-  .faq-item {
-    display: flex;
-    justify-self: center;
-    background: #ffffff;
-    padding: 20px 70px !important;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 450px;
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  .faq-item:hover {
-    transform: scale(1.05);
-  }
-  
-  .faq-icon {
-    font-size: 2rem;
-    /* margin-right: 7px; */
-  }
-  
-  .faq-question {
-    font-size: 1rem !important;
-    font-weight: bold !important;
-  }
-  
-  .faq-answer {
-    font-size: 1rem !important;
-    color: #6c757d !important;
-  }
-  
-/* enroll */
+  padding: 40px 100px;
+  text-align: center;
+  background: #f9f9f9;
+  gap: 20px !important;
+  margin-top: 60px;
+}
 
-  .enroll-section {
-    text-align: center;
-    margin-top: 50px;
-    padding: 40px;
-    background-color: aliceblue;
-    border-radius: 10px;
-  }
-  
-  .enroll-heading {
-    font-size: 20px;
-    color: #333 !important;
-    font-weight: bold !important;
-    margin-top: 10px !important;
-  }
-  
-  .enroll-title {
-    font-size: 28px;
-    font-weight: bold !important;
-    color: #b15a7d;
-    margin: 10px 0;
-  }
-  
-  .enroll-text {
-    font-size: 16px;
-    color: #666;
-    margin-bottom: 20px;
-  }
-  
-  .enroll-button {
-    background-color: #ee186d !important;
-    border-radius: 20px !important;
-    text-transform: capitalize !important;
-    font-weight: bold !important;
-    padding: 15px 35px;
-    border: none;
-    color: #fff;
-   font-size: 1rem;
-  }
-  
- 
-  
+.faqs-title {
+  font-size: 2.5rem !important;
+  font-weight: bold !important;
+  color: #2c4a62;
+  margin-bottom: 10px;
+}
+
+.faqs-subtitle {
+  font-size: 1rem;
+  color: #6c757d;
+  margin-bottom: 30px !important;
+  justify-self: center;
+}
 
 
-/* 1024px - Medium Screens */
+.faqs-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  gap: 20px !important;
+  margin: 0 auto;
+}
+
+.faq-item {
+  display: flex;
+  justify-self: center;
+  background: #ffffff;
+  padding: 20px 70px !important;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 450px;
+  transition: transform 0.3s ease-in-out;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease-in-out forwards;
+}
+
+.faq-item:hover {
+  transform: scale(1.05);
+}
+
+@keyframes fadeInUp {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.faq-item:nth-child(1) { animation-delay: 0.2s; }
+.faq-item:nth-child(2) { animation-delay: 0.4s; }
+.faq-item:nth-child(3) { animation-delay: 0.6s; }
+.faq-item:nth-child(4) { animation-delay: 0.8s; }
+.faq-item:nth-child(5) { animation-delay: 1s; }
+.faq-item:nth-child(6) { animation-delay: 1.2s; }
+
+
+.faq-icon {
+  font-size: 2rem;
+}
+
+.faq-question {
+  font-size: 1rem !important;
+  font-weight: bold !important;
+}
+
+.faq-answer {
+  font-size: 1rem !important;
+  color: #6c757d !important;
+}
+
+.enroll-section {
+  text-align: center;
+  margin-top: 50px;
+  padding: 40px;
+  background-color: aliceblue;
+  border-radius: 10px;
+}
+
+.enroll-heading {
+  font-size: 20px;
+  color: #333 !important;
+  font-weight: bold !important;
+  margin-top: 10px !important;
+}
+
+.enroll-title {
+  font-size: 28px;
+  font-weight: bold !important;
+  color: #b15a7d;
+  margin: 10px 0;
+}
+
+.enroll-text {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.enroll-button {
+  background-color: #ee186d !important;
+  border-radius: 20px !important;
+  text-transform: capitalize !important;
+  font-weight: bold !important;
+  padding: 15px 35px;
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+}
+
+
 @media (max-width: 1024px) {
   .faqs-container {
-    padding: 40px 50px;
+      padding: 40px 50px;
   }
 
   .faqs-grid {
-    grid-template-columns: repeat(1, 1fr);
-    padding: 20px;
+      grid-template-columns: repeat(1, 1fr);
+      padding: 20px;
   }
 
   .faq-item {
-    max-width: 400px;
+      max-width: 400px;
   }
 }
 
-/* 768px - Tablet Screens */
 @media (max-width: 768px) {
   .faqs-container {
-    padding: 30px 20px;
+      padding: 30px 20px;
   }
 
   .faqs-title {
-    font-size: 2rem !important;
+      font-size: 2rem !important;
   }
 
   .faqs-grid {
-    grid-template-columns: 1fr;
-    gap: 15px !important;
+      grid-template-columns: 1fr;
+      gap: 15px !important;
   }
 
   .faq-item {
-    max-width: 90%;
-    padding: 25px;
+      max-width: 90%;
+      padding: 25px;
   }
 
   .enroll-section {
-    padding: 30px;
+      padding: 30px;
   }
 }
 
-/* 400px - Mobile Screens */
 @media (max-width: 400px) {
   .faqs-container {
-    padding: 10px !important;
-    margin-top: 80px !important;
+      padding: 10px !important;
+      margin-top: 80px !important;
   }
 
   .faqs-title {
-    font-size: 1.2rem !important;
-    margin-bottom: 5px !important;
+      font-size: 1.3rem !important;
+      margin-bottom: 5px !important;
   }
 
   .faqs-subtitle {
-    font-size: 0.8rem !important;
-    margin-bottom: 0px !important;
+      font-size: 0.9rem !important;
+      margin-bottom: 0px !important;
   }
 
   .faq-item {
-    max-width: 100% !important;
-    display: flex !important;
-    align-items: start !important;
-    justify-content: start !important;
-    padding: 5px !important;
+      max-width: 100% !important;
+      padding: 10px !important;
   }
-  .faq-item:hover {
-    transform: scale(1.05);
+
+  .faq-question {
+      font-size: 0.9rem !important;
   }
-  .faq-question{
-    font-size: 0.9rem !important;
-     margin-right: 60px !important;
-  }
-  .faq-answer{
-    font-size: 0.8rem !important;
-    padding: 0px !important;
+
+  .faq-answer {
+      font-size: 0.8rem !important;
   }
 
   .enroll-section {
-    padding: 20px !important;
+      padding: 20px !important;
   }
 
   .enroll-title {
-    font-size: 24px !important;
+      font-size: 24px !important;
   }
 
   .enroll-button {
-    font-size: 0.9rem;
-    padding: 12px 30px;
+      font-size: 0.9rem;
+      padding: 12px 30px;
+  }
+  .enroll-section{
+    margin-top: 20px !important;
+    padding: 10px 20px !important;
+    
   }
 }

@@ -13,14 +13,7 @@ import { Book, EmojiPeople, Home, Palette, School } from "@mui/icons-material";
 function AboutUs() {
   return (
     <Box className="about-background">
-    
-      {/* <CustomContainer
-        title="About Us"
-        description="Lorem ipsum dolor sit amet consectetur. Quis sed donec quis nunc aliquet cursus mauris ut."
-      >
-        <p style={{color:'#fff'}}>Enim fermentum maecenas rutrum dapibus sodales quis.</p>
-      </CustomContainer> */}
-
+  
       <Container className="about-container">
         <Box className="about-content">
           {/* Image Section */}
@@ -31,7 +24,7 @@ function AboutUs() {
           {/* Text Section */}
           <Box className="about-text-container">
             <Typography variant="h4" className="about-title">About Us</Typography>
-            <Typography  sx={{color:'#ee186d',fontWeight:'bold',mb:1,fontSize:'30px'}}>
+            <Typography  sx={{color:'#ee186d',fontWeight:'bold',mb:1,fontSize:'25px'}}>
             Give the Children Space to Grow a Creativity
 
             </Typography>
