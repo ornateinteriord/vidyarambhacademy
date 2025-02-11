@@ -17,7 +17,6 @@
 
 
 .about-container {
-  width: 100% !important;
   padding: 3rem 0;
   background: url('https://img.freepik.com/free-vector/cute-baby-toys-cartoon-seamless-pattern_1284-41084.jpg');
   background-size: 350px !important;
@@ -27,7 +26,6 @@
 }
 
 .about-container::before {
-  width: 100% !important;
   content: '';
   position: absolute;
   inset: 0;
@@ -37,13 +35,12 @@
 }
 
 .about-background {
-  width: 100%;
   position: relative;
   background: rgba(255, 255, 255, 0.88);
 }
 
 .about-content {
-  width: 100%;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -284,9 +281,19 @@
 }
 
 @media (max-width: 768px) {
+ 
+  .about-container{
+    padding: 40px 50px ;
+  }
+  .about-image{
+    width: 95%;
+  }
   .about-title {
       font-size: 2.2rem !important;
       text-align: center !important;
+  }
+  .about-image-container{
+    width: 95%;
   }
 
   .about-description {

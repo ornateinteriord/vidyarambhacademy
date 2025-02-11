@@ -6,9 +6,9 @@ import "./Footer.css";
 
 const Footer = () => {
   return (
-    <Box mt={0} className="footer1">
+    <Box  className="footer1">
       <footer className="footer">
-        <Box maxWidth="lg" sx={{ width: '100%', padding: '0 20px' }}>
+        <Box maxWidth="lg">
           <Grid container spacing={5} justifyContent="center">
             {/* About Section */}
             <Grid item xs={12} sm={4} >

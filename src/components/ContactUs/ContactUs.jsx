@@ -7,7 +7,7 @@ import CustomContainer from "../Container/CustomContainer";
 
 const ContactUs = () => {
   return (
-    <Box mb={'30px'}>
+   
     <Box className="background">
     {/* <CustomContainer
      title="Contact Us"
@@ -24,7 +24,7 @@ const ContactUs = () => {
             Get in touch with us for any inquiries or project discussions. We're here to help!
           </Typography>
           <form className="contact-form">
-            <Grid container spacing={2}>
+            <Grid container spacing={2} className="input-fields">
               <Grid item xs={6}>
                 <TextField fullWidth label="Your Name" variant="outlined" className="input-field" />
               </Grid>
@@ -72,9 +72,7 @@ const ContactUs = () => {
         </Box>
       </Box>
     </Box>
-     {/* <Box sx={{borderBottom:'2px solid #ccc',mb:3}}> 
-               </Box> */}
-    </Box>
+  
   );
 };
 

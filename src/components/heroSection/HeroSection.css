@@ -117,20 +117,19 @@
   color: azure;
   font-family: sans-serif !important;
 }
-
 .custom-button {
   background-color: #ee186d !important;
-  color: #fff !important;
+  color: #ffff !important;
   border-radius: 10px !important;
   font-size: 20px !important;
-  padding: 6px 24px !important;
+  padding: 6px 30px !important;
   border-radius: 25px !important;
   transition: background 0.3s ease;
   text-transform: capitalize !important;
   font-weight: bold !important;
   margin-top: 15px !important;
   margin-right: 47% !important;
-}
+} 
 
 .custom-button:hover {
   background-color: #f05622 !important;
@@ -360,7 +359,7 @@
   }
   .custom-button{
     font-size: 20px !important;
-    padding: 5px !important;
+    padding: 5px 24px !important;
   }
   .preschool-hero{
     margin-top: 35px !important;

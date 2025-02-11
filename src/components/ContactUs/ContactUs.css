@@ -10,7 +10,7 @@
 .contact-container {
     width: 85%;
     padding: 20px;
-    margin-top: 100px;
+    margin-top: 60px;
     border-radius: 10px;
     background: rgba(255, 255, 255, 0.938);
     box-shadow: 10px 10px 30px rgba(9, 7, 7, 0.2), 
@@ -203,9 +203,22 @@
 
 /* ✅ Small Mobile (480px and below) */
 @media (max-width: 400px) {
+    
     .contact-container {
-        margin-top: 50px;
+       margin: 50px 50px !important;
         margin-bottom: 10px !important;
+    }
+    .contact-form{
+        margin: 20px 15px  !important;
+    }
+    .input-field{
+        width: 320px !important;
+        justify-self: flex-start !important;
+    }
+    .input-fields{
+        display: flex !important;
+        align-items: start;
+        flex-direction: column !important;
     }
     .contact-container1{
         display: flex !important;
@@ -214,12 +227,12 @@
 
     .title {
         font-size: 30px !important;
-        justify-self: flex-start !important;
+        justify-self:center !important;
     }
 
     .description {
         font-size: 18px !important;
-        text-align: start !important;
+        text-align: center !important;
     }
 
     .animated-button {
@@ -231,8 +244,8 @@
         width: 35px !important;
         height: 35px !important;
     }
-.address{
-    justify-self: center !important;
+.contact-details{
+    justify-self: center;
 }
     .social-icons {
         padding-left: 0 !important;
@@ -240,11 +253,12 @@
         
     }
     .follow-title{
-        justify-self: flex-start !important;
+        justify-self:center !important;
         font-size: 30px !important;
     }
-    .icons{
-        justify-self: flex-start !important;
-        
+    .social-icons svg {
+        width: 40px !important; 
+        height: 40px !important;
+        justify-self: center !important;
     }
 }

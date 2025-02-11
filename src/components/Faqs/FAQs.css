@@ -118,7 +118,7 @@
   border-radius: 20px !important;
   text-transform: capitalize !important;
   font-weight: bold !important;
-  padding: 15px 35px;
+  padding: 15px 35px  !important;
   border: none;
   color: #fff;
   font-size: 1rem;

@@ -79,7 +79,7 @@ const FAQs = () => {
           Don't Let Your Child's Childhood Pass
         </Typography>
         <Typography variant="body1" mb={2} className="enroll-text">
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. <br/>Cum sociis natoque penatibus et magnis dis parturient montes.
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
         </Typography>
         <Button variant="contained" className="enroll-button">
   <Link to="/admission" style={{ textDecoration: "none", color: "white" }}>
