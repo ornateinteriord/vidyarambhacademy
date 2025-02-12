@@ -7,7 +7,6 @@ import CustomContainer from "../Container/CustomContainer";
 
 const ContactUs = () => {
   return (
-   
     <Box className="background">
     {/* <CustomContainer
      title="Contact Us"

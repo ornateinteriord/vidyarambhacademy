@@ -125,7 +125,7 @@
   background: rgba(255, 255, 255, 0.9);
   border-radius: 20px;
   border: 4px dashed #4ecdc4;
-  animation: float 5s ease-in-out infinite;
+  animation: float 5s ease-in-out infinite ;
 }
 
 .about-points-title {
@@ -162,10 +162,12 @@
   border-radius: 15px;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
+  cursor: pointer;
 }
 
 .about-points li:hover {
-  transform: scale(1.05) rotate(2deg);
+  transform: scale(1.05) 
+  
 }
 
 .about-icon {
@@ -174,7 +176,7 @@
   margin-bottom: 0px !important;
   animation: bounce 2s ease-in-out infinite;
 }
-
+/* 
 .about-values-container {
   margin-top: 4rem;
   padding: 2rem;
@@ -208,7 +210,7 @@
   color: #4a4a4a;
   line-height: 2;
   text-align: center;
-}
+} */
 
 .about-team-container {
   width: 100% !important;
@@ -240,21 +242,22 @@
 .about-team-members {
   display: flex;
   gap: 2.5rem;
-  justify-content: center;
+  justify-content: center !important;
 }
 
 .team-member {
   text-align: center;
-  max-width: 200px !important;
+  max-width: 230px !important;
   padding: 1.3rem !important;
   background: white;
   border-radius: 20px;
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
   transition: transform 0.3s ease;
+  cursor: pointer;
 }
 
 .team-member:hover {
-  transform: scale(1.05) rotate(2deg);
+  transform: scale(1.05) ;
 }
 
 .team-member-image {
@@ -279,6 +282,9 @@
   font-weight: bold !important;
   font-size: 1.1rem;
 }
+.about-subtitle{
+  font-size: 25px !important;
+}
 
 @media (max-width: 768px) {
  
@@ -289,15 +295,18 @@
     width: 95%;
   }
   .about-title {
-      font-size: 2.2rem !important;
+      font-size: 2.5rem !important;
       text-align: center !important;
+  }
+  .about-subtitle{
+    font-size: 23px !important;
   }
   .about-image-container{
     width: 95%;
   }
 
   .about-description {
-      font-size: 1.2rem;
+      font-size: 1.3rem !important;
       text-align: start !important;
       margin-bottom: 1rem !important;
   }
@@ -309,7 +318,15 @@
   .about-values-list {
       font-size: 1.2rem !important;
   }
-
+  .about-points-title{
+    font-size:2.1rem !important ;
+  }
+.about-team-title{
+  font-size:2.2rem !important ;
+}
+.about-team-description{
+  text-align: start !important;
+}
   .about-team-members {
       justify-self: center !important;
       flex-direction: column !important;

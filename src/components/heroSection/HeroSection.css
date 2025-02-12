@@ -14,7 +14,7 @@
   justify-content: space-around;
   background: linear-gradient(90deg, rgb(127, 123, 198) 0%, rgba(1,146,187,1) 49%, rgba(0,212,255,1) 100%);
   position: relative;
-  flex-wrap: wrap;
+  flex-wrap: wrap; /* Allow wrapping for small screens */
 }
 
 .hero-background {
@@ -47,7 +47,7 @@
 /* Floating animation */
 @keyframes float {
   0% { transform: translateY(0px); }
-  50% { transform: translateY(-40px); }
+  50% { transform: translateY(-30px); }
   100% { transform: translateY(2px); }
 }
 
@@ -394,7 +394,7 @@
   }
   @keyframes float {
     0% { transform: translateY(0px); }
-    50% { transform: translateY(-40px); }
+    50% { transform: translateY(-20px); }
     100% { transform: translateY(2px); }
   }
 }
