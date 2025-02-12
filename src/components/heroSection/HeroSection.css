@@ -14,7 +14,7 @@
   justify-content: space-around;
   background: linear-gradient(90deg, rgb(127, 123, 198) 0%, rgba(1,146,187,1) 49%, rgba(0,212,255,1) 100%);
   position: relative;
-  flex-wrap: wrap; /* Allow wrapping for small screens */
+  flex-wrap: wrap;
 }
 
 .hero-background {
@@ -47,7 +47,7 @@
 /* Floating animation */
 @keyframes float {
   0% { transform: translateY(0px); }
-  50% { transform: translateY(-30px); }
+  50% { transform: translateY(-40px); }
   100% { transform: translateY(2px); }
 }
 
@@ -164,13 +164,14 @@
 }
 
 @media (max-width: 768px) {
+ 
   .hero-container {
     flex-direction: column;
     justify-content: center;
   }
 
   .hero-content {
-    width: 100%;
+    /* width: 100% !important; */
     padding: 10px;
   }
 
@@ -210,50 +211,63 @@
 }
 
 @media (max-width: 480px) {
+  .toy1 {
+    top: 0px !important;
+    left: 0% !important;
+    width: 70px !important;
+  }
+  
+  .toy2 {
+    bottom: 10px  !important;
+    right: 4% !important;
+    width: 70px !important;
+  }
   .hero {
     background: linear-gradient(90deg, rgb(127, 123, 198) 0%, rgba(1,146,187,1) 49%, rgba(0,212,255,1) 100%);
-    padding: 10px 5px;
+    padding: 15px 10px !important;
   }
   .hero-container {
-    padding:20px 0px !important;
+    padding:10px 14px !important;
     
+  }
+  .gradient-text span {
+    padding-left: 0px !important;
   }
 
   .image-container {
-    max-width: 300px !important;
-    padding: 13px !important;
-
+    /* max-width: 300px !important; */
+    margin-right: 35px !important;
+    width: 100%;
+    padding: 11px !important;
+    margin-top: 10px !important;
+    justify-self: center !important;
+    margin-bottom: 10px !important;
   }
 
   .background-img {
-    max-width: 300px !important;
+    /* max-width: 300px !important; */
+    width: 100%;
+    justify-self: center !important;
   }
 
   .custom-button {
-    font-size: 14px !important;
-    padding: 4px 15px !important;
+    font-size: 17px !important;
+    padding: 10px 25px !important;
+    margin-right: 10% !important;
+  
   }
 
   .toy {
     width: 50px;
   }
 
-  .toy1 {
-    left: 8%;
-    width: 70px;
-  }
-
-  .toy2 {
-    right: 8%;
-    width: 70px;
-  }
 
   .gradient-text {
     font-size: 41px !important;
     margin-top: 40px !important;
   }
   .highlight-text {
-    margin-right: 10px !important;
+    margin-right: 17px !important;
     color: azure;
     font-size: 19px !important;
     font-family: sans-serif !important;
@@ -283,7 +297,7 @@
 }
 
 .preschool-image {
-  width: 90%;
+  width: 100%;
   max-width: 600px;
   height: auto;
   border-radius: 10px;
@@ -314,7 +328,7 @@
   color: #fff;
   font-size: 24px;
   margin-bottom: 10px !important;
-  
+  justify-self: flex-start !important;
 }
 
 @media (min-width: 768px) {
@@ -362,25 +376,25 @@
     padding: 5px 24px !important;
   }
   .preschool-hero{
-    margin-top: 35px !important;
+    margin-top: 45px !important;
     background: linear-gradient(90deg, rgb(127, 123, 198) 0%, rgba(1,146,187,1) 49%, rgba(0,212,255,1) 100%) !important;
   }
-  .preschool-heading{
-    justify-self: flex-start !important;
-  
+  .preschool-heading {
+
   }
   .preschool-image{
-    width: 90% !important;
+    max-width: 95% !important;
     justify-self: center !important;
     /* margin-left: 17px; */
   }
   .image-container{
     margin-right: 18px;
     margin-top: 5px !important;
+    margin-bottom: 10px !important;
   }
   @keyframes float {
     0% { transform: translateY(0px); }
-    50% { transform: translateY(-20px); }
+    50% { transform: translateY(-40px); }
     100% { transform: translateY(2px); }
   }
 }
