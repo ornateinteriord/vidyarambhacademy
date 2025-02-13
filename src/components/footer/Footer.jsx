@@ -1,75 +1,111 @@
 import React from "react";
-import { Box, Grid, Typography, IconButton, TextField, Button } from "@mui/material";
+import { Box, Container, Grid, Typography, IconButton, TextField, Button } from "@mui/material";
 import { Facebook, Twitter, Instagram, YouTube, Email, Phone, LocationOn } from "@mui/icons-material";
 import { Link } from "react-router-dom";
 import "./Footer.css";
 
 const Footer = () => {
   return (
-    <Box  className="footer1">
-      <footer className="footer">
-        <Box maxWidth="lg">
-          <Grid container spacing={5} justifyContent="center">
-            {/* About Section */}
-            <Grid item xs={12} sm={4} >
-              <Typography variant="h5" className="main-title"  sx={{ color: '#fff', fontWeight: 'bold', marginBottom: '10px' }}>
-                Little Stars Kindergarten
-              </Typography>
-              <Typography variant="body1" className="footer-text">
-                We create a joyful learning experience where children grow with curiosity and creativity.
-              </Typography>
-            </Grid>
-
-            {/* Links Section */}
-            <Grid item xs={12} sm={2}  className="grid2"> 
-              <Typography variant="h6"  className="footer-title">Quick Links</Typography>
-             <Box className="footer-link">
-              <ul className="footer-links">
-                <li><Link to="/about">About Us</Link></li>
-                <li><Link to="/testimonials">Testimonials</Link></li>
-                <li><Link to="/admission">Admissions</Link></li>           
-                <li><Link to="/faqs">FAQs</Link></li>
-                <li><Link to="/contact">Contact Us</Link></li>
-              </ul>
-              </Box>
-            </Grid>
-
-            {/* Contact Details */}
-            <Grid item xs={12} sm={3}  className="grid2">
-              <Typography variant="h6" className="footer-title footer-contact">Contact Us</Typography>
-              <Box className="footer-link-item">
-                <p className="contact-item"><LocationOn /> 123 Happy St, Kids City</p>
-                <p className="contact-item"><Phone /> +123 456 7890</p>
-                <p className="contact-item"><Email /> info@littlestars.com</p>
-              </Box>
-            </Grid>
-
-            {/* Newsletter Signup */}
-            <Grid item xs={12} sm={3}  className="grid2">
-              <Typography variant="h6" className="footer-title footer-input">Stay Updated</Typography>
-              <Box className="newsletter-section" display='flex' sx={{ width: '400px', alignItems: 'center', justifyContent: 'center', gap: '5px' }}>
-                <TextField size="medium" placeholder="Enter your email" className="newsletter-input" />
-                <Button variant="contained" size="large"  className="newsletter-btn">Subscribe</Button>
-              </Box>
-            </Grid>
+    <Box component="footer" className="footer">
+      <Container maxWidth="lg">
+        <Grid container spacing={4}>
+          {/* About Section */}
+          <Grid item xs={12} md={4}>
+            <Typography variant="h5" component="h2" className="main-title">
+              Little Stars Kindergarten
+            </Typography>
+            <Typography variant="body1" className="footer-text">
+              We create a joyful learning experience where children grow with curiosity and creativity.
+            </Typography>
           </Grid>
 
-          {/* Social Media Icons */}
-          <Box className="social-section grid2" textAlign="center" mt={2} >
-            <Typography variant="h6" sx={{ color: '#fff', fontWeight: 'bold' }}>Follow Us</Typography>
-            <Box className="social-icons social-icons1" display="flex" justifyContent="center" gap={2} mt={1}>
-              <IconButton><Facebook /></IconButton>
-              <IconButton><Twitter /></IconButton>
-              <IconButton><Instagram /></IconButton>
-              <IconButton><YouTube /></IconButton>
-            </Box>
-          </Box>
+          {/* Quick Links */}
+          <Grid item xs={12} sm={6} md={2}>
+            <Typography variant="h6" component="h3" className="footer-title">
+              Quick Links
+            </Typography>
+            <ul className="footer-links">
+              <li><Link to="/about">About Us</Link></li>
+              <li><Link to="/testimonials">Testimonials</Link></li>
+              <li><Link to="/admission">Admissions</Link></li>
+              <li><Link to="/faqs">FAQs</Link></li>
+              <li><Link to="/contact">Contact Us</Link></li>
+            </ul>
+          </Grid>
 
-          <Typography variant="body2" align="center" className="footer-copy" mt={2}>
-            © {new Date().getFullYear()} Little Stars Kindergarten. All rights reserved.
+          {/* Contact Details */}
+          <Grid item xs={12} sm={6} md={3}>
+            <Typography variant="h6" component="h3" className="footer-title">
+              Contact Us
+            </Typography>
+            <Box>
+              <Typography className="contact-item">
+                <LocationOn /> 123 Happy St, Kids City
+              </Typography>
+              <Typography className="contact-item">
+                <Phone /> +123 456 7890
+              </Typography>
+              <Typography className="contact-item">
+                <Email /> info@littlestars.com
+              </Typography>
+            </Box>
+          </Grid>
+
+          {/* Newsletter */}
+          <Grid item xs={12} md={3}>
+            <Typography variant="h6" component="h3" className=" extra-title">
+              Stay Updated
+            </Typography>
+            <Box className="newsletter-section">
+              <Box>
+              <TextField
+                fullWidth
+                variant="outlined"
+                placeholder="Enter your email"
+                className="newsletter-input"
+                // size="small"
+              />
+              </Box>
+              <Box className="newsletter-btn-container">
+              <Button
+                variant="contained"
+                className="newsletter-btn"
+                fullWidth
+            
+                sx={{ mt: { xs: 1, md: 2 } }}
+              >
+                Subscribe
+              </Button>
+              </Box>
+            </Box>
+          </Grid>
+        </Grid>
+
+        {/* Social Media */}
+        <Box className="social-section">
+          <Typography variant="h6" component="h3" align="center" className="footer-title">
+            Follow Us
           </Typography>
+          <Box className="social-icons icons">
+            <IconButton aria-label="#" >
+              <Facebook  />
+            </IconButton>
+            <IconButton aria-label="#">
+              <Twitter />
+            </IconButton>
+            <IconButton aria-label="#">
+              <Instagram />
+            </IconButton>
+            <IconButton aria-label="#">
+              <YouTube />
+            </IconButton>
+          </Box>
         </Box>
-      </footer>
+
+        <Typography variant="body2" align="center" className="footer-copy">
+          © {new Date().getFullYear()} Little Stars Kindergarten. All rights reserved.
+        </Typography>
+      </Container>
     </Box>
   );
 };

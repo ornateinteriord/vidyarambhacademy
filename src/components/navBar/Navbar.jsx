@@ -109,7 +109,6 @@ function Navbar() {
             <Link className="navLink" to={"/faqs"}>
               <MenuItem onClick={handleMenuClose} className="menu-item">FAQs</MenuItem>
             </Link>
-            <MenuItem onClick={handleMenuClose} className="menu-item">404</MenuItem>
             <MenuItem onClick={handleMenuClose} className="menu-item">Coming Soon</MenuItem>
           </Menu>
         </Box>
@@ -170,7 +169,6 @@ function Navbar() {
           <Link className="navLink" to={"/faqs"}>
             <MenuItem onClick={handleDrawerToggle}>FAQs</MenuItem>
           </Link>
-          <MenuItem onClick={handleDrawerToggle}>404</MenuItem>
           <MenuItem onClick={handleDrawerToggle}>Coming Soon</MenuItem>
         </Menu>
       </Box>

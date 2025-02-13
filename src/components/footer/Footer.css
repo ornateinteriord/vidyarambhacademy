@@ -1,146 +1,201 @@
-
-
 .footer {
-  background: linear-gradient(90deg, rgb(86, 83, 146) 0%, rgb(104, 191, 215) 49%, rgba(0,212,255,1) 100%);
-  color: white;
-  padding: 30px 15px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  background: linear-gradient(135deg, #344e7e 0%, #4680e6 100%);
+  padding: 2rem;
+  color: #fff;
+}
 
+.main-title {
+  font-size: 1.8rem !important;
+  margin-bottom: 1.5rem !important;
+  position: relative;
+  font-weight: bold !important;
 }
 .footer-title{
-  justify-self: flex-start;
-  font-size: 19px !important;
+  font-size: 21px !important;
   font-weight: bold !important;
+  margin-bottom: 9px !important;
+}
+.extra-title{
+  margin-top: 0 !important;
+  font-weight: bold !important;
+}
+
+.main-title::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background-color: #fff;
+}
+
+.footer-text {
+  line-height: 1.8;
+  opacity: 0.9;
 }
 
 .footer-links {
   list-style: none;
   padding: 0;
-  margin: 10px 0;
+  margin: 0;
 }
 
 .footer-links li {
-  margin: 8px 0;
-  justify-self: flex-start !important;
+  margin-bottom: 5px;
 }
 
 .footer-links a {
+  color: #fff !important;
   text-decoration: none !important;
-  color: #fff;
-  font-weight: bold !important;
-  transition: 0.3s;
- 
+  transition: opacity 0.3s;
+  opacity: 0.9;
+  line-height: 1.4 !important;
 }
 
 .footer-links a:hover {
+  opacity: 1;
   color: #ee186d !important;
 }
 
 .contact-item {
-  display: flex !important;
+  display: flex;
   align-items: center;
-  line-height: 0.5rem !important;
-  gap: 3px !important;
-  font-size: 14px;
-  font-weight: bold;
-  color: #fff;
+  gap: 10px;
+  line-height: 1.9 !important;
+  /* margin-bottom: 12px !important; */
+  opacity: 0.9;
 }
 
 .newsletter-section {
+  /* margin-top: 1rem; */
   display: flex !important;
-  flex-direction: row;
-  justify-self: center !important;
+  /* justify-content: center; */
+  align-items: center;
   gap: 10px !important;
+ 
 }
 
-.newsletter-input {
-  background: #ffffff;
-  border-radius: 5px;
-  width: 70%;
-  font-size: 16px;
-  text-align: center;
-  margin-top: 10px !important;
+.newsletter-input .MuiOutlinedInput-root {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  width: 280px !important;
+  /* margin-top: 15px !important; */
+  border: none !important;
+  outline: none !important;
+}
+
+.newsletter-input .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
+  border-color: rgba(255, 255, 255, 0.5);
+
+}
+
+.newsletter-input .MuiOutlinedInput-input {
+  color: #fff;
+
 }
 
 .newsletter-btn {
-  width: 30%;
-  background: #ee186d !important;
-  color: white !important;
-  padding: 13px !important;
+  background-color: #d74982 !important;
+  color: #fff !important;
   font-weight: bold !important;
-  border-radius: 5px !important;
-  margin-top: 8px !important;
+  transition: transform 0.3s !important;
+  width: 140px !important;
+  font-size: 18px !important;
+  height: 54px !important;
   text-transform: capitalize !important;
+  margin-bottom: 15px !important;
 }
 
-@media (max-width: 768px) {
-  .footer {
+.newsletter-btn:hover {
+  transform: translateY(-2px);
+}
+
+.social-section {
+  margin-top: 2rem !important;
+ 
+}
+
+.social-icons {
+  margin-top: 1.5rem !important;
+  justify-self: center !important;
   
-    padding: 20px 10px;
+}
+
+.social-icons .MuiIconButton-root {
+
+  background-color: rgba(12, 10, 10, 0.5);
+  margin: 0 8px !important;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.social-icons .MuiSvgIcon-root {
+  color: white !important;
+}
+
+.social-icons .MuiIconButton-root:hover {
+  background-color: rgba(240, 235, 235, 0.2) !important;
+  transform: translateY(-3px);
+}
+
+.footer-copy {
+  margin-top: 2rem !important;
+  opacity: 0.7 !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+  padding-top: 1.5rem !important;
+}
+
+@media (max-width: 900px) {
+  .footer {
+    padding: 1.5rem 1.5rem 1.5rem !important;
   }
-  .footer-links a, .contact-item {
-    font-size: 14px;
+  .extra-title{
+    justify-self: center !important;
+    margin-bottom: 0.5rem !important;
   }
   .newsletter-section {
+    /* Ensure the container is full width and its children stretch */
+    display: flex;
     flex-direction: column;
+    align-items: stretch;
     width: 100%;
   }
+
   .newsletter-input {
-    width: 60%;
+    width: 100% !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+
+  .newsletter-input .MuiOutlinedInput-root {
+    width: 100% !important;
+    box-sizing: border-box; 
+  }
+  .newsletter-btn-container {
+    display: flex;
+    justify-content: center;
   }
   .newsletter-btn {
-    width: 30%;
+    width: 50% !important;
+    display: block;       /* Make the button a block element */
+    margin: 0 auto;       /* Auto margins on left and right centers it */
   }
+  .footer-links li{
+    margin-bottom: 0 !important;
+  }
+ 
 }
 
-@media (max-width: 480px) {
-  .footer {
-    padding: 15px 5px;
-   
+@media (max-width: 600px) {
+  .main-title {
+    font-size: 1.5rem !important;
   }
-  .footer-text{
-      font-size: 16px !important;
-      font-weight: bold !important;
-  }
-  .footer-link{
-      justify-self: center !important;
-      margin-right: 40px !important;
-  }
-  .footer-link-item{
-      justify-self: center !important;
-  }
-  .footer-links a, .contact-item {
-    font-size: 16px;
-  }
-  .contact-item{
-      margin-left: 50px !important;
-  }
- .footer-title{
-  justify-self: center !important;
-  font-size: 28px !important;
- }
- .newsletter-section{
-  display: flex !important;
-  align-items: center !important;
-  flex-direction: column !important;
- }
-  .newsletter-input {
-    width: 80%;
-   margin-left: 40px !important;
-  }
-  .newsletter-btn {
-    width: 50%;
-    margin-left: 50px !important;
-  }
- .social-icons1{
-  justify-self: center !important;
   
- }
- .grid2{
-  margin:10px 0px !important;
-  padding: 0px 0 !important;
- }
+  .footer-title {
+    margin-top: 2rem !important;
+  }
+  
+  .social-section {
+    margin-top: 2rem !important;
+  }
 }

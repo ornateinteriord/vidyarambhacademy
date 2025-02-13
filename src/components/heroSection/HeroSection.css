@@ -124,7 +124,8 @@
   font-size: 20px !important;
   padding: 6px 30px !important;
   border-radius: 25px !important;
-  transition: background 0.3s ease;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 4px 15px rgba(30, 60, 114, 0.6) !important;
   text-transform: capitalize !important;
   font-weight: bold !important;
   margin-top: 15px !important;
@@ -132,7 +133,8 @@
 } 
 
 .custom-button:hover {
-  background-color: #f05622 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(30, 60, 114, 0.3) !important;
 }
 
 .shadow-img {
@@ -281,105 +283,188 @@
 }
 
 /* 
----------------------about us ---------------------*/
+/* ... (keep your existing CSS) ... */
+
 .preschool-hero {
-  margin-top: 30px !important;
   display: flex !important;
-  flex-direction: row !important;
-  align-items: center;
-  justify-content: center;
-   padding: 0px 16px;
-  text-align: center;
+  align-items: center !important;
+  gap: 2rem !important;
+  padding: 2rem 2rem !important;
   background: linear-gradient(90deg, rgb(127, 123, 198) 0%, rgba(1,146,187,1) 49%, rgba(0,212,255,1) 100%);
+  position: relative !important;
+  overflow: hidden;
+}
+
+.preschool-image {
+  flex: 1;
+  max-width: 50%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.preschool-text {
+  flex: 1;
+  max-width: 50%;
+  padding: 2rem;
+  animation: slideIn 0.8s ease-out forwards;
+}
+
+.preschool-heading {
+  color: #fff;
+  margin-bottom: 1rem !important;
+  font-size: 2.5rem !important;
+  font-weight: bold !important;
+  position: relative;
+  padding-bottom: 0.7rem;
+}
+
+.preschool-heading::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(100deg, #fff 0%, #ee186d 100%);
+  border-radius: 2px;
+}
+
+.preschool-description {
+  color: #333 !important;
+  font-weight: bold !important;
+  line-height: 1.8 !important;
+  margin-bottom: 1.5rem !important;
+  font-size: 1.1rem !important;
+}
+
+.preschool-button {
+  background: #ee186d !important;
+  color: white !important;
+  padding: 12px 32px !important;
+  font-size: 1.1rem !important;
+  text-transform: none !important;
+  border-radius: 50px !important;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 4px 15px rgba(30, 60, 114, 0.9) !important;
+}
+
+.preschool-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(30, 60, 114, 0.3) !important;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .preschool-hero {
+    padding: 4rem 2rem;
+    gap: 3rem;
+  }
+
+  .preschool-heading {
+    font-size: 2.2rem !important;
+  }
+
+  .preschool-description {
+    font-size: 1rem !important;
+  }
+}
+
+@media (max-width: 992px) {
+  .preschool-hero {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .preschool-image,
+  .preschool-text {
+    max-width: 100%;
+  }
+
+  .preschool-heading::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .preschool-description br {
+    display: none;
+  }
 }
 
 @media (max-width: 768px) {
   .preschool-hero {
-    
-    display: flex  ;
-    flex-direction: column !important;
-    align-items: center;
-    justify-content: center;
-     padding: 0px 16px;
-    text-align: center;
-    background: linear-gradient(90deg, rgb(127, 123, 198) 0%, rgba(1,146,187,1) 49%, rgba(0,212,255,1) 100%);
+    padding: 3rem 1.5rem;
   }
-}
 
-.preschool-image {
-  width: 100%;
-  max-width: 600px;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-  margin-bottom: 24px;
-}
-
-@media (max-width: 768px) {
-  .preschool-image {
-    width: 85% !important;
-    margin-bottom: 0;
-    justify-self: flex-start !important;
-    margin-right: 20px ;
-  }
-}
-
-.preschool-text {
-  padding: 18px !important;
-  margin-left: 20px !important;
-  display: flex !important;
-  align-items: self-start;
-  justify-content: flex-start;
-  flex-direction: column;
- 
-}
-
-@media (max-width: 768px) {
-  .preschool-text {
-    padding: 24px;
-    margin-left: 40px;
-  }
-}
-
-.preschool-heading {
-  font-weight: bold !important;
-  color: #fff;
-  font-size: 24px;
-  margin-bottom: 10px !important;
-  justify-self: flex-start !important;
-}
-
-@media (max-width: 768px) {
-  
   .preschool-heading {
-    font-size: 28px;
+    font-size: 1.5rem !important;
+    margin-bottom: 0.75rem !important;
+  }
+  .preschool-heading::after {
+    width: 100px !important;
+    height: 3px !important;
+    bottom: -4px !important;
+  }
+
+  .preschool-text {
+    padding: 1rem;
   }
 }
 
-.preschool-description {
-  margin-bottom: 16px !important;
-  color: #333;
-  font-weight: bold !important;
-  font-size: 20px !important;
-  text-align: start !important;
-}
+@media (max-width: 480px) {
+  .preschool-hero {
+    padding: 2rem 1rem;
+  }
 
-@media (max-width: 768px) {
+  .preschool-heading {
+    font-size: 1.7rem !important;
+    margin-bottom: 0.6rem !important;
+    justify-self: flex-start !important;
+  }
+  .preschool-heading::after {
+    width: 100px !important;
+    height: 2px !important;
+    bottom: -3px !important;
+  }
   .preschool-description {
-    font-size: 20px;
+    font-size: 1rem !important;
+    margin-bottom: 0.7rem !important;
+    text-align: left !important;
+  }
+
+  .preschool-button {
+    width: 100%;
+    padding: 10px 18px !important;
+    font-size: 1.3rem !important;
+    margin-top: 5px !important;
   }
 }
 
-.preschool-button {
-  margin-top: 24px !important;
-  border-radius: 20px !important;
-  padding: 8px 24px !important;
-  background: #ee186d !important;
-  font-weight: bold !important ;
-  font-size: 18px !important;
-  text-transform: none !important;
-}
+/* Optional: Add a subtle parallax effect on desktop */
+@media (min-width: 993px) {
+  .preschool-image {
+    transform: perspective(1000px) rotateY(-5deg);
+    transition: transform 0.5s ease;
+  }
 
+  .preschool-image:hover {
+    transform: perspective(1000px) rotateY(0deg);
+  }
+}
+/* 
 @media (max-width: 400px) {
   
   .gradient-text{
@@ -405,8 +490,8 @@
     max-width: 98% !important;
     justify-self: center !important;
     /* margin-left: 17px; */
-  }
-  .image-container{
+  
+  /* .image-container{
     margin-right: 18px;
     margin-top: 5px !important;
     margin-bottom: 10px !important;
@@ -416,8 +501,8 @@
     50% { transform: translateY(-20px); }
     100% { transform: translateY(2px); }
   }
-}
+
 
 .preschool-button:hover {
   background: #f05622;
-}
+} */ 

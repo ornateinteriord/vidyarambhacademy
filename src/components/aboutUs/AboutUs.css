@@ -18,7 +18,7 @@
 
 .about-container {
   padding: 3rem 0;
-  background: url('https://img.freepik.com/free-vector/cute-baby-toys-cartoon-seamless-pattern_1284-41084.jpg');
+  /* background: url('https://img.freepik.com/free-vector/cute-baby-toys-cartoon-seamless-pattern_1284-41084.jpg'); */
   background-size: 350px !important;
   position: relative;
   isolation: isolate;
@@ -40,7 +40,6 @@
 }
 
 .about-content {
-
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -250,57 +249,100 @@
 .about-subtitle{
   font-size: 25px !important;
 }
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .about-container {
+    padding: 0 2rem !important;
+  }
+  
+  /* .team-member-image {
+    height: 220px;
+  } */
+}
 
-@media (max-width: 768px) {
- 
-  .about-container{
-
-    padding: 40px 50px ;
-  }
-  .about-image{
-    
-    width: 95%;
-  }
-  .about-title {
-      font-size: 2.5rem !important;
-      text-align: center !important;
-  }
-  .about-subtitle{
-    font-size: 23px !important;
-  }
-  .about-image-container{
-    width: 95%;
+@media (max-width: 992px) {
+  
+  .about-content {
+    margin-top: 100px !important;
+    flex-direction: column;
+    gap: 2rem;
   }
 
-  .about-description {
-      font-size: 1.3rem !important;
-      text-align: start !important;
-      margin-bottom: 1rem !important;
+  .about-image-container,
+  .about-text-container {
+    max-width: 100%;
+  
   }
 
   .about-points {
-      grid-template-columns: 1fr !important;
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  .about-values-list {
-      font-size: 1.2rem !important;
-  }
-  .about-points-title{
-    font-size:2.1rem !important ;
-  }
-.about-team-title{
-  font-size:2.2rem !important ;
-}
-.about-team-description{
-  text-align: start !important;
-}
   .about-team-members {
-      justify-self: center !important;
-      flex-direction: column !important;
-      gap: 2rem !important;
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr);
+    justify-self: center !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-background {
+    padding: 3rem 0;
   }
 
-  .team-member {
-      margin: 0 auto;
+  .about-title,
+  .about-points-title,
+  .about-team-title {
+    font-size: 2rem !important;
+  }
+
+  .about-description,
+  .about-team-description {
+    font-size: 1rem !important;
+  }
+
+  .about-points li {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+
+  .about-icon {
+    font-size: 2rem !important;
+  }
+
+  /* .team-member-image {
+    height: 200px;
+  } */
+}
+
+@media (max-width: 576px) {
+  .about-background {
+    padding: 2rem 0;
+  }
+
+  .about-container {
+    padding: 0 1rem !important;
+  }
+
+  .about-points {
+    grid-template-columns: 1fr;
+  }
+
+  .about-team-members {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    justify-self: center !important;
+    gap: 1.5rem;
+  }
+
+  /* .team-member-image {
+    height: 280px;
+  } */
+
+  .about-title,
+  .about-points-title,
+  .about-team-title {
+    font-size: 1.8rem !important;
   }
 }
