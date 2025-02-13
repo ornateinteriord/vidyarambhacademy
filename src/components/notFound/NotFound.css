@@ -1,0 +1,69 @@
+.not-found-container {
+    text-align: center;
+    padding: 50px;
+    background: linear-gradient(135deg, #14212f, #49a7eb);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.error-code {
+    font-size: 100px;
+    font-weight: bold !important;
+    color: #ee186d !important; /* Ensuring the color is applied */
+    animation: bounce 1.5s infinite;
+    margin-bottom: 10px !important;
+}
+
+.error-text {
+    font-size: 24px !important; /* Ensuring font size is applied */
+    font-weight: bold !important;
+    color: white !important; /* Ensuring text color is white */
+    margin-bottom: 20px !important;
+}
+
+.error-image {
+    width: 250px !important; /* Ensuring image size */
+    animation: shake 1.5s infinite alternate !important;
+}
+
+.home-button {
+    background-color: #ff4081 !important; /* Ensuring button color */
+    color: white !important; /* Ensuring text color */
+    font-size: 18px !important;
+    font-weight: bold !important;
+    padding: 8px 22px !important;
+    border-radius: 12px;
+    text-transform: capitalize !important;
+    margin-top: 20px;
+    transition: transform 0.4s ease-in-out;
+}
+
+.home-button:hover {
+    transform: scale(1.1);
+}
+
+/* Bounce Animation */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Shake Animation */
+@keyframes shake {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(5deg);
+    }
+    75% {
+        transform: rotate(-5deg);
+    }
+}

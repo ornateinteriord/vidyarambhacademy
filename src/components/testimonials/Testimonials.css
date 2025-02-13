@@ -1,4 +1,4 @@
-/* Keyframes for slide-in animation */
+
 @keyframes slideInLeft {
   from { transform: translateX(-100%); opacity: 0; }
   to { transform: translateX(0); opacity: 1; }
@@ -26,14 +26,14 @@
   grid-template-columns: repeat(3, 1fr);
   justify-content: center;
   flex-wrap: wrap !important;
-  padding: 20px 70px;
+  padding: 30px 70px;
   gap: 20px;
 }
 
 /* Testimonial Card */
 .testimonial-card {
   max-width: 350px;
-  height: 250px;
+  height: 290px;
   padding: 20px;
   text-align: center;
   border-radius: 10px;
@@ -41,11 +41,10 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5) !important;
   transition: transform 0.3s ease-in-out !important;
   color: #fff !important;
-  opacity: 0; /* Start with cards hidden */
-  animation-fill-mode: forwards; /* Ensure the card stays visible after animation */
+  opacity: 0; 
+  animation-fill-mode: forwards; 
 }
 
-/* Slide Animations for Each Card (One-Time) */
 .testimonial-card:nth-child(1) {
   animation: slideInLeft 1s ease-in-out 0.5s forwards;
 }

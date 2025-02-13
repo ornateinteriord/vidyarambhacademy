@@ -1,13 +1,26 @@
-body{
+/* body{
     font-family: 'Arial', sans-serif; 
     margin: 0;
     padding: 0;
-   /* background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(1,146,187,1) 49%, rgba(0,212,255,1) 100%); */
-   background-color: aliceblue;
    width: 100%;
-}
+} */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
+  /* body {
+    overflow-x: hidden;
+    max-width: 100%;
+    background-color: aliceblue;
+} 
+
+ html {
+    width: 100%;
+    max-width: 100%;
+} 
+ 
+*{
+    box-sizing: border-box;
+    max-width: 100%;
+} */

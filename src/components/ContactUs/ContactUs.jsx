@@ -25,16 +25,16 @@ const ContactUs = () => {
           <form className="contact-form">
             <Grid container spacing={2} className="input-fields">
               <Grid item xs={6}>
-                <TextField fullWidth label="Your Name" variant="outlined" className="input-field" />
+                <TextField fullWidth placeholder="Your Name" variant="outlined"  className="input-field" />
               </Grid>
               <Grid item xs={6}>
-                <TextField fullWidth label="Email Address" variant="outlined" className="input-field" />
+                <TextField fullWidth placeholder="Email Address" variant="outlined" className="input-field" />
               </Grid>
               <Grid item xs={6}>
-                <TextField fullWidth label="Phone Number" variant="outlined" className="input-field" />
+                <TextField fullWidth placeholder="Phone Number" variant="outlined" className="input-field" />
               </Grid>
               <Grid item xs={6}>
-                <TextField fullWidth label="Project Details" variant="outlined" className="input-field" />
+                <TextField fullWidth placeholder="Project Details" variant="outlined" className="input-field" />
               </Grid>
               <Grid item xs={12}>
                 <TextField fullWidth label="Write your message" variant="outlined" multiline rows={4} className="input-field" />

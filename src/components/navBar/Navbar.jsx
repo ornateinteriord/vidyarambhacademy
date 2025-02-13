@@ -18,7 +18,7 @@ import CloseIcon from "@mui/icons-material/Close";
 import { Link as ScrollLink, scroller } from "react-scroll";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import kidslogo from "../../assets/kidzena-red.png";
-import vlogo from "../../assets/classes/v-logo1.png"
+import vlogo from "../../assets/classes/img-vid.png"
 
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import "./Navbar.css";
@@ -65,16 +65,17 @@ function Navbar() {
   return (
     <AppBar position="fixed" className="navbar">
       <Box className="toolbar">
-        <Box display={'flex'} justifyContent={'space-evenly'} alignItems={'center'}>
-      <Box className="logo-container">
-      <Box>
-        <img src={vlogo} alt="Kidzena" className="logo" />
-        </Box>  
-        <Box>
-  <Typography  className="logo-primary">Vidyarambha</Typography>
-  <Typography  className="logo-secondary">Balamandir</Typography>
+        <Box className="navmid" display={'flex'} justifyContent={'space-evenly'} alignItems={'center'}>
+        <Box className="logo-container">
+  <Box className="logo-content">
+    <img src={vlogo} alt="Kidzena" className="logo" />
+    {/* <Box className="logo-text">
+      <Typography className="logo-primary">Vidyarambha</Typography>
+      <Typography className="logo-secondary">Balamandir</Typography>
+    </Box> */}
   </Box>
 </Box>
+
 <Box>
 <IconButton className="menu-icon" onClick={handleDrawerToggle}>
           <MenuIcon />

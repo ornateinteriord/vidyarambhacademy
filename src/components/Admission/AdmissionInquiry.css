@@ -1,25 +1,25 @@
 /* General Styles */
 .admission {
   background: aliceblue;
-  width: 100%;
+  width: 100vw !important;
   margin-top: 100px;
+  justify-self: center !important;
+  padding: 0px 40px;
 }
 
 .admission-inquiry {
-  display: flex;
-  width: 90%;
+  display: flex !important;
   max-width: 100%;
-  justify-content: center;
-  align-items: center;
+  justify-content: center !important;
+  align-items: center !important;
   background: #34495e;
-  padding: 50px;
+  padding: 30px;
   border-radius: 10px;
   gap: 20px !important;
   margin: 30px 30px !important;
-  overflow: hidden; /* Ensures animation looks smooth */
+  /* overflow: hidden;  */
 }
 
-/* Keyframe Animations */
 @keyframes slideFromTop {
   from {
       opacity: 0;
@@ -42,27 +42,26 @@
   }
 }
 
-/* Left-Side Text Animation */
 .admission-content {
   max-width: 60%;
   text-align: left;
-  opacity: 0; /* Initially hidden */
+  opacity: 0; 
   animation: slideFromBottom 1s ease-in-out forwards;
-  animation-delay: 0.3s; /* Slight delay for smoother effect */
+  animation-delay: 0.3s; 
 }
 
-/* Right-Side Form Animation */
+
 .inquiry-form {
   background: #fff;
+  width: 50% !important;
   padding: 30px !important;
   border-radius: 10px !important;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2) !important;
-  opacity: 0; /* Initially hidden */
+  opacity: 0;
   animation: slideFromTop 1s ease-in-out forwards;
-  animation-delay: 0.5s; /* Slight delay for smoother effect */
+  animation-delay: 0.5s; 
 }
 
-/* Title & Subtitle Styles */
 .admission-title {
   font-size: 2.5rem !important;
   font-weight: bold !important;
@@ -75,7 +74,6 @@
   margin-bottom: 20px;
 }
 
-/* Steps Section */
 .steps-container {
   display: flex;
   gap: 20px;
@@ -87,7 +85,7 @@
   padding: 15px;
   border-radius: 10px;
   text-align: center;
-  width: 120px;
+  width: 150px !important;
 }
 
 .step-number {
@@ -130,7 +128,7 @@
   background: #e91e63 !important;
 }
 
-/* Responsive Styles */
+
 
 /* For Tablets and Below (≤1024px) */
 @media (max-width: 1024px) {
@@ -196,14 +194,15 @@
 /* For Mobile Devices (≤400px) */
 @media (max-width: 400px) {
   .admission {
-      width: 100%;
+      width: 100vw !important;
+      padding: 0px 0px;
   }
 
   .admission-inquiry {
       flex-direction: column;
       justify-self: center;
       padding: 10px;
-      width: 100% !important;
+     width: 90% !important;
       margin: 30px 30px !important;
       text-align: center;
   }
