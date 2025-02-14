@@ -143,14 +143,28 @@
   .classes-grid {
       padding: 0px 20px !important;
       padding-bottom: 20px !important;
+      display: grid !important;
+      grid-template-columns: repeat(2, 1fr);
+      justify-content: center !important;
   }
 
   .class-card {
+  
       width: 100% !important;
   }
 
   .classes-page {
       padding: 0 !important;
       width: 100% !important;
+  }
+}
+@media (max-width: 480px){
+  .classes-page{
+    margin-top: 70px !important;
+  }
+  .classes-grid{
+  display: grid !important;
+  grid-template-columns: repeat(1, 1fr);
+  justify-content: center !important;
   }
 }

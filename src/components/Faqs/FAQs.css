@@ -114,14 +114,14 @@
   font-size: clamp(1.5rem, 3vw, 2rem) !important;
   font-weight: bold !important;
   color: #b15a7d;
-  margin: clamp(10px, 2vw, 20px) 0;
-  line-height: 1.3;
+  margin: clamp(10px, 2vw, 20px) 0 !important;
+  line-height: 1.3 !important;
 }
 
 .enroll-text {
-  font-size: clamp(0.9rem, 1.8vw, 1rem);
+  font-size: clamp(0.9rem, 1.8vw, 1rem) !important;
   color: #666;
-  margin-bottom: clamp(15px, 3vw, 25px);
+  margin-bottom: clamp(15px, 3vw, 25px) !important;
   max-width: 600px;
   margin-left: auto !important;
   margin-right: auto !important;
@@ -144,6 +144,28 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  .faqs-grid{
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center !important;
+    width: 100% !important;
+    padding: 5px  !important;
+  }
+  .faq-item{
+    padding: 5px !important;
+    margin: 5px !important;
+  }
+  
+  .faqs-container{
+    margin-top: 60px !important;
+    width: 100% !important;
+   max-width:  100% !important;
+  }
+  .faqs-bg{
+    padding: 20px 20px !important;
+    margin: 20px 20px !important ;
+    justify-self: center !important;
+  }
   .faq-item {
     margin-left: auto;
     margin-right: auto;
@@ -157,8 +179,14 @@
 }
 
 @media (max-width: 480px) {
+  .faqs-grid{
+    padding: 0 !important;
+    display: grid !important;
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: center !important;
+  }
   .faqs-bg {
-    padding: 5px 10px;
+    padding: 5px !important;
     margin-top: 60px !important;
   }
   .faqs-container{

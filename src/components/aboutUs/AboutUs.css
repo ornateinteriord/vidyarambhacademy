@@ -317,8 +317,11 @@
 }
 
 @media (max-width: 576px) {
+  .about-content{
+    margin-top: 60px !important;
+  }
   .about-background {
-    padding: 2rem 0;
+    padding: 1rem 0;
   }
 
   .about-container {
@@ -334,6 +337,13 @@
     grid-template-columns: 1fr !important;
     justify-self: center !important;
     gap: 1.5rem;
+  }
+  .about-team-description{
+  text-align: left !important;
+  }
+  .about-team-title{
+    text-align: left !important;
+    margin-bottom: 10px !important;
   }
 
   /* .team-member-image {

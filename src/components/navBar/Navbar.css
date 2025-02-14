@@ -22,7 +22,7 @@
 }
 
 .logo {
-  height: 60px;
+  height: 70px;
   width: auto;
 }
 
@@ -70,9 +70,10 @@
 }
 
 .get-started {
-  background: linear-gradient(145deg, #033a4a 0%, #b51580 100%) !important;
+  background: linear-gradient(145deg, #05151a 30%, #b51580 70%) !important;
   color: white !important;
   padding: 0.5rem 1.5rem !important;
+  font-weight: bold !important;
   font-size: 1rem !important;
   text-transform: none !important;
   border-radius: 50px !important;

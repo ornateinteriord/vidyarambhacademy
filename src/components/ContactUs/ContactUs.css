@@ -198,7 +198,8 @@
 
     .background {
         padding: 0px;
-        margin-top: 60px;
+        margin-top: 40px !important;
+
     }
 
     .contact-container {

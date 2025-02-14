@@ -312,12 +312,12 @@
 }
 
 .preschool-heading {
-  color: #fff;
+  color: #ffff !important;
   margin-bottom: 1rem !important;
   font-size: 2.5rem !important;
   font-weight: bold !important;
   position: relative;
-  padding-bottom: 0.7rem;
+  padding-bottom: 0.3rem;
 }
 
 .preschool-heading::after {

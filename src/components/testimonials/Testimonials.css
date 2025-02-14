@@ -107,7 +107,7 @@
   .testimonials-grid {
     display: grid !important;
     justify-self: center !important;
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     padding: 20px;
 
   }

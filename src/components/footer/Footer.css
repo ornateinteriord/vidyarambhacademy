@@ -131,10 +131,12 @@
 
 .social-icons .MuiSvgIcon-root {
   color: white !important;
+  width: 30px !important;
+  height: auto;
 }
 
 .social-icons .MuiIconButton-root:hover {
-  background-color: rgba(240, 235, 235, 0.2) !important;
+  background-color: #ee186d !important;
   transform: translateY(-3px);
 }
 
