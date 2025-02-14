@@ -62,7 +62,7 @@ const ContactUs = () => {
                   />
                 </Grid>
               </Grid>
-              <Box display="flex" gap={2} flexWrap="wrap">
+              <Box    className="cont-btn">
                 <Button variant="contained" className="animated-button">
                   Submit
                 </Button>
