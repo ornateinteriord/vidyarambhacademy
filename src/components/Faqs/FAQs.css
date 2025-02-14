@@ -180,18 +180,18 @@
 
 @media (max-width: 480px) {
   .faqs-grid{
-    padding: 0 !important;
+    padding: 5px !important;
     display: grid !important;
     grid-template-columns: repeat(1, 1fr);
     justify-content: center !important;
   }
   .faqs-bg {
-    padding: 5px !important;
-    margin-top: 60px !important;
+    padding: 10px !important;
+    margin-top: 70px !important;
   }
   .faqs-container{
     margin-top: 20px !important;
-    padding: 3px !important;
+    padding: 25px 10px !important;
     margin: 0px !important;
     
   }

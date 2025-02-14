@@ -18,7 +18,7 @@ import CloseIcon from "@mui/icons-material/Close";
 import { Link as ScrollLink, scroller } from "react-scroll";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import kidslogo from "../../assets/kidzena-red.png";
-import vlogo from "../../assets/classes/img-vid.png"
+import vlogo from "../../assets/classes/v-logo1.png"
 
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import "./Navbar.css";
@@ -73,10 +73,10 @@ function Navbar() {
         <Box className="logo-container">
   <Box className="logo-content">
     <img src={vlogo} alt="Kidzena" className="logo" />
-    {/* <Box className="logo-text">
+    <Box className="logo-text">
       <Typography className="logo-primary">Vidyarambha</Typography>
       <Typography className="logo-secondary">Balamandir</Typography>
-    </Box> */}
+    </Box>
   </Box>
 </Box>
 
