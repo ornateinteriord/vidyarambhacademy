@@ -103,7 +103,7 @@ const Footer = () => {
         </Box>
 
         <Typography variant="body2" align="center" className="footer-copy">
-          © {new Date().getFullYear()} Little Stars Kindergarten. All rights reserved.
+          © {new Date().getFullYear()} Vidyarambh Balmandir. All rights reserved.
         </Typography>
       </Container>
     </Box>

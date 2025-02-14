@@ -61,6 +61,10 @@
   padding: 0.5rem 1rem;
 }
 
+.nav-links Button:hover {
+  color: #ee186d !important ;
+}
+
 .nav-links Button:focus {
   color: #ee186d !important ;
 }
@@ -92,8 +96,8 @@
 }
 
 .mobile-menu {
-  width: 250px;
-  padding: 1rem;
+  width: 230px !important;
+  padding: 1rem !important;
 }
 
 .mobile-menu .MuiListItem-root {
@@ -102,7 +106,8 @@
 
 .mobile-menu .navLink {
   text-decoration: none;
-  color: #1e3c72;
+  color: black;
+  font-weight: bold !important;
   width: 100%;
 }
 
@@ -123,6 +128,86 @@
   text-decoration: none;
   color: inherit;
   width: 100%;
+}
+
+/* Define the keyframes for the animation */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply the animation to each menu item */
+.more-menu .menu-item {
+  opacity: 0;
+  transform: translateY(-30px);
+  animation: slideIn 0.5s ease forwards;
+}
+
+/* Stagger the animation for each menu item */
+.more-menu .menu-item:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.more-menu .menu-item:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.more-menu .menu-item:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.more-menu .menu-item:nth-child(4) {
+  animation-delay: 0.8s;
+}
+
+.more-menu .menu-item:nth-child(5) {
+  animation-delay: 0.10s;
+}
+
+/* Keyframes for sliding in the menu items */
+@keyframes slideInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Apply the animation to each list item */
+.mobile-menu .MuiListItem-root {
+  opacity: 0;
+  transform: translateX(-30px);
+  animation: slideInFromLeft 0.5s ease forwards;
+}
+
+/* Stagger the animation for each list item */
+.mobile-menu .MuiListItem-root:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.mobile-menu .MuiListItem-root:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.mobile-menu .MuiListItem-root:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.mobile-menu .MuiListItem-root:nth-child(4) {
+  animation-delay: 0.8s;
+}
+
+.mobile-menu .MuiListItem-root:nth-child(5) {
+  animation-delay: 0.10s;
 }
 
 /* Responsive Styles */
@@ -193,30 +278,32 @@
 }
 
 /* Animation for mobile menu */
-.MuiDrawer-paper {
+/* .MuiDrawer-paper {
   animation: slideIn 0.3s ease-out;
-}
+} */
 
 @keyframes slideIn {
   from {
     transform: translateX(100%);
+    opacity: 0;
   }
   to {
     transform: translateX(0);
+    opacity: 1;
   }
 }
 
-/* Smooth transition for menu items */
-.mobile-menu .MuiListItem-root {
-  transition: background-color 0.3s ease;
-}
+.MuiDrawer-paper {
+  animation: slideIn 0.3s ease-out !important;
+} 
 
-.mobile-menu .MuiListItem-root:hover {
-  background-color: rgba(30, 60, 114, 0.05);
-}
+
+ .mobile-menu .MuiListItem-root:hover {
+  background-color: hwb(335 11% 18% / 0.05);
+} 
 
 /* Active link styles */
-.nav-links Button.active,
+ .nav-links Button.active,
 .mobile-menu .MuiListItem-root.active {
   background-color: rgba(30, 60, 114, 0.1);
-}
+} 

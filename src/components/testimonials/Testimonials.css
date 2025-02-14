@@ -105,8 +105,11 @@
 
 @media (max-width: 768px) {
   .testimonials-grid {
+    display: grid !important;
+    justify-self: center !important;
     grid-template-columns: repeat(1, 1fr);
     padding: 20px;
+
   }
 
   .testimonials-container1 {
@@ -123,7 +126,9 @@
 
   .testimonial-card {
     max-width: 90% !important;
-    padding: 15px !important;
+    height: auto !important;
+    padding: 5px !important;
+    justify-self: center !important;
   }
 
   .testimonials-container1 {

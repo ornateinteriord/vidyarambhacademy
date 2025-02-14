@@ -33,15 +33,19 @@ function Navbar() {
     setAnchorEl(event.currentTarget);
   };
 
+  
 
-  const handleMenuClose = () => setAnchorEl(null);
+
+  const handleMenuClose = () =>{ 
+    setMobileOpen(false);
+    setAnchorEl(null)};
 
 
-  const handleDrawerToggle = () =>{
-    setMobileOpen(!mobileOpen)
-    handleMenuOpen(false)
+  const handleDrawerToggle = () => {
+    console.log("Before toggle:", mobileOpen);
+    setMobileOpen((prev) => !prev);
+    console.log("After toggle:", !mobileOpen);
   };
-
   const handleScrollToSection = (sectionId) => {
     handleMenuClose(); 
     setMobileOpen(false); 
@@ -156,22 +160,11 @@ function Navbar() {
       </ListItem>
 
       {/* More Menu inside Drawer */}
-      <Box>
+       <Box>
         <Button onClick={handleMenuOpen} sx={{ marginLeft: "10px", color: "black" }}>
           More <KeyboardArrowDownIcon style={{ fontWeight: "bold", fontSize: "30px" }} />
         </Button>
-        <Menu anchorEl={anchorEl} open={Boolean(anchorEl)} onClose={handleMenuClose}  >
-          <MenuItem onClick={() => handleScrollToSection("activities")}>Activities</MenuItem>
-          <Link className="navLink" to={"/testimonials"}>
-            <MenuItem onClick={handleDrawerToggle}>Testimonials</MenuItem>
-          </Link>
-          <MenuItem onClick={() => handleScrollToSection("moments-section")}>Moments</MenuItem>
-          <Link className="navLink" to={"/faqs"}>
-            <MenuItem onClick={handleDrawerToggle}>FAQs</MenuItem>
-          </Link>
-          <MenuItem onClick={handleDrawerToggle}>Coming Soon</MenuItem>
-        </Menu>
-      </Box>
+      </Box> 
     </Box>
   </List>
 </Drawer>

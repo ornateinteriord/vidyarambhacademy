@@ -18,8 +18,8 @@
 
 .about-container {
   padding: 3rem 0;
-  /* background: url('https://img.freepik.com/free-vector/cute-baby-toys-cartoon-seamless-pattern_1284-41084.jpg'); */
-  background-size: 350px !important;
+  /* background: url("https://img.freepik.com/free-vector/cute-baby-toys-cartoon-seamless-pattern_1284-41084.jpg") no-repeat; */
+  /* background-size: 350px !important; */
   position: relative;
   isolation: isolate;
   overflow: hidden;

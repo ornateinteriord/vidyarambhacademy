@@ -1,66 +1,79 @@
-
+/* Base Styles */
 .faqs-bg {
   background: aliceblue;
-  /* width: 100vw; */
+  min-height: 100vh;
+  width: 100%;
+  margin-top: 50px !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center;
+  padding: 70px
 }
 
 .faqs-container {
-  padding: 40px 170px !important;
+  width: 100%;
+  max-width: 1400px;
+  padding: clamp(0px, 5vw, 70px) !important;
   text-align: center;
   background: #f9f9f9;
-  gap: 20px !important;
-  margin-top: 60px;
+  padding-top: 20px !important;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 .faqs-title {
-  font-size: 2.5rem !important;
+  font-size: clamp(1.8rem, 4vw, 2.5rem) !important;
   font-weight: bold !important;
   color: #2c4a62;
-  margin-bottom: 10px;
+  margin-bottom: clamp(10px, 2vw, 20px) !important;
 }
 
 .faqs-subtitle {
-  font-size: 1rem;
+  font-size: clamp(0.9rem, 2vw, 1rem);
   color: #6c757d;
-  margin-bottom: 30px !important;
-  justify-self: center;
+  margin-bottom: clamp(20px, 4vw, 30px) !important;
+  max-width: 800px;
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
-
 
 .faqs-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  justify-content: center;
-  gap: 20px !important;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 450px), 1fr));
+  gap: clamp(15px, 3vw, 25px);
+  width: 90%;
   margin: 0 auto;
+  padding: clamp(5px, 1vw, 10px);
 }
 
 .faq-item {
   display: flex;
-  justify-self: center;
+  align-items: flex-start;
+  gap: 15px;
   background: #ffffff;
-  padding: 20px 20px !important;
+  padding: clamp(15px, 3vw, 25px);
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  max-width: 500px;
-  transition: transform 0.3s ease-in-out;
+  text-align: left;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   opacity: 0;
   transform: translateY(20px);
-  animation: fadeInUp 0.8s ease-in-out forwards;
+  animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
 
 .faq-item:hover {
-  transform: scale(1.05);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
 
 @keyframes fadeInUp {
   from {
-      opacity: 0;
-      transform: translateY(20px);
+    opacity: 0;
+    transform: translateY(20px);
   }
   to {
-      opacity: 1;
-      transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
@@ -71,144 +84,100 @@
 .faq-item:nth-child(5) { animation-delay: 1s; }
 .faq-item:nth-child(6) { animation-delay: 1.2s; }
 
-
 .faq-icon {
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 3vw, 2rem) !important;
+  flex-shrink: 0;
 }
 
 .faq-question {
-  font-size: 1rem !important;
+  font-size: clamp(0.9rem, 2vw, 1.1rem) !important;
   font-weight: bold !important;
+  margin-bottom: 8px !important;
 }
 
 .faq-answer {
-  font-size: 1rem !important;
+  font-size: clamp(0.85rem, 1.8vw, 1rem) !important;
   color: #6c757d !important;
+  line-height: 1.5;
 }
 
 .enroll-section {
-  text-align: center;
-  margin-top: 50px;
-  padding: 40px;
+  text-align: center !important;
+  margin-top: clamp(30px, 5vw, 50px);
+  padding: clamp(20px, 4vw, 40px);
   background-color: aliceblue;
   border-radius: 10px;
-}
-
-.enroll-heading {
-  font-size: 20px;
-  color: #333 !important;
-  font-weight: bold !important;
-  margin-top: 10px !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 .enroll-title {
-  font-size: 28px;
+  font-size: clamp(1.5rem, 3vw, 2rem) !important;
   font-weight: bold !important;
   color: #b15a7d;
-  margin: 10px 0;
+  margin: clamp(10px, 2vw, 20px) 0;
+  line-height: 1.3;
 }
 
 .enroll-text {
-  font-size: 16px;
+  font-size: clamp(0.9rem, 1.8vw, 1rem);
   color: #666;
-  margin-bottom: 20px;
+  margin-bottom: clamp(15px, 3vw, 25px);
+  max-width: 600px;
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
 
 .enroll-button {
   background-color: #ee186d !important;
-  border-radius: 20px !important;
+  border-radius: 25px !important;
   text-transform: capitalize !important;
   font-weight: bold !important;
-  padding: 15px 35px  !important;
-  border: none;
-  color: #fff;
-  font-size: 1rem;
+  padding: clamp(10px, 1vw, 15px) clamp(18px, 2vw, 28px) !important;
+  font-size: clamp(0.9rem, 1.8vw, 1rem);
+  transition: all 0.3s ease !important;
 }
 
-
-@media (max-width: 1024px) {
-  .faqs-container {
-      padding: 40px 50px;
-  }
-
-  .faqs-grid {
-      grid-template-columns: repeat(1, 1fr);
-      padding: 20px;
-  }
-
-  .faq-item {
-      max-width: 400px;
-  }
+.enroll-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(238, 24, 109, 0.3);
 }
 
+/* Responsive Design */
 @media (max-width: 768px) {
-  .faqs-container {
-      padding: 30px 20px;
-  }
-
-  .faqs-title {
-      font-size: 2rem !important;
-  }
-
-  .faqs-grid {
-      grid-template-columns: 1fr;
-      gap: 15px !important;
-  }
-
   .faq-item {
-      max-width: 90%;
-      padding: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 500px;
   }
-
+  
   .enroll-section {
-      padding: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
   }
 }
 
-@media (max-width: 400px) {
-  .faqs-container {
-      padding: 10px !important;
-      margin-top: 80px !important;
+@media (max-width: 480px) {
+  .faqs-bg {
+    padding: 5px 10px;
+    margin-top: 60px !important;
   }
-
-  .faqs-title {
-      font-size: 1.3rem !important;
-      margin-bottom: 5px !important;
-  }
-
-  .faqs-subtitle {
-      font-size: 0.9rem !important;
-      margin-bottom: 0px !important;
+  .faqs-container{
+    margin-top: 20px !important;
+    padding: 3px !important;
+    margin: 0px !important;
+    
   }
 
   .faq-item {
-      max-width: 100% !important;
-      padding: 10px !important;
+    padding: 10px;
   }
 
-  .faq-question {
-      font-size: 0.9rem !important;
-  }
-
-  .faq-answer {
-      font-size: 0.8rem !important;
-  }
-
-  .enroll-section {
-      padding: 20px !important;
-  }
-
-  .enroll-title {
-      font-size: 24px !important;
+  .faq-icon {
+    margin-top: 2px;
   }
 
   .enroll-button {
-      font-size: 0.9rem;
-      padding: 12px 30px;
-  }
-  .enroll-section{
-    margin-top: 20px !important;
-    padding: 10px 20px !important;
-    
+    width: 100%;
+    max-width: 250px;
   }
 }

@@ -150,7 +150,7 @@
     padding: 1.5rem 1.5rem 1.5rem !important;
   }
   .extra-title{
-    justify-self: center !important;
+    justify-self: start !important;
     margin-bottom: 0.5rem !important;
   }
   .newsletter-section {
@@ -173,7 +173,7 @@
   }
   .newsletter-btn-container {
     display: flex;
-    justify-content: center;
+    justify-content: start !important;
   }
   .newsletter-btn {
     width: 50% !important;
