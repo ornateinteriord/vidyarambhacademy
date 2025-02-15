@@ -259,9 +259,10 @@
 
   .custom-button {
     font-size: 17px !important;
-    padding: 10px 25px !important;
+    padding: 9px 20px !important;
     margin-right: 10% !important;
-  
+    display: flex !important;
+    justify-self: center!important;
   }
 
   .toy {
