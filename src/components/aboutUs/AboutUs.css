@@ -97,7 +97,7 @@
 }
 
 .about-title {
-  font-size: 2.5rem !important;
+  font-size: 2.6rem !important;
   font-weight: bold !important;
   color: #ff6b6b;
   margin-bottom: 1rem !important;
@@ -317,8 +317,12 @@
 }
 
 @media (max-width: 576px) {
+  
   .about-content{
     margin-top: 70px !important;
+  }
+  .about-description{
+    line-height: 22px !important;
   }
   .about-background {
     padding: 1rem 0;
@@ -331,7 +335,9 @@
   .about-points {
     grid-template-columns: 1fr;
   }
-
+.about-points li{
+  font-size: 16px !important;
+}
   .about-team-members {
     display: grid !important;
     grid-template-columns: 1fr !important;
@@ -340,6 +346,7 @@
   }
   .about-team-description{
   text-align: left !important;
+ 
   }
   .about-team-title{
     text-align: left !important;
@@ -354,5 +361,8 @@
   .about-points-title,
   .about-team-title {
     font-size: 1.8rem !important;
+  }
+  .about-subtitle{
+  font-size: 18px !important;
   }
 }

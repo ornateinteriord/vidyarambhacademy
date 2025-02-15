@@ -5,7 +5,7 @@
 }
 
 .main-title {
-  font-size: 1.8rem !important;
+  font-size: 2rem !important;
   margin-bottom: 1.5rem !important;
   position: relative;
   font-weight: bold !important;
@@ -190,10 +190,10 @@
 
 @media (max-width: 600px) {
   .main-title {
-    font-size: 1.5rem !important;
+    font-size: 1.7rem !important;
   }
   .footer-text{
-    font-size: 1.2rem !important;
+    font-size: 1rem !important;
     margin-bottom: 0px !important;
   }
   .footer-links li {
@@ -201,7 +201,9 @@
     font-size: 1.1rem !important;
   }
   
-  
+  .footer-follow{
+    font-size: 24px !important;
+  }
   .footer-title {
     margin-top: 0rem !important;
   }
@@ -212,5 +214,10 @@
   
   .social-section {
     margin-top: 0rem !important;
+  }
+  .newsletter-btn{
+    letter-spacing: 1.5px !important;
+    font-size: 1.3rem !important;
+    height: 50px !important;
   }
 }

@@ -215,7 +215,7 @@
 
     .title {
         text-align: start;
-        margin-bottom: 0 !important;
+        margin-bottom: 0px !important;
     }
     
     .description {
@@ -246,7 +246,8 @@
     }
     .cantact-icons {
         justify-content: start;
-        margin-top: 0 !important;
+        margin-top: 8px !important;
+        margin-bottom: 10px !important;
     }
    .cont-btn{
     margin-top: 5px !important;

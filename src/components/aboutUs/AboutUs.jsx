@@ -23,7 +23,7 @@ function AboutUs() {
 
           {/* Text Section */}
           <Box className="about-text-container">
-            <Typography variant="h4" className="about-title">About Us</Typography>
+            <Typography  className="about-title">About Us</Typography>
             <Typography className="about-subtitle"  sx={{color:'#ee186d',fontWeight:'bold',mb:1}}>
             Give the Children Space to Grow a Creativity
 

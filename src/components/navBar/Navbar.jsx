@@ -74,8 +74,8 @@ function Navbar() {
   <Box className="logo-content">
     <img src={vlogo} alt="Kidzena" className="logo" />
     <Box className="logo-text">
-      <Typography className="logo-primary">Vidyarambha</Typography>
-      <Typography className="logo-secondary">Balamandir</Typography>
+      <Typography className="logo-primary">Vidyarambh</Typography>
+      <Typography className="logo-secondary">Balmandir</Typography>
     </Box>
   </Box>
 </Box>

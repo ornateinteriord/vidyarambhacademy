@@ -11,8 +11,8 @@ const Footer = () => {
         <Grid container spacing={4}>
           {/* About Section */}
           <Grid item xs={12} md={4}>
-            <Typography variant="h5" component="h2" className="main-title">
-              Little Stars Kindergarten
+            <Typography  component="h2" className="main-title">
+              Vidyarambh Balmandir
             </Typography>
             <Typography variant="body1" className="footer-text">
               We create a joyful learning experience where children grow with curiosity and creativity.
@@ -83,7 +83,7 @@ const Footer = () => {
 
         {/* Social Media */}
         <Box className="social-section">
-          <Typography variant="h6" component="h3" align="center" className="footer-title">
+          <Typography variant="h6" component="h3" align="center" className="footer-title footer-follow">
             Follow Us
           </Typography>
           <Box className="social-icons icons">
