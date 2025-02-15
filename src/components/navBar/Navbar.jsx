@@ -104,17 +104,23 @@ function Navbar() {
             More{" "}
             <KeyboardArrowDownIcon style={{ fontWeight: "bold", fontSize: "30px" }} />
           </Button>
-          <Menu anchorEl={anchorEl} open={Boolean(anchorEl)} onClose={handleMenuClose} className="more-menu">
-            <MenuItem onClick={() => handleScrollToSection("activities")} className="menu-item">Activities</MenuItem>
-            <Link className="navLink" to={"/testimonials"}>
-              <MenuItem onClick={handleMenuClose} className="menu-item">Testimonials</MenuItem>
-            </Link>
-            <MenuItem onClick={() => handleScrollToSection("moments-section")} className="menu-item">Moments</MenuItem>
-            <Link className="navLink" to={"/faqs"}>
-              <MenuItem onClick={handleMenuClose} className="menu-item">FAQs</MenuItem>
-            </Link>
-            <MenuItem onClick={handleMenuClose} className="menu-item">Coming Soon</MenuItem>
-          </Menu>
+          <Menu
+  anchorEl={anchorEl}
+  open={Boolean(anchorEl)}
+  onClose={handleMenuClose}
+  className={`more-menu ${anchorEl ? "menu-open" : ""}`}
+>
+  <MenuItem onClick={() => handleScrollToSection("activities")} className="menu-item">Activities</MenuItem>
+  <Link className="navLink" to={"/testimonials"}>
+    <MenuItem onClick={handleMenuClose} className="menu-item">Testimonials</MenuItem>
+  </Link>
+  <MenuItem onClick={() => handleScrollToSection("moments-section")} className="menu-item">Moments</MenuItem>
+  <Link className="navLink" to={"/faqs"}>
+    <MenuItem onClick={handleMenuClose} className="menu-item">FAQs</MenuItem>
+  </Link>
+  <MenuItem onClick={handleMenuClose} className="menu-item">Coming Soon</MenuItem>
+</Menu>
+
         </Box>
 
         <Link to={"/admission"}>
@@ -129,8 +135,8 @@ function Navbar() {
 
       {/* Mobile Drawer */}
      {/* Mobile Drawer */}
-<Drawer anchor="right" open={mobileOpen} onClose={handleDrawerToggle}>
-  <Box justifySelf={"flex-start"}>
+<Drawer anchor="right" open={mobileOpen} onClose={handleDrawerToggle} sx={{background:'rgba(0 , 0, 0 ,0.5)'}}>
+  <Box justifySelf={"flex-start"} className="menu-close-1">
     <IconButton onClick={handleDrawerToggle} className="close-menu-icon" sx={{ color: "red" }}>
       <CloseIcon />
     </IconButton>
@@ -158,12 +164,14 @@ function Navbar() {
           <ListItemText primary="Contact " />
         </Link>
       </ListItem>
-
-      {/* More Menu inside Drawer */}
        <Box>
-        <Button onClick={handleMenuOpen} sx={{ marginLeft: "10px", color: "black" }}>
-          More <KeyboardArrowDownIcon style={{ fontWeight: "bold", fontSize: "30px" }} />
-        </Button>
+       <Button 
+  onClick={handleMenuOpen} 
+  sx={{ marginLeft: "10px", color:'#fff',fontSize:'17px',textTransform:'none' }} 
+  className="menu-button"
+>  More <KeyboardArrowDownIcon style={{ fontWeight: "bold", fontSize: "30px",color:'#fff' }} />
+</Button>
+
       </Box> 
     </Box>
   </List>

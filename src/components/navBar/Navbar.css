@@ -36,8 +36,8 @@
 
 @font-face {
   font-family: 'Cooper Black';
-  src: url(src/assets/classes/COOPBL.TTF) format('truetype'),
-       url('/fonts/CooperBlack.woff') format('woff');
+  src: url(src/assets/classes/COOPBL.TTF) format('truetype');
+       /* url('/fonts/CooperBlack.woff') format('woff'); */
   font-weight: bold !important;
   font-style: normal;
   
@@ -104,18 +104,22 @@
   transform: translateY(-2px);
   box-shadow: 0 6px 12px rgba(30, 60, 114, 0.3) !important;
 }
-
+.menu-close-1{
+background: linear-gradient(90deg, rgb(127, 123, 198) 0%, rgba(1,146,187,1) 49%, rgba(0,212,255,1) 100%);
+}
 .menu-icon {
   display: none !important;
   color: #1e3c72 !important;
 }
 
 .close-menu-icon {
-  margin: 1rem !important;
+  margin: 0.5rem !important;
   align-self: flex-end;
 }
 
 .mobile-menu {
+  height: 100% !important;
+  background: linear-gradient(90deg, rgb(127, 123, 198) 0%, rgba(1,146,187,1) 49%, rgba(0,212,255,1) 100%);
   width: 230px !important;
   padding: 1rem !important;
 }
@@ -126,7 +130,7 @@
 
 .mobile-menu .navLink {
   text-decoration: none;
-  color: black;
+  color: #fff;
   font-weight: bold !important;
   width: 100%;
 }
@@ -150,47 +154,28 @@
   width: 100%;
 }
 
-/* Define the keyframes for the animation */
+/* lap */
+.more-menu .menu-item {
+  opacity: 0;
+  transform: translateX(-40px);
+  animation: slideIn 0.5s ease-in-out forwards;
+}
+.more-menu .menu-item:hover{
+  background: rgba(48, 209, 237, 0.2);
+}
+
 @keyframes slideIn {
   from {
     opacity: 0;
-    transform: translateY(-20px);
+    transform: translateX(20px);
   }
   to {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateX(0);
   }
 }
 
-/* Apply the animation to each menu item */
-.more-menu .menu-item {
-  opacity: 0;
-  transform: translateY(-30px);
-  animation: slideIn 0.5s ease forwards;
-}
-
-/* Stagger the animation for each menu item */
-.more-menu .menu-item:nth-child(1) {
-  animation-delay: 0.2s;
-}
-
-.more-menu .menu-item:nth-child(2) {
-  animation-delay: 0.4s;
-}
-
-.more-menu .menu-item:nth-child(3) {
-  animation-delay: 0.6s;
-}
-
-.more-menu .menu-item:nth-child(4) {
-  animation-delay: 0.8s;
-}
-
-.more-menu .menu-item:nth-child(5) {
-  animation-delay: 0.10s;
-}
-
-/* Keyframes for sliding in the menu items */
+/* mobile */
 @keyframes slideInFromLeft {
   from {
     opacity: 0;
@@ -202,14 +187,13 @@
   }
 }
 
-/* Apply the animation to each list item */
+
 .mobile-menu .MuiListItem-root {
   opacity: 0;
   transform: translateX(-30px);
-  animation: slideInFromLeft 0.5s ease forwards;
+  animation: slideInFromLeft 0.3s ease forwards;
 }
 
-/* Stagger the animation for each list item */
 .mobile-menu .MuiListItem-root:nth-child(1) {
   animation-delay: 0.2s;
 }
@@ -229,6 +213,25 @@
 .mobile-menu .MuiListItem-root:nth-child(5) {
   animation-delay: 0.10s;
 }
+
+@keyframes fadeInButton {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.menu-button {
+  opacity: 0;
+  transform: translateX(-20px);
+  animation: fadeInButton 0.3s ease forwards;
+  animation-delay: 0.9s; /* Adjust delay as needed */
+}
+
 
 /* Responsive Styles */
 @media (max-width: 1200px) {

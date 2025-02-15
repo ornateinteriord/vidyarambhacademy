@@ -46,7 +46,7 @@ const Footer = () => {
                 <Phone /> +123 456 7890
               </Typography>
               <Typography className="contact-item">
-                <Email /> info@littlestars.com
+                <Email /> info@Vidyarambhbalmandir.com
               </Typography>
             </Box>
           </Grid>
