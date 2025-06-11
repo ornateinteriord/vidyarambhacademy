@@ -1,0 +1,88 @@
+
+.gallery-container {
+  margin-top: 1rem;
+  width: 90% !important;
+  padding: 1.5rem;
+  background: linear-gradient(40deg, rgba(2,0,36,1) 0%, rgba(1,146,187,1) 49%, rgba(0,212,255,1) 100%); /* Soft gradient background */
+  border-radius: 20px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  justify-self: center;
+}
+
+.gallery-title {
+  white-space: nowrap !important;
+  font-size: 2.5rem !important;
+  font-weight: bold !important;
+  color: #fff;
+  /* margin-bottom: 1rem !important; */
+  text-transform: capitalize;
+  letter-spacing: 1.5px !important;
+  justify-self: center;
+}
+
+.slick-slider {
+  position: relative ;
+}
+
+.gallery-slide {
+  /* padding: 10px; */
+  transition: transform 0.4s ease-in-out;
+}
+
+.gallery-slide:hover {
+  transform: scale(1.05); 
+}
+
+.gallery-image {
+  width: 100% !important;
+  height: 250px !important;
+  object-fit: cover !important;
+  border-radius: 9px !important;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15) !important;
+  transition: transform 0.2s ease-in-out !important;
+  margin-right: 20px !important;
+}
+
+.gallery-image:hover {
+  transform:  scale(1); 
+}
+
+
+.slick-dots li button:before {
+  font-size: 12px !important;
+  color: #ee186d; 
+}
+
+.slick-dots li.slick-active button:before {
+  color: #ee186d; 
+}
+
+/* Remove default next/prev text and only show arrows */
+.slick-prev, .slick-next {
+  width: 50px;
+  height: 50px;
+  z-index: 10;
+  display: none !important;
+}
+
+.slick-prev:before, .slick-next:before {
+  font-size: 50px !important;  
+  color: #fff !important; 
+  opacity: 1;
+}
+/* .slick-prev {
+  left: -50px;
+}
+
+.slick-next {
+  right: -50px; 
+}
+ */
+.slick-prev:hover:before, .slick-next:hover:before {
+  color: #ff4500 !important; 
+}
+/* .slick-list{
+  width: 85% !important;
+  height: 250px !important;
+} */

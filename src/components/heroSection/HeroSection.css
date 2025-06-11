@@ -1,0 +1,640 @@
+.hero {
+  background: linear-gradient(90deg, rgb(127, 123, 198) 0%, rgba(1,146,187,1) 49%, rgba(0,212,255,1) 100%);
+  padding: 0px;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.hero-container {
+  margin-top: 65px;
+  padding: 40px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: linear-gradient(90deg, rgb(127, 123, 198) 0%, rgba(1,146,187,1) 49%, rgba(0,212,255,1) 100%);
+  position: relative;
+  flex-wrap: wrap;
+}
+
+.hero-background {
+  background: linear-gradient(90deg, rgb(127, 123, 198) 0%, rgba(1,146,187,1) 49%, rgba(0,212,255,1) 100%);
+  width: 100%; 
+}
+
+.toy {
+  position: absolute;
+  width: 80px;
+  animation: float 3s infinite ease-in-out;
+  z-index: 2;
+  mix-blend-mode: multiply !important;
+  border: none;
+  outline: none;
+}
+
+.toy1 {
+  top: 0px;
+  left: 5%;
+  width: 120px;
+}
+
+.toy2 {
+  bottom: 10px;
+  right: 6%;
+  width: 120px;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-30px); }
+  100% { transform: translateY(2px); }
+}
+
+.hero-content {
+  flex: 1;
+  text-align: center;
+  padding: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+.image-container {
+  position: relative;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #f2c534 0%, #d81b79 100%);
+  padding: 20px 5px !important;
+  border-radius: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+}
+
+.background-img {
+  width: 100%;
+  max-width: 550px;
+  height: 70vh;
+  object-fit: cover;
+  border-radius: 15px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.background-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.bouncy-text {
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-40px); }
+}
+
+.gradient-text {
+  font-size: 80px !important;
+  background: linear-gradient(to right, yellow, yellow);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top: 60px !important;
+  font-family: Georgia, 'Times New Roman', Times, serif !important;
+  line-height: 1.3 !important;
+}
+
+.gradient-text span {
+  padding-left: 15px !important;
+}
+
+.highlight-text {
+  font-size: 24px !important;
+  margin-right: 20px !important;
+  color: azure;
+  font-family: sans-serif !important;
+}
+
+.custom-button {
+  background-color: #ee186d !important;
+  color: #ffff !important;
+  border-radius: 25px !important;
+  font-size: 20px !important;
+  padding: 6px 30px !important;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 4px 15px rgba(30, 60, 114, 0.6) !important;
+  text-transform: capitalize !important;
+  font-weight: bold !important;
+  margin-top: 15px !important;
+  /* margin-right: 47% !important; */
+} 
+
+.custom-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(30, 60, 114, 0.3) !important;
+}
+
+.shadow-img {
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Grid Layout System */
+.grid-container {
+  display: grid;
+  width: 100%;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+/* 1200px+ - 4 columns (25% each) */
+/* @media (min-width: 1200px) {
+  .grid-container {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+
+  .grid-item {
+    padding: 1.5rem;
+  }
+} */
+
+/* 900px - 1199px - 4 columns with proper spacing */
+/* @media (min-width: 900px) and (max-width: 1199px) {
+  .grid-container {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+  }
+
+  .grid-item {
+    padding: 1.25rem;
+  }
+} */
+
+/* Below 900px - 2 columns per row */
+/* @media (min-width: 600px) and (max-width: 899px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+ 
+  .grid-item {
+    padding: 1rem;
+  }
+} */
+
+
+/* Preschool Section */
+.preschool-hero {
+  display: flex !important;
+  align-items: center !important;
+  gap: 2rem !important;
+  padding: 2rem !important;
+  background: linear-gradient(90deg, rgb(127, 123, 198) 0%, rgba(1,146,187,1) 49%, rgba(0,212,255,1) 100%);
+  position: relative !important;
+  overflow: hidden;
+}
+
+.preschool-image {
+  flex: 1;
+  max-width: 50%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.preschool-text {
+  flex: 1;
+  max-width: 50%;
+  padding: 2rem;
+  animation: slideIn 0.8s ease-out forwards;
+}
+
+.preschool-heading {
+  color: #ffff !important;
+  margin-bottom: 1rem !important;
+  font-size: 2.5rem !important;
+  font-weight: bold !important;
+  position: relative;
+  padding-bottom: 0.3rem;
+}
+
+.preschool-heading::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(100deg, #fff 0%, #ee186d 100%);
+  border-radius: 2px;
+}
+
+.preschool-description {
+  color: #333 !important;
+  font-weight: bold !important;
+  line-height: 1.8 !important;
+  margin-bottom: 1.5rem !important;
+  font-size: 1.1rem !important;
+}
+
+.preschool-button {
+  background: #ee186d !important;
+  font-weight: bold !important;
+  color: white !important;
+  padding: 12px 32px !important;
+  font-size: 1.1rem !important;
+  text-transform: none !important;
+  border-radius: 50px !important;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 4px 15px rgba(30, 60, 114, 0.9) !important;
+}
+
+.preschool-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(30, 60, 114, 0.3) !important;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1200px) {
+  .preschool-hero {
+    padding: 4rem 2rem;
+    gap: 3rem;
+  }
+
+  .preschool-heading {
+    font-size: 2.2rem !important;
+  }
+
+  .preschool-description {
+    font-size: 1rem !important;
+  }
+
+  .gradient-text {
+    font-size: 70px !important;
+  }
+}
+
+@media (max-width: 992px) {
+  .gradient-text {
+    font-size: 95px !important;
+    margin-bottom: 0px !important; 
+  }
+
+  .hero-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .highlight-text {
+    font-size: 23px !important;
+    text-align: start !important;
+    margin-left: 25px !important;
+  }
+
+  .toy1 {
+    top: 20px !important;
+    left: -4% !important;
+    width: 85px !important;
+  }
+  
+  .toy2 {
+    bottom: 20px !important;
+    right: -4% !important;
+    width: 85px !important;
+  }
+
+  .image-container {
+    max-width: 100% !important;
+    padding: 30px !important;
+   
+  }
+
+  .background-img {
+    max-width: 100% !important;
+  }
+
+  .custom-button {
+    font-size: 25px !important;
+    margin-right: 0 !important;
+    display: flex !important;
+    justify-self: center !important;
+  }
+
+  .preschool-hero {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .preschool-image,
+  .preschool-text {
+    max-width: 100% !important;
+    width: 90% !important;
+  }
+
+  .preschool-heading {
+    font-size: 50px !important;
+    text-align: left !important;
+  }
+
+  .preschool-description {
+    text-align: left !important;
+    font-size: 23px !important;
+  }
+
+  .preschool-heading::after {
+    left: 50%;
+    transform: translateX(-300%);
+  }
+  .preschool-button{
+    font-size: 25px !important;
+  }
+
+  .preschool-description br {
+    display: none;
+  }
+}
+
+ @media (max-width: 820px) {
+   .hero {
+    width: 100% !important;
+  }
+
+  .hero-container {
+    width: 100% !important;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .hero-content {
+    padding: 10px;
+  }
+
+  /* .image-container {
+    max-width: 100% !important;
+    padding: 20px 0px !important;
+    justify-self: center !important;
+  
+  } */
+
+  
+  .custom-button {
+    font-size: 25px !important;
+    padding: 15px 46px !important;
+    margin: 20px !important;
+  }
+
+  .toy {
+    width: 60px;
+  }
+
+  .toy1 {
+    left: -9% !important;
+    width: 90px !important;
+  }
+
+  .toy2 {
+    right: -7% !important;
+    width: 90px !important;
+  }
+  .highlight-text{
+    font-size: 1.5rem !important;
+  }
+
+  .gradient-text {
+    font-size: 75px !important;
+    margin: 10px !important;
+    
+  }
+
+  .preschool-hero {
+    padding: 3rem 1.5rem;
+  }
+
+  .preschool-heading {
+    font-size: 2rem !important;
+    margin-bottom: 0.75rem !important;
+  }
+
+  .preschool-heading::after {
+    width: 100px !important;
+    height: 3px !important;
+    bottom: -4px !important;
+  }
+
+  .preschool-text {
+    padding: 0rem;
+  }
+  .preschool-description {
+    font-size: 1.5rem !important;
+    text-align: left !important;
+  }
+  .image-container {
+    width: 100% !important;
+    padding: 11px 0 !important;
+    margin-top: 0px !important;
+    justify-self: center !important;
+    margin-bottom: 10px !important;
+  }
+
+  .background-img {
+      max-width: 90% !important;
+    height: 45vh;
+    margin-top: 20px;
+    margin-bottom: 20px !important;
+} 
+ }
+
+ 
+ @media (max-width: 768px) {
+  .hero {
+    width: 100% !important;
+  }
+
+  .hero-container {
+    width: 100% !important;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .hero-content {
+    padding: 10px;
+  }
+  .gradient-text{
+    font-size: 70px !important;
+  }
+
+ }
+
+@media (max-width: 568px) {
+  .toy1 {
+    top: 10px !important;
+    left: 0% !important;
+    width: 70px !important;
+  }
+  
+  .toy2 {
+    bottom: 10px !important;
+    right: 4% !important;
+    width: 70px !important;
+  }
+
+  .hero {
+    margin-top: 10px;
+    padding: 0px !important;
+    width: 100vw !important;
+    
+
+  }
+
+  .hero-container {
+    padding: 10px 0 !important;
+ 
+  }
+
+  .gradient-text span {
+    padding-left: 0px !important;
+   
+  }
+
+
+  .image-container {
+    width: 95% !important;
+    padding: 10px 0 !important;
+    margin-top: 10px !important;
+    justify-self: center !important;
+    margin-bottom: 35px !important;
+    height: 50vh !important;
+  }
+
+  .background-img {
+    width:90% !important;
+    justify-self: center !important;
+    height: 38vh !important;
+   
+  }
+
+  .custom-button {
+    font-size: 15px !important;
+    padding: 9px 20px !important;
+    /* margin-right: 10% !important; */
+    display: flex !important;
+    justify-self: center !important; 
+      margin: 0px !important;
+    
+  }
+
+  .gradient-text {
+    font-size: 38px !important;
+    margin-top: 40px !important;
+    text-align: center !important;
+    margin-bottom: 0 !important;
+  }
+
+  .highlight-text {
+    /* margin-right: 30px !important; */
+    color: azure;
+    font-size: 14px !important;
+    text-align: center !important;
+  }
+
+  .preschool-hero {
+    padding: 2rem 0.95rem !important;
+  }
+
+  .preschool-image,
+  .preschool-text {
+    max-width: 100% !important;
+    width: 100% !important;
+    margin-bottom: 0 !important;
+    padding: 0 !important;
+  }
+
+  .preschool-heading {
+    font-size: 1.7rem !important;
+    margin-bottom: 0.6rem !important;
+    justify-self: flex-start !important;
+  }
+
+  .preschool-heading::after {
+  left: 50%;
+    transform: translateX(-100%);
+  }
+
+  .preschool-description {
+    font-size: 1.2rem !important;
+    margin-bottom: 1.3rem !important;
+    text-align: left !important;
+  }
+
+  .preschool-button {
+    width: 90% !important;
+    padding: 10px 10px !important;
+    font-size: 1.1rem !important;
+    margin-top: 10px !important;
+    display: flex !important;
+    justify-items: flex-start !important;
+    margin-bottom: 0 !important;
+  }
+}
+
+/* Desktop Parallax Effect */
+@media (min-width: 993px) {
+  .preschool-image {
+    transform: perspective(1000px) rotateY(-5deg);
+    transition: transform 0.5s ease;
+  }
+
+  .preschool-image:hover {
+    transform: perspective(1000px) rotateY(0deg);
+  }
+}
+
+/* Grid Item Styles */
+.grid-item {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.grid-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+.grid-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.grid-item-content {
+  padding: 1.5rem;
+}
+
+.grid-item h3 {
+  margin: 0 0 1rem 0;
+  color: #333;
+  font-size: 1.25rem;
+}
+
+.grid-item p {
+  margin: 0;
+  color: #666;
+  line-height: 1.5;
+}

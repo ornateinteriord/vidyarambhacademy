@@ -1,0 +1,217 @@
+
+
+.classes-page {
+  text-align: center;
+  padding: 20px;
+  margin-top: 80px;
+  background: #f9f9f9; 
+  height: 100%;
+}
+
+.classes-title {
+  margin-bottom: 20px !important;
+  font-weight: bold !important;
+  color: #ff6f61; 
+  margin-top: 10px;
+  font-size: 2.5em; 
+  font-family: 'Fredoka One', cursive;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); 
+}
+
+.classes-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+  padding: 0px 90px !important;
+}
+
+@keyframes slideFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.class-card {
+  width: 28%;
+  min-width: 250px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  transition: transform 0.3s ease-in-out  !important;
+  background: #34495e !important;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3) !important;
+  /* border: 3px solid transparent; */
+  overflow: hidden;
+  position: relative;
+  opacity: 0; 
+  cursor: pointer;
+}
+
+/* Apply animation to each row differently */
+.class-card:nth-child(3n+1),
+.class-card:nth-child(3n+2),
+.class-card:nth-child(3n+3) {
+  animation: slideFromLeft 1s ease-out forwards;
+}
+
+.class-card:nth-child(3n+4),
+.class-card:nth-child(3n+5),
+.class-card:nth-child(3n+6) {
+  animation: slideFromRight 1s ease-out forwards;
+}
+
+/* Add delay for staggered effect */
+.class-card:nth-child(1) { animation-delay: 0.2s; }
+.class-card:nth-child(2) { animation-delay: 0.4s; }
+.class-card:nth-child(3) { animation-delay: 0.6s; }
+.class-card:nth-child(4) { animation-delay: 0.2s; }
+.class-card:nth-child(5) { animation-delay:0.4s }
+.class-card:nth-child(6) { animation-delay: 0.6s; }
+
+
+.class-card:hover {
+  transform: scale(1.03) !important; 
+}
+
+.class-timing {
+  font-weight: bold !important;
+  margin-top: 10px;
+  color: #ee186d; /* Bright pink for timing */
+  font-size: 1.2em;
+  font-family: 'Comic Neue', cursive;
+}
+
+.class-title {
+  color: #fff;
+  font-weight: bold !important;
+  font-size: 1.8em; 
+  font-family: 'Fredoka One', cursive; 
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+.class-description {
+  color: #fff !important; 
+  font-weight: bold !important;
+  font-size: 1.2em;
+  font-family: 'Comic Neue', cursive; 
+}
+/* Unique Bounce Animation */
+@keyframes kids-bounce {
+  0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+  }
+  40% {
+      transform: translateY(-20px); 
+  }
+  60% {
+      transform: translateY(-10px); 
+  }
+}
+
+
+
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .classes-page {
+      margin-top: 90px !important;
+  }
+
+  .classes-grid {
+      padding: 0px 30px !important;
+  }
+
+  .class-card {
+      width: 45%;
+  }
+}
+
+@media (max-width: 1199px) and (min-width: 900px) {
+  .classes-page {
+    margin-top: 80px !important;
+    padding: 15px !important;
+    height: 100% !important;
+  }
+
+  .classes-grid {
+    gap: 60px !important;
+    padding: 0px 50px !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 20px;
+  }
+
+  .class-card {
+    width: 40% !important; /* Adjusted for better fit */
+    min-width: 280px;
+    opacity: 1; /* Ensure it's visible */
+  }
+
+  .class-card:nth-child(3n+1),
+  .class-card:nth-child(3n+2),
+  .class-card:nth-child(3n+3) {
+    animation: slideFromLeft 0.8s ease-out forwards;
+  }
+
+  .class-card:nth-child(3n+4),
+  .class-card:nth-child(3n+5),
+  .class-card:nth-child(3n+6) {
+    animation: slideFromRight 0.8s ease-out forwards;
+  }
+
+  .classes-title {
+    font-size: 2.2em !important; /* Slightly smaller for this range */
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  .classes-page{
+    margin-top: 100px !important;
+  }
+  .classes-grid {
+      padding: 0px 20px !important;
+      padding-bottom: 20px !important;
+      display: grid !important;
+      grid-template-columns: repeat(2, 1fr);
+      justify-content: center !important;
+  }
+
+  .class-card {
+  
+      width: 100% !important;
+  }
+
+  .classes-page {
+      padding: 0 !important;
+      width: 100% !important;
+  }
+}
+@media (max-width: 567px){
+  .classes-page{
+    margin-top: 85px !important;
+  }
+  .classes-grid{
+  display: grid !important;
+  grid-template-columns: repeat(1, 1fr);
+  justify-content: center !important;
+  }
+}

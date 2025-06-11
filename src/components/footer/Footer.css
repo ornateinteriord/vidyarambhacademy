@@ -1,0 +1,310 @@
+.footer {
+  background: linear-gradient(135deg, #344e7e 0%, #4680e6 100%);
+  padding: 2rem;
+  color: #fff;
+  flex-shrink: 0 !important;
+}
+
+.main-title {
+  font-size: 2rem !important;
+  margin-bottom: 1.5rem !important;
+  position: relative;
+  font-weight: bold !important;
+}
+.footer-title{
+  font-size: 21px !important;
+  font-weight: bold !important;
+  margin-bottom: 9px !important;
+}
+.extra-title{
+  margin-top: 0 !important;
+  font-weight: bold !important;
+}
+
+.main-title::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background-color: #fff;
+}
+
+.footer-text {
+  line-height: 1.8;
+  opacity: 0.9;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 5px;
+}
+
+.footer-links a {
+  color: #fff !important;
+  text-decoration: none !important;
+  transition: opacity 0.3s;
+  opacity: 0.9;
+  line-height: 1.5 !important;
+}
+
+.footer-links a:hover {
+  opacity: 1;
+  color: #ee186d !important;
+}
+
+.contact-item {
+  display: flex;
+  align-items: start;
+  gap: 10px;
+  line-height: 1.7 !important;
+  /* margin-bottom: 12px !important; */
+  opacity: 0.9;
+}
+
+.newsletter-section {
+  /* margin-top: 1rem; */
+  display: flex !important;
+  /* justify-content: center; */
+  align-items: center;
+  gap: 10px !important;
+ 
+}
+
+.newsletter-input .MuiOutlinedInput-root {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  width: 280px !important;
+  /* margin-top: 15px !important; */
+  border: none !important;
+  outline: none !important;
+}
+
+.newsletter-input .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
+  border-color: rgba(255, 255, 255, 0.5);
+
+}
+
+.newsletter-input .MuiOutlinedInput-input {
+  color: #fff;
+
+}
+
+.newsletter-btn {
+  background-color: #d74982 !important;
+  color: #fff !important;
+  font-weight: bold !important;
+  transition: transform 0.3s !important;
+  width: 140px !important;
+  font-size: 18px !important;
+  height: 54px !important;
+  text-transform: capitalize !important;
+  margin-bottom: 15px !important;
+}
+
+.newsletter-btn:hover {
+  transform: translateY(-2px);
+}
+
+.social-section {
+  margin-top: 2rem !important;
+ 
+}
+
+.social-icons {
+  margin-top: 1.5rem !important;
+  justify-self: center !important;
+  
+}
+
+.social-icons .MuiIconButton-root {
+
+  background-color: rgba(12, 10, 10, 0.5);
+  margin: 0 8px !important;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.social-icons .MuiSvgIcon-root {
+  color: white !important;
+  width: 30px !important;
+  height: auto;
+}
+
+.social-icons .MuiIconButton-root:hover {
+  background-color: #ee186d !important;
+  transform: translateY(-3px);
+}
+
+.footer-copy {
+  margin-top: 2rem !important;
+  opacity: 0.7 !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+  padding-top: 1.5rem !important;
+}
+
+
+@media (min-width: 900px) and (max-width: 1100px) {
+  .footer {
+    padding: 1rem !important;
+  
+  }
+
+  .footer-text {
+    font-size: 0.9rem !important;
+    /* text-align: justify !important; */
+    line-height: 1.8 !important;
+    word-break: break-word !important;
+    hyphens: auto !important;
+  }
+
+  .main-title {
+    font-size: 1.3rem !important;
+    margin-top: 15px !important;
+  }
+
+  .footer-title, .extra-title {
+    font-size: 1rem !important;
+  }
+
+  .contact-item {
+    font-size: 0.85rem !important;
+    display: flex;
+    align-items: center;
+  }
+
+  .footer-links a {
+    font-size: 0.85rem !important;
+    display: block;
+  }
+
+  .newsletter-section {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    width: 100% !important;
+  }
+
+  .newsletter-input .MuiOutlinedInput-root {
+    width: 250px  !important;
+  }
+
+  .newsletter-btn {
+    width: 100% !important;
+    margin:0 auto !important;
+    font-size: 1rem !important;
+  }
+
+  .footer-title {
+    margin-top: 1rem !important;
+  }
+  .extra-title{
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+  }
+
+  .social-section {
+    text-align: center !important;
+  }
+
+  .social-icons {
+    display: flex;
+    justify-content: center !important;
+    margin-top: 1rem !important;
+  }
+
+  .social-icons .MuiIconButton-root {
+    background-color: rgba(12, 10, 10, 0.5);
+    margin: 0 5px !important;
+    transition: transform 0.3s, background-color 0.3s;
+  }
+
+  .social-icons .MuiIconButton-root:hover {
+    background-color: #ee186d !important;
+    transform: translateY(-3px);
+  }
+ 
+  
+}
+
+
+
+@media (max-width: 899px) {
+  .footer {
+    padding: 1.5rem 1.5rem 1.5rem !important;
+  }
+  .extra-title{
+    justify-self: start !important;
+    margin-bottom: 0.5rem !important;
+  }
+  .newsletter-section {
+    /* Ensure the container is full width and its children stretch */
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
+
+  .newsletter-input {
+    width: 100% !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+
+  .newsletter-input .MuiOutlinedInput-root {
+    width: 100% !important;
+    box-sizing: border-box; 
+  }
+  .newsletter-btn-container {
+    display: flex;
+    justify-content: start !important;
+  }
+  .newsletter-btn {
+    width: 50% !important;
+    display: block;       /* Make the button a block element */
+    margin: 0 auto;       /* Auto margins on left and right centers it */
+  }
+  .footer-links li{
+    margin-bottom: 0 !important;
+  }
+ 
+}
+
+@media (max-width: 600px) {
+  .main-title {
+    font-size: 1.5rem !important;
+  }
+  .footer-text{
+    font-size: 1rem !important;
+    margin-bottom: 0px !important;
+  }
+  .footer-links li {
+    margin-bottom: 0px !important;
+    font-size: 1.1rem !important;
+  }
+  
+  .footer-follow{
+    font-size: 24px !important;
+  }
+  .footer-title {
+    margin-top: 0rem !important;
+  }
+  .contact-item{
+    font-size: 1.1rem !important;
+    margin-bottom: 0px !important;
+  }
+  
+  .social-section {
+    margin-top: 0rem !important;
+  }
+  .newsletter-btn{
+    letter-spacing: 1.5px !important;
+    font-size: 1.3rem !important;
+    height: 50px !important;
+  }
+}

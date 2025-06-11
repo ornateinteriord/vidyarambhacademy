@@ -1,0 +1,413 @@
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+@keyframes bounce {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+@keyframes wiggle {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-3deg); }
+  75% { transform: rotate(3deg); }
+}
+
+
+.about-container {
+  padding: 3rem 0;
+  /* background: url("https://img.freepik.com/free-vector/cute-baby-toys-cartoon-seamless-pattern_1284-41084.jpg") no-repeat; */
+  /* background-size: 350px !important; */
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  margin-top: 10px !important;
+}
+
+.about-container::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(3px);
+  z-index: -1;
+}
+
+.about-background {
+  position: relative;
+  background: rgba(255, 255, 255, 0.88);
+}
+
+.about-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+  margin-top: 60px !important;
+  position: relative;
+  animation: float 6s ease-in-out infinite;
+}
+
+.about-image-container {
+  flex: 1;
+  min-width: 230px !important;
+  position: relative;
+}
+
+.about-image-container::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1);
+  border-radius: 12px;
+  z-index: -1;
+  opacity: 0.3;
+  animation: bounce 3s ease-in-out infinite;
+}
+
+.about-image {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+  transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  border: 8px solid white;
+}
+
+.about-image:hover {
+  transform: scale(1.05) rotate(2deg);
+}
+
+.about-text-container {
+  flex: 1;
+  min-width: 250px;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 2rem !important;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(31, 38, 135, 0.2);
+  backdrop-filter: blur(8px);
+  border: 4px solid #ffd700;
+  animation: bounce 5s ease-in-out infinite;
+}
+
+.about-title {
+  font-size: 2.6rem !important;
+  font-weight: bold !important;
+  color: #ff6b6b;
+  margin-bottom: 1rem !important;
+  text-align: left !important;
+  text-shadow: 3px 3px 0px #ffd700;
+  animation: wiggle 3s ease-in-out infinite;
+}
+
+.about-description {
+  font-size: 1rem !important;
+  color: #4a4a4a !important;
+  line-height: 1.5 !important;
+  text-align: left !important;
+  margin-bottom: 2rem !important;
+  font-weight: bold !important;
+  background: linear-gradient(120deg, #037b73 0%, #0bdacc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.about-points-container {
+  margin-top: 3rem;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  border: 4px dashed #4ecdc4;
+  animation: float 5s ease-in-out infinite ;
+}
+
+.about-points-title {
+  font-size: 2.5rem !important;
+  color: #4ecdc4 !important;
+  margin-bottom: 1.5rem !important;
+  text-align: center !important;
+  font-weight: bold !important;
+  text-shadow: 2px 2px 0px #ffd700;
+}
+
+.about-points {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 1.4rem;
+  color: #4a4a4a;
+  line-height: 1.2;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+  font-weight: bold !important;
+  text-align: left;
+}
+
+.about-points li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem !important ;
+  gap: 1rem;
+  padding: 1.2rem;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.about-points li:hover {
+  transform: scale(1.05) 
+  
+}
+
+.about-icon {
+  color: #ff6b6b;
+  font-size: 2.5rem;
+  margin-bottom: 0px !important;
+  animation: bounce 2s ease-in-out infinite;
+}
+
+.about-team-container {
+  width: 100% !important;
+  margin-top: 1rem !important;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  /* border: 4px solid #4ecdc4; */
+  animation: float 5s ease-in-out infinite;
+}
+
+.about-team-title {
+  font-size: 2.5rem !important;
+  color: #4ecdc4 !important;
+  margin-bottom: 1.5rem !important;
+  text-align: center !important;
+  font-weight: bold !important;
+  text-shadow: 2px 2px 0px #ffd700;
+}
+
+.about-team-description {
+  font-size: 1.4rem !important;
+  color: #4a4a4a !important;
+  text-align: center !important;
+  margin-bottom: 2.5rem !important;
+  font-weight: bold !important;
+}
+
+.about-team-members {
+  display: flex;
+  gap: 2.5rem;
+  justify-content: center !important;
+}
+
+.team-member {
+  text-align: center;
+  max-width: 230px !important;
+  padding: 1.3rem !important;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.team-member:hover {
+  transform: scale(1.05) ;
+}
+
+.team-member-image {
+  width: 190px;
+  height: 190px;
+  border-radius: 50%;
+  margin-bottom: 1.5rem;
+  object-fit: cover !important;
+  border: 6px solid #ffd700;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.team-member-name {
+  font-size: 1.4rem !important;
+  font-weight: bold !important;
+  color: #ff6b6b !important;
+  margin-bottom: 0.5rem;
+}
+
+.team-member-role {
+  color: #4ecdc4 !important;
+  font-weight: bold !important;
+  font-size: 1.1rem;
+}
+.about-subtitle{
+  font-size: 25px !important;
+}
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .about-container {
+    padding: 0 2rem !important;
+  }
+  
+  /* .team-member-image {
+    height: 220px;
+  } */
+}
+
+@media (max-width: 992px) {
+  
+  .about-content {
+    margin-top: 100px !important;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .about-image-container,
+  .about-text-container,
+  .about-team-container {
+    width: 100% !important;
+  
+  }
+.about-team-description{
+font-size: 1.5rem !important;
+text-align: start !important;
+}
+.team-member-image{
+width: 240px !important;
+height: 240px !important;
+}
+.team-member-name{
+font-size: 1.5rem !important;
+}
+.team-member-role{
+  font-size: 1rem !important;
+}
+
+  .about-points {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-team-members {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr);
+    justify-self: center !important;
+  }
+ 
+.team-member {
+  text-align: center;
+  max-width: 280px !important;
+  padding: 1.3rem !important;
+  height: auto !important;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+}
+
+@media (max-width: 768px) {
+  .about-content{
+    margin-top: 70px !important;
+  }
+  .about-background {
+    padding: 3rem 0;
+  }
+
+  .about-title,
+  .about-points-title,
+  .about-team-title {
+    font-size: 2rem !important;
+  }
+
+  .about-description,
+  .about-team-description {
+    font-size: 1rem !important;
+  }
+
+  .about-points li {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+
+  .about-icon {
+    font-size: 2rem !important;
+  }
+  .about-team-members {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    justify-self: center !important;
+    gap: 1.5rem;
+  }
+  /* .team-member-image {
+    height: 200px;
+  } */
+}
+
+@media (max-width: 576px) {
+  
+  .about-content{
+    margin-top: 70px !important;
+  }
+  .about-description{
+    line-height: 22px !important;
+  }
+  .about-background {
+    padding: 1rem 0;
+  }
+
+  .about-container {
+    padding: 0 1rem !important;
+  }
+
+  .about-points {
+    grid-template-columns: 1fr;
+  }
+  .about-icon{
+    font-size: 2.1rem !important;
+
+  }
+.about-points li{
+  font-size: 14px !important;
+}
+  .about-team-members {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    justify-self: center !important;
+    gap: 1.5rem;
+  }
+  .about-team-description{
+  text-align: left !important;
+ 
+  }
+  .about-team-title{
+    text-align: left !important;
+    margin-bottom: 10px !important;
+  }
+  .team-member {
+    width: 100% !important;
+    width: 220px !important;
+  }
+  .team-member-image{
+    width: 150px !important;
+    height: 150px !important;
+  }
+
+  .about-title,
+  .about-points-title,
+  .about-team-title {
+    font-size: 1.8rem !important;
+  }
+  .about-subtitle{
+  font-size: 18px !important;
+  }
+}
