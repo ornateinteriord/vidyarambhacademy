@@ -2,13 +2,16 @@ import React from "react";
 import { Box, Typography, Container } from "@mui/material";
 import "./AboutUs.css";
 import kid2 from "../../assets/kid2.avif";
+import pic8 from "../../assets/picsM/pic8.jpg"
 import kidsGrp from "../../assets/kidsGrp.avif";
 import teacher1 from "../../assets/teacher1.avif";
 import teacher2 from "../../assets/teacher2.avif";
 import teacher3 from "../../assets/teacher3.avif";
 import img5 from "../../assets/classes/parent5.jpg";
 import CustomContainer from "../Container/CustomContainer";
-import { Book, EmojiPeople, Home, Palette, School } from "@mui/icons-material";
+import { Book, EmojiEmotions, EmojiPeople, Home, Palette, School, SocialDistanceTwoTone } from "@mui/icons-material";
+import FourCsPage from "../FourCsPage/FourCsPage";
+import thir from "../../assets/picsM/thir.webp"
 
 function AboutUs() {
   return (
@@ -18,7 +21,7 @@ function AboutUs() {
         <Box className="about-content">
           {/* Image Section */}
           <Box className="about-image-container">
-            <img src={kidsGrp} alt="About Us" className="about-image" />
+            <img src={thir} alt="About Us" className="about-image" />
           </Box>
 
           {/* Text Section */}
@@ -29,10 +32,10 @@ function AboutUs() {
 
             </Typography>
             <Typography variant="body1" className="about-description">
-              Welcome to our kindergarten! We provide a nurturing and educational
-              environment for young children, fostering creativity, curiosity, and
-              a love for learning. Our dedicated staff ensures a safe and engaging
-              experience for all kids.
+            Vidyarambh Balmandir is part of Lighthouse Learning Group, India's leading Early Childhood & K-12 Education group backed by KKR Capital.
+             Lighthouse Learning is committed to deliver holistic development of its 175,000+ students across the network. 
+             The group works towards delivering a robust foundation for future generations with innovation in pedagogy,
+              use of appropriate technology and focus on child safety.
             </Typography>
           </Box>
         </Box>
@@ -43,30 +46,32 @@ function AboutUs() {
           <ul className="about-points">
             <li>
               <School fontSize="large" className="about-icon" />
-              Experienced and caring teachers
+              Play-based learning with Montessori.
             </li>
             <li>
               <Palette fontSize="large" className="about-icon" />
-              Fun and interactive learning activities
+              Modern facilities with well-equipped classrooms and play areas.
             </li>
             <li>
               <Book fontSize="large" className="about-icon" />
-              Early childhood development programs
+              Smaller class sizes providing personalized attention.
             </li>
             <li>
               <Home fontSize="large" className="about-icon" />
-              Safe and secure environment for children
+              Best  activities where the child would enjoy.
             </li>
             <li>
               <EmojiPeople fontSize="large" className="about-icon" />
-              Encouraging social and emotional growth
+              We encourage parent participation in classroom activities.
             </li>
             <li>
-              <EmojiPeople fontSize="large" className="about-icon" />
+              <EmojiEmotions fontSize="large" className="about-icon" />
               Encouraging social and emotional growth
             </li>
           </ul>
         </Box>
+          {/* FourCspage */}
+            <FourCsPage/>
 
         {/* Team Introduction Section */}
         <Box className="about-team-container">

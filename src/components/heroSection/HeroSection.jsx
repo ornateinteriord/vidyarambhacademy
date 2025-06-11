@@ -2,6 +2,10 @@ import React from "react";
 import { Box, Typography, Button, Divider } from "@mui/material";
 import "./HeroSection.css";
 import kid1 from "../../assets/kid1.avif";
+import pic1 from "../../assets/picsM/pic1.jpg"
+import first from "../../assets/picsM/1st.webp"
+import sec from "../../assets/picsM/sec.webp"
+import pic2 from "../../assets/picsM/pic2.jpg"
 import toy1 from "../../assets/toy1.png"; 
 import toy2 from "../../assets/toy2.png";
 import kidsbg from "../../assets/kidsGrp11-bg.png"
@@ -9,6 +13,9 @@ import kidsGrp8 from "../../assets/kidsGrp8.avif"
 import { Link } from "react-router-dom";
 import Gallery from "../gallery/Gallery";
 import Activities from "../activities/Activities";
+import WhyUs from "../whyUs/WhyUs";
+import FourCsPage from "../FourCsPage/FourCsPage"
+import ActivityLab from "../Activitylab/ActivityLab";
 
 function HeroSection() {
   return (
@@ -22,12 +29,12 @@ function HeroSection() {
         </Box>
 
         {/* Main Heading */}
-        <Typography className="bouncy-text gradient-text" sx={{ fontSize: "80px", fontWeight: "bold" }} gutterBottom>
+        <Typography className="bouncy-text gradient-text" sx={{  fontWeight: "bold" }} gutterBottom>
           Better Future <br /><span> For Your Kids</span>
         </Typography>
         
         {/* Subtext */}
-        <Typography variant="h5" className="highlight-text" fontWeight={700} gutterBottom>
+        <Typography  className="highlight-text" fontWeight={700} gutterBottom>
           Providing quality education with love and care.
         </Typography>
         
@@ -38,16 +45,18 @@ function HeroSection() {
 
       {/* Kid Image Section */}
       <Box className="image-container" marginTop={5}>
-        <img src={kid1} className="background-img shadow-img" alt="kid" />
+        <img src={first} className="background-img shadow-img" alt="kid" />
       </Box>
     </Box>
+    
+    <WhyUs/>
 
 
    <Box className="preschool-hero">
       {/* Image Section */}
       <Box
         component="img"
-        src={kidsGrp8}
+        src={sec}
         alt="Preschool"
         className="preschool-image"
       />
@@ -58,9 +67,8 @@ function HeroSection() {
           About Preschool
         </Typography>
         <Typography variant="body1" className="preschool-description">
-          We provide a safe, nurturing environment where children can learn, grow, 
-          and develop essential life skills. <br /> Our focus is on early childhood education 
-          and emotional well-being.
+        Holistic development encompassing academics, creative arts, sports, and social-emotional skills.
+        Which includes,Early literacy and numeracy skills, along with personality development.
         </Typography>
 
         <Typography variant="h4" className="preschool-heading">
@@ -80,9 +88,12 @@ function HeroSection() {
       </Box>
     </Box>
   {/* Gallery */}
+  <ActivityLab/>
+
       <Gallery/>
       {/* Activities */}
     <Activities/>  
+  
       </Box>
   );
 }

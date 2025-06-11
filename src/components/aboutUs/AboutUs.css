@@ -23,6 +23,7 @@
   position: relative;
   isolation: isolate;
   overflow: hidden;
+  margin-top: 10px !important;
 }
 
 .about-container::before {
@@ -88,7 +89,7 @@
   flex: 1;
   min-width: 250px;
   background: rgba(255, 255, 255, 0.95);
-  padding: 2.5rem;
+  padding: 2rem !important;
   border-radius: 20px;
   box-shadow: 0 15px 35px rgba(31, 38, 135, 0.2);
   backdrop-filter: blur(8px);
@@ -109,7 +110,7 @@
 .about-description {
   font-size: 1rem !important;
   color: #4a4a4a !important;
-  line-height: 1.2 !important;
+  line-height: 1.5 !important;
   text-align: left !important;
   margin-bottom: 2rem !important;
   font-weight: bold !important;
@@ -269,10 +270,25 @@
   }
 
   .about-image-container,
-  .about-text-container {
-    max-width: 100%;
+  .about-text-container,
+  .about-team-container {
+    width: 100% !important;
   
   }
+.about-team-description{
+font-size: 1.5rem !important;
+text-align: start !important;
+}
+.team-member-image{
+width: 240px !important;
+height: 240px !important;
+}
+.team-member-name{
+font-size: 1.5rem !important;
+}
+.team-member-role{
+  font-size: 1rem !important;
+}
 
   .about-points {
     display: grid !important;
@@ -284,9 +300,25 @@
     grid-template-columns: repeat(2, 1fr);
     justify-self: center !important;
   }
+ 
+.team-member {
+  text-align: center;
+  max-width: 280px !important;
+  padding: 1.3rem !important;
+  height: auto !important;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
 }
 
 @media (max-width: 768px) {
+  .about-content{
+    margin-top: 70px !important;
+  }
   .about-background {
     padding: 3rem 0;
   }
@@ -310,7 +342,12 @@
   .about-icon {
     font-size: 2rem !important;
   }
-
+  .about-team-members {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    justify-self: center !important;
+    gap: 1.5rem;
+  }
   /* .team-member-image {
     height: 200px;
   } */
@@ -335,8 +372,12 @@
   .about-points {
     grid-template-columns: 1fr;
   }
+  .about-icon{
+    font-size: 2.1rem !important;
+
+  }
 .about-points li{
-  font-size: 16px !important;
+  font-size: 14px !important;
 }
   .about-team-members {
     display: grid !important;
@@ -352,10 +393,14 @@
     text-align: left !important;
     margin-bottom: 10px !important;
   }
-
-  /* .team-member-image {
-    height: 280px;
-  } */
+  .team-member {
+    width: 100% !important;
+    width: 220px !important;
+  }
+  .team-member-image{
+    width: 150px !important;
+    height: 150px !important;
+  }
 
   .about-title,
   .about-points-title,

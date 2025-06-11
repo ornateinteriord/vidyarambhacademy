@@ -1,0 +1,143 @@
+/* General Styles */
+.why-us-container {
+  width: 100%;
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #d81b60;
+  color: white;
+}
+
+.why-us-container h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  font-weight: bold;
+}
+
+.why-us-container h3 {
+  font-size: 2rem;
+  margin: 50px 0 30px;
+  font-weight: bold;
+}
+
+/* Benefits Grid */
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 0 20px;
+}
+
+.benefit-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 30px 20px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.benefit-box:hover {
+  transform: scale(1.05);
+}
+
+.benefit-icon {
+  background-color: white;
+  color: #d81b60;
+  border-radius: 50%;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.benefit-icon svg {
+  font-size: 2.5rem;
+}
+
+.benefit-text {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* Programs Section */
+.programs {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.programs span {
+  padding: 10px 20px;
+  background-color: rgba(44, 124, 215, 0.3);
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.programs span:hover {
+  background-color:rgba(44, 124, 215, 0.5);
+}
+.programs span:nth-child(1) { background-color: #007bff; } /* Blue for Playgroup */
+.programs span:nth-child(2) { background-color: #ff69b4; } /* Pink for Nursery */
+.programs span:nth-child(3) { background-color: #ff9800; } /* Orange for LKG */
+.programs span:nth-child(4) { background-color: #4caf50; } /* Green for UKG */
+.programs span:nth-child(5) { background-color: #673ab7; } /* P
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .why-us-container h2 {
+    font-size: 2rem;
+  }
+
+  .why-us-container h3 {
+    font-size: 1.5rem;
+  }
+
+  .benefits-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  .benefit-text {
+    font-size: 1rem;
+  }
+
+  .programs {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .why-us-container{
+    padding:30px 0 ;
+  }
+  .why-us-container h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px ;
+  }
+
+  .why-us-container h3 {
+    font-size: 1.4rem;
+    margin-top: 20px !important;
+  }
+
+  .benefits-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .programs {
+    width: 50% !important;
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr);
+    flex-direction: column;
+    justify-self: center !important;
+    gap: 0.5rem;
+  }
+ 
+}

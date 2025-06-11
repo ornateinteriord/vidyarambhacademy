@@ -1,8 +1,11 @@
+
+
 .classes-page {
   text-align: center;
   padding: 20px;
-  margin-top: 70px;
+  margin-top: 80px;
   background: #f9f9f9; 
+  height: 100%;
 }
 
 .classes-title {
@@ -139,7 +142,51 @@
   }
 }
 
+@media (max-width: 1199px) and (min-width: 900px) {
+  .classes-page {
+    margin-top: 80px !important;
+    padding: 15px !important;
+    height: 100% !important;
+  }
+
+  .classes-grid {
+    gap: 60px !important;
+    padding: 0px 50px !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 20px;
+  }
+
+  .class-card {
+    width: 40% !important; /* Adjusted for better fit */
+    min-width: 280px;
+    opacity: 1; /* Ensure it's visible */
+  }
+
+  .class-card:nth-child(3n+1),
+  .class-card:nth-child(3n+2),
+  .class-card:nth-child(3n+3) {
+    animation: slideFromLeft 0.8s ease-out forwards;
+  }
+
+  .class-card:nth-child(3n+4),
+  .class-card:nth-child(3n+5),
+  .class-card:nth-child(3n+6) {
+    animation: slideFromRight 0.8s ease-out forwards;
+  }
+
+  .classes-title {
+    font-size: 2.2em !important; /* Slightly smaller for this range */
+  }
+}
+
+
+
 @media (max-width: 768px) {
+  .classes-page{
+    margin-top: 100px !important;
+  }
   .classes-grid {
       padding: 0px 20px !important;
       padding-bottom: 20px !important;
@@ -158,9 +205,9 @@
       width: 100% !important;
   }
 }
-@media (max-width: 480px){
+@media (max-width: 567px){
   .classes-page{
-    margin-top: 70px !important;
+    margin-top: 85px !important;
   }
   .classes-grid{
   display: grid !important;
