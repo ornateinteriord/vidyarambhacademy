@@ -8,7 +8,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.5rem 2rem;
+  padding: 0rem 1.5rem;
   width: 100%;
 }
 
@@ -27,7 +27,7 @@
 .logo {
   height: 75px !important;
   width: 130px !important;
-
+  cursor: pointer;
 }
 
 .logo-text {
@@ -306,7 +306,7 @@ background: linear-gradient(90deg, rgb(127, 123, 198) 0%, rgba(1,146,187,1) 49%,
   }
 
   .logo {
-    height: 40px !important;
+    height: 70px !important;
   }
 
   .logo-primary {
@@ -315,6 +315,9 @@ background: linear-gradient(90deg, rgb(127, 123, 198) 0%, rgba(1,146,187,1) 49%,
 
   .logo-secondary {
     font-size: 0.875rem !important;
+  }
+   .toolbar {
+    padding: 0rem 1rem;
   }
 }
 
@@ -335,7 +338,7 @@ background: linear-gradient(90deg, rgb(127, 123, 198) 0%, rgba(1,146,187,1) 49%,
   }
 
   .toolbar {
-    padding: 0.5rem;
+    padding: 0rem 1rem;
   }
 
   .logo {
@@ -357,8 +360,8 @@ background: linear-gradient(90deg, rgb(127, 123, 198) 0%, rgba(1,146,187,1) 49%,
     width: 100%;
   }
 
-  .toolbar {
-    padding: 0.60rem;
+   .toolbar {
+    padding: 0rem 0.5rem;
   }
   .navLink{
     color:#fff !important;
