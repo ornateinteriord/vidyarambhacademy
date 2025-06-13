@@ -27,7 +27,7 @@ const Footer = () => {
             </Typography>
             <ul className="footer-links">
               <li><Link to="/about">About Us</Link></li>
-              <li><Link to="/class">Classes</Link></li>
+              <li><Link to="/classes">Classes</Link></li>
               <li><Link to="/testimonials">Testimonials</Link></li>
               <li><Link to="/admission">Admissions</Link></li>
               <li><Link to="/faqs">FAQs</Link></li>

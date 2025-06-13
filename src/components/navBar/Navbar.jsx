@@ -69,6 +69,10 @@ function Navbar() {
     }
   };
 
+  const nagigatelogo = ()=>{
+     navigate("/");
+  }
+
   return (
     <AppBar position="fixed" className="navbar">
       
@@ -76,11 +80,7 @@ function Navbar() {
         <Box className="navmid" display={'flex'} justifyContent={'space-evenly'} alignItems={'center'}>
         <Box className="logo-container">
   <Box className="logo-content">
-    <img src={vlogo} alt="Kidzena" className="logo" />
-    {/* <Box className="logo-text">
-      <Typography className="logo-primary">Vidyarambh</Typography>
-      <Typography className="logo-secondary">Balmandir</Typography>
-    </Box> */}
+    <img onClick={nagigatelogo} src={vlogo} alt="Kidzena" className="logo" />
   </Box>
 </Box>
 
